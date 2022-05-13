@@ -1,8 +1,8 @@
 <script context="module" lang="ts">
+	import { apiBaseUrl } from "../helpers";
 	export async function load({ fetch }) {
-		const res = await fetch(`http://localhost:4000/album/all`);
+		const res = await fetch(`${apiBaseUrl}/album/all`);
 		const albums = await res.json();
-		console.log(albums[0]);
 		if (res.ok) {
 			return {
 				props: {
@@ -20,20 +20,25 @@
 <script lang="ts">
 	import type { Album } from "../types";
 	import { resources } from "../resources";
-	import { buildImageLocatorUrl } from "../helpers";
+	import AlbumCard from "$lib/AlbumCard.svelte";
 	export let albums: Album[];
 </script>
 
 <div>
 	<h1>{resources.home}</h1>
-	<ul>
+	<ul class="album-grid">
 		{#each albums as album}
-			<li>
-				<img src={buildImageLocatorUrl(album.coverPicture)} alt={album.name} />
-				<a href={`/album/${album.publicId}`}>{album.name}</a>
-			</li>
+			<AlbumCard {album} />
 		{/each}
 	</ul>
 </div>
 
-<style></style>
+<style>
+	.album-grid {
+		max-width: 1200px;
+		margin: 0 auto;
+		display: grid;
+		grid-gap: 1rem;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	}
+</style>

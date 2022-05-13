@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { resources } from "src/resources";
+	import { resources } from "../resources";
 </script>
 
 <div>

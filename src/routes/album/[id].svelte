@@ -1,7 +1,8 @@
 <script context="module" lang="ts">
+	import { apiBaseUrl } from "../../helpers";
 	export async function load({ params, fetch }) {
 		const id = params.id;
-		const res = await fetch(`http://localhost:4000/album/${id}`);
+		const res = await fetch(`${apiBaseUrl}/album/${id}`);
 		const album = await res.json();
 		if (res.ok) {
 			return {

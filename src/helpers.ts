@@ -1,6 +1,6 @@
 import type { Picture } from "./types"
 
-export const apiUrl = ''
+export const apiBaseUrl = 'http://localhost:4000'
 export const buildImageLocatorUrl = (picture:Picture) => {
 
     if(!picture) {
