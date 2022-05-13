@@ -1,6 +1,8 @@
 <script context="module" lang="ts">
 	import { apiBaseUrl } from "../helpers";
-	export async function load({ fetch }) {
+	import type { Load } from "@sveltejs/kit";
+
+	export const load: Load = async ({ fetch }) => {
 		const res = await fetch(`${apiBaseUrl}/album/all`);
 		const albums = await res.json();
 		if (res.ok) {
@@ -14,7 +16,7 @@
 			status: res.status,
 			error: new Error("could not find")
 		};
-	}
+	};
 </script>
 
 <script lang="ts">

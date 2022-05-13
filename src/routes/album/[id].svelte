@@ -1,6 +1,8 @@
 <script context="module" lang="ts">
 	import { apiBaseUrl } from "../../helpers";
-	export async function load({ params, fetch }) {
+	import type { Load } from "@sveltejs/kit";
+
+	export const load: Load = async ({ params, fetch }) => {
 		const id = params.id;
 		const res = await fetch(`${apiBaseUrl}/album/${id}`);
 		const album = await res.json();
@@ -15,7 +17,7 @@
 			status: 301,
 			redirect: "/"
 		};
-	}
+	};
 </script>
 
 <script lang="ts">
