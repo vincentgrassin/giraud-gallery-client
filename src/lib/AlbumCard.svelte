@@ -27,7 +27,6 @@
 	.card-link {
 		display: flex;
 		flex-direction: column;
-		justify-content: space-between;
 		text-decoration: none;
 		height: 100%;
 	}
@@ -38,5 +37,9 @@
 	}
 	.album-informations {
 		margin: 16px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		flex: 1;
 	}
 </style>

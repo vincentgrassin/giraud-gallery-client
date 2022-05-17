@@ -27,5 +27,6 @@
     label:string,
     id:string,
     path:string
+    regex:string
   } 
   

@@ -3,27 +3,18 @@
 	import { page } from "$app/stores";
 
 	import type { NavigationTab } from "../types";
-	export let activeTab: string = "home";
-	const handleActiveTab = (tab: NavigationTab) => {
-		activeTab = tab.id;
-	};
 	const tabs: NavigationTab[] = [
-		{ label: resources.home, id: "home", path: "/" },
-		{ label: resources.about, id: "about", path: "/about" },
-		{ label: resources.search, id: "search", path: "/search" }
+		{ label: resources.home, id: "home", path: "/", regex: "/(album|$)" },
+		{ label: resources.search, id: "search", path: "/search", regex: "/search" },
+		{ label: resources.about, id: "about", path: "/about", regex: "/about" }
 	];
 </script>
 
 <nav class="nav-header">
 	<ul class="list">
 		{#each tabs as tab}
-			<li class="nav-item">
-				<a
-					class="nav-link"
-					class:active={$page.url.pathname === tab.path}
-					href={tab.path}
-					on:click={() => handleActiveTab(tab)}>{tab.label}</a
-				>
+			<li class="nav-item" class:active={$page.url.pathname.match(tab.regex)}>
+				<a class="nav-link" href={tab.path}>{tab.label}</a>
 			</li>
 		{/each}
 	</ul>
@@ -32,16 +23,17 @@
 <style>
 	.nav-header {
 		height: 64px;
-		background-color: var(--metallicBlue);
+		background-color: var(--munsellBlue);
+		display: flex;
+		justify-content: space-evenly;
 	}
 	.list {
 		display: flex;
-		height: 100%;
-		align-items: center;
-		margin: 0px 16px 0px 16px;
+		max-width: 50%;
+		flex: 1;
 	}
 	.nav-item {
-		min-width: 100px;
+		width: 100%;
 		height: 100%;
 	}
 	.nav-link {
@@ -50,9 +42,11 @@
 		height: 100%;
 		display: flex;
 		align-items: center;
+		justify-content: center;
+		flex: 1;
 	}
 	.nav-item:hover,
 	.active {
-		background-color: var(--lightGrey);
+		background-color: var(--columbiaBlue);
 	}
 </style>

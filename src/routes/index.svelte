@@ -26,7 +26,7 @@
 	export let albums: Album[];
 </script>
 
-<div class="home">
+<div>
 	<h1>{resources.home}</h1>
 	<ul class="album-grid">
 		{#each albums as album}
@@ -37,9 +37,6 @@
 </div>
 
 <style>
-	.home {
-		margin: 16px;
-	}
 	.album-grid {
 		display: grid;
 		grid-gap: 1rem;
