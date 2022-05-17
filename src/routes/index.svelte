@@ -26,21 +26,24 @@
 	export let albums: Album[];
 </script>
 
-<div>
+<div class="home">
 	<h1>{resources.home}</h1>
 	<ul class="album-grid">
 		{#each albums as album}
+			<AlbumCard {album} />
 			<AlbumCard {album} />
 		{/each}
 	</ul>
 </div>
 
 <style>
+	.home {
+		margin: 16px;
+	}
 	.album-grid {
-		max-width: 1200px;
-		margin: 0 auto;
 		display: grid;
 		grid-gap: 1rem;
-		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+		margin-left: 0;
 	}
 </style>

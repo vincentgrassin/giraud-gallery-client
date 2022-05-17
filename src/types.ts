@@ -23,4 +23,9 @@
     pictures?: Picture[];
     coverPicture: Picture;
   }
+  export type NavigationTab = {
+    label:string,
+    id:string,
+    path:string
+  } 
   
