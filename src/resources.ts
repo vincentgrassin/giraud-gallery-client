@@ -1,5 +1,6 @@
 export const resources = {
     home: "Home",
     about:"About",
-    search:"Search"
+    search:"Search",
+    addTag:"Ajouter un mot clé"
 }

@@ -29,7 +29,7 @@
 	}
 	.list {
 		display: flex;
-		max-width: 50%;
+		max-width: 60%;
 		flex: 1;
 	}
 	.nav-item {
