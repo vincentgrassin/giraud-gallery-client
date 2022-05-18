@@ -6,16 +6,8 @@
 	export let isPictureDetailsDisplayed: boolean = false;
 
 	export const handlePictureDetailsVisibility = (isVisible: boolean) => {
-		isPictureDetailsDisplayed = !isVisible;
+		isPictureDetailsDisplayed = isVisible;
 	};
-
-	// const handleMouseOver = () => {
-	// 	isPictureDetailsDisplayed = true;
-	// };
-	// const handleMouseLeave = () => {
-	// 	console.log("leave");
-	// 	isPictureDetailsDisplayed = false;
-	// };
 </script>
 
 <li class="card">
@@ -24,12 +16,12 @@
 			src={buildImageLocatorUrl(picture)}
 			alt={picture.name}
 			class="picture"
-			on:mouseover={() => handlePictureDetailsVisibility(isPictureDetailsDisplayed)}
-			on:focus={() => handlePictureDetailsVisibility(isPictureDetailsDisplayed)}
+			on:mouseover={() => handlePictureDetailsVisibility(true)}
+			on:focus={() => handlePictureDetailsVisibility(true)}
 		/>
 	</a>
 	{#if isPictureDetailsDisplayed}
-		<PictureDetails {picture} />
+		<PictureDetails {picture} onMouseLeave={handlePictureDetailsVisibility} />
 	{/if}
 </li>
 

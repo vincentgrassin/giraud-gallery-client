@@ -4,18 +4,14 @@
 	export let picture: Picture;
 	import Modal from "./Modal.svelte";
 	export let isModalVisible: boolean = false;
-	// export let isDetailsVisible: boolean = false;
-	// export let onMouseLeave: (isVisible: boolean) => void;
-	// export const handleMouseOut = () => {
-	// 	console.log("out");
-	// };
+	export let onMouseLeave: (isVisible: boolean) => void;
 
 	export const handleModalChange = (isVisible: boolean) => {
 		isModalVisible = isVisible;
 	};
 </script>
 
-<div class="picture-details">
+<div class="picture-details" on:mouseleave={() => onMouseLeave(false)}>
 	<p>{picture.name}</p>
 	<div>
 		{#if picture.tags}
@@ -32,8 +28,8 @@
 	.picture-details {
 		position: absolute;
 		background-color: aqua;
-		top: 8px;
-		left: 8px;
+		top: 0px;
+		left: 0px;
 		/* pointer-events: none; */
 	}
 </style>
