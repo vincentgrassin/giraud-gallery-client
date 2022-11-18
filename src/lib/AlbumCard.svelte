@@ -2,11 +2,19 @@
 	import type { Album } from "../types";
 	import { buildImageLocatorUrl } from "../helpers";
 	export let album: Album;
+
+	const coverPicture = album.pictures?.find((picture) => {
+		return picture.id === album.coverPicture;
+	});
 </script>
 
 <li class="card">
-	<a href={`/album/${album.publicId}`} class="card-link">
-		<img src={buildImageLocatorUrl(album.coverPicture)} alt={album.name} class="cover-picture" />
+	<a href={`/album/${album.id}`} class="card-link">
+		<img
+			src={coverPicture ? buildImageLocatorUrl(coverPicture) : ""}
+			alt={album.name}
+			class="cover-picture"
+		/>
 		<div class="album-informations">
 			<h2>
 				{album.name}

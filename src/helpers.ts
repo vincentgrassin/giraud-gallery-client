@@ -11,6 +11,5 @@ export const buildImageLocatorUrl = (picture: Picture) => {
 	if (!picture) {
 		return "";
 	}
-
-	return `https://res.cloudinary.com/dyivtryy7/image/upload/v1652346037/${picture.externalPublicId}.jpg`;
+	return `https://res.cloudinary.com/dyivtryy7/image/upload/v1652346037/${picture.cloudinaryPublicId}.jpg`;
 };

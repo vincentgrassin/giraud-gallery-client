@@ -1,11 +1,10 @@
 <script context="module" lang="ts">
-	import { apiBaseUrl } from "../helpers";
 	import type { Load } from "@sveltejs/kit";
+	import { dataAlbums } from "../dataPicture";
 
-	export const load: Load = async ({ fetch }) => {
-		const res = await fetch(`${apiBaseUrl}/album/all`);
-		const albums = await res.json();
-		if (res.ok) {
+	export const load: Load = async () => {
+		const albums = Object.values(dataAlbums);
+		if (albums) {
 			return {
 				props: {
 					albums
@@ -13,7 +12,6 @@
 			};
 		}
 		return {
-			status: res.status,
 			error: new Error("could not find")
 		};
 	};
@@ -30,7 +28,6 @@
 	<h1>{resources.home}</h1>
 	<ul class="album-grid">
 		{#each albums as album}
-			<AlbumCard {album} />
 			<AlbumCard {album} />
 		{/each}
 	</ul>
