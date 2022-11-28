@@ -16,7 +16,7 @@
 		isListDisplay = isList;
 	};
 
-	const handlePreviewClick = (picture: Picture) => {
+	const handlePictureChange = (picture: Picture | undefined) => {
 		selected = picture;
 	};
 </script>
@@ -30,17 +30,17 @@
 	</button>
 	{#if album.pictures}
 		<ul class="gallery-container">
-			{#each album.pictures as d}
+			{#each album.pictures as picture}
 				<div>
-					{#if d !== selected}
+					{#if picture !== selected}
 						<div
 							role="img"
-							aria-label={d.id}
-							out:send={{ key: d.id }}
-							in:receive={{ key: d.id }}
-							on:click={() => handlePreviewClick(d)}
+							aria-label={picture.id}
+							out:send={{ key: picture.id }}
+							in:receive={{ key: picture.id }}
+							on:click={() => handlePictureChange(picture)}
 							class="image"
-							style="background-image: url({buildImageLocatorUrl(d)});"
+							style="background-image: url({buildImageLocatorUrl(picture)});"
 						/>
 					{/if}
 				</div>
@@ -48,7 +48,7 @@
 		</ul>
 
 		{#if selected}
-			<PictureCard {selected} pictures={album.pictures} />
+			<PictureCard {selected} pictures={album.pictures} {handlePictureChange} />
 		{/if}
 	{/if}
 </div>

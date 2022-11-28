@@ -16,8 +16,8 @@
 			<h2>{album.name}</h2>
 			<p>{album.date}</p>
 		</div>
-		<PicturesGallery {album} />
 	</div>
+	<PicturesGallery {album} />
 </div>
 
 <style>

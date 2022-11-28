@@ -4,6 +4,7 @@
 	import { tick } from "svelte";
 	import { crossfade, fade } from "svelte/transition";
 
+	export let handlePictureChange: (picture: Picture | undefined) => void;
 	export let selected: Picture | undefined;
 	export let pictures: Picture[];
 	let gallery: HTMLElement;
@@ -14,27 +15,25 @@
 		duration: () => 350
 	});
 
-	const shortcut = {
-		ArrowRight: async (e: KeyboardEvent) => {
-			e.preventDefault();
-			const nextIdx = (currentIdx + 1) % pictures.length;
-			selected = pictures[nextIdx];
-			await tick();
-			const active = gallery.querySelector('[data-selected="true"]');
-			if (active) {
-				active.scrollIntoView();
-			}
-		},
-		ArrowLeft: async (e: KeyboardEvent) => {
-			e.preventDefault();
-			const nextIdx = currentIdx === 0 ? pictures.length - 1 : (currentIdx - 1) % pictures.length;
-			selected = pictures[nextIdx];
-			await tick();
-			const active = gallery.querySelector('[data-selected="true"]');
-			if (active) {
-				active.scrollIntoView();
-			}
+	const handleArrowChange = async (e: KeyboardEvent, direction: "left" | "right") => {
+		e.preventDefault();
+		const nextIdx =
+			direction === "right"
+				? (currentIdx + 1) % pictures.length
+				: currentIdx === 0
+				? pictures.length - 1
+				: (currentIdx - 1) % pictures.length;
+		handlePictureChange(pictures[nextIdx]);
+		await tick();
+		const active = gallery.querySelector('[data-selected="true"]');
+		if (active) {
+			active.scrollIntoView();
 		}
+	};
+
+	const shortcut = {
+		ArrowRight: async (e: KeyboardEvent) => handleArrowChange(e, "right"),
+		ArrowLeft: async (e: KeyboardEvent) => handleArrowChange(e, "left")
 	};
 </script>
 
@@ -42,14 +41,14 @@
 	class="image-viewer"
 	on:click={(e) => {
 		if (e.target === e.currentTarget) {
-			selected = undefined;
+			handlePictureChange(undefined);
 		}
 	}}
 >
 	<button
 		on:click={() => {
 			const nextIdx = (currentIdx - 1) % pictures.length;
-			selected = pictures[nextIdx];
+			handlePictureChange(pictures[nextIdx]);
 		}}
 	>
 		Previous
@@ -57,7 +56,7 @@
 	<button
 		on:click={() => {
 			const nextIdx = (currentIdx + 1) % pictures.length;
-			selected = pictures[nextIdx];
+			handlePictureChange(pictures[nextIdx]);
 		}}
 	>
 		Next
@@ -69,7 +68,7 @@
 		alt=""
 	/>
 	<div
-		aria-label="album"
+		aria-label="gallery"
 		role="group"
 		bind:this={gallery}
 		use:keyboard={{ shortcut }}
@@ -82,7 +81,7 @@
 				aria-label={d.id}
 				data-selected={selected === d}
 				class:active={selected === d}
-				on:click={() => (selected = d)}
+				on:click={() => handlePictureChange(d)}
 				class="image"
 				style="background-image:url({buildImageLocatorUrl(d)})"
 			/>
