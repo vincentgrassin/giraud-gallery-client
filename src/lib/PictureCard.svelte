@@ -39,34 +39,17 @@
 
 <div
 	class="image-viewer"
+	on:keyup={(e) => {
+		if (e.code === "Escape") {
+			handlePictureChange(undefined);
+		}
+	}}
 	on:click={(e) => {
 		if (e.target === e.currentTarget) {
 			handlePictureChange(undefined);
 		}
 	}}
 >
-	<button
-		on:click={() => {
-			const nextIdx = (currentIdx - 1) % pictures.length;
-			handlePictureChange(pictures[nextIdx]);
-		}}
-	>
-		Previous
-	</button>
-	<button
-		on:click={() => {
-			const nextIdx = (currentIdx + 1) % pictures.length;
-			handlePictureChange(pictures[nextIdx]);
-		}}
-	>
-		Next
-	</button>
-	<img
-		in:receive={{ key: selected }}
-		out:send={{ key: selected }}
-		src={buildImageLocatorUrl(selected)}
-		alt=""
-	/>
 	<div
 		aria-label="gallery"
 		role="group"
@@ -87,11 +70,45 @@
 			/>
 		{/each}
 	</div>
+
+	<div class="image-container">
+		<button
+			on:click={() => {
+				const nextIdx = (currentIdx - 1) % pictures.length;
+				handlePictureChange(pictures[nextIdx]);
+			}}
+		>
+			Previous
+		</button>
+		<a
+			in:receive={{ key: selected }}
+			out:send={{ key: selected }}
+			href={buildImageLocatorUrl(selected)}
+			target="_blank"
+		>
+			<img src={buildImageLocatorUrl(selected)} alt={selected?.cloudinaryPublicId} />
+		</a>
+		<button
+			on:click={() => {
+				const nextIdx = (currentIdx + 1) % pictures.length;
+				handlePictureChange(pictures[nextIdx]);
+			}}
+		>
+			Next
+		</button>
+	</div>
 </div>
 
 <style>
 	* {
 		box-sizing: border-box;
+	}
+
+	.image-container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 80px;
 	}
 
 	.image {
@@ -117,12 +134,13 @@
 	.image-viewer {
 		padding: 20px;
 		position: fixed;
+		overflow-y: auto;
 		width: 100%;
 		height: 100%;
 		left: 0;
 		bottom: 0;
 		right: 0;
-		top: 0;
+		top: var(--headerHeight);
 		background-color: rgba(100, 100, 100, 0.8);
 	}
 
@@ -131,6 +149,6 @@
 	}
 
 	.image-viewer > img {
-		max-height: 70%;
+		max-height: 80%;
 	}
 </style>

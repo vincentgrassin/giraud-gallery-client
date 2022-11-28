@@ -22,7 +22,7 @@
 
 <style>
 	.nav-header {
-		height: 64px;
+		height: var(--headerHeight);
 		background-color: var(--munsellBlue);
 		display: flex;
 		justify-content: space-evenly;
