@@ -2,8 +2,7 @@
 	import { dataAlbums } from "../../dataPicture";
 	import { page } from "$app/stores";
 	const album = dataAlbums[`${$page.params.id}`];
-	import PictureList from "$lib/PictureList.svelte";
-	import Icon from "$lib/Icon.svelte";
+	import PicturesGallery from "$lib/PicturesGallery.svelte";
 	export let isListDisplay: boolean = true;
 
 	const handleListDisplay = (isList: boolean) => {
@@ -17,18 +16,8 @@
 			<h2>{album.name}</h2>
 			<p>{album.date}</p>
 		</div>
-		<div>
-			<button on:click={() => handleListDisplay(true)} disabled={isListDisplay}>
-				<Icon name="picture" height="30px" width="30px" />
-			</button>
-			<button on:click={() => handleListDisplay(false)} disabled={!isListDisplay}>
-				<Icon name="grid" height="30px" width="30px" />
-			</button>
-		</div>
+		<PicturesGallery {album} />
 	</div>
-	{#if album.pictures}
-		<PictureList pictures={album.pictures} {isListDisplay} />
-	{/if}
 </div>
 
 <style>
