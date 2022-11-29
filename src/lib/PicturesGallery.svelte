@@ -21,29 +21,40 @@
 	};
 </script>
 
-<div>
-	<button on:click={() => handleListDisplay(true)} disabled={isListDisplay}>
-		<Icon name="picture" height="30px" width="30px" />
-	</button>
-	<button on:click={() => handleListDisplay(false)} disabled={!isListDisplay}>
-		<Icon name="grid" height="30px" width="30px" />
-	</button>
+<div class="container">
+	<div>
+		<button on:click={() => handleListDisplay(true)} disabled={isListDisplay}>
+			<Icon name="picture" height="30px" width="30px" />
+		</button>
+		<button on:click={() => handleListDisplay(false)} disabled={!isListDisplay}>
+			<Icon name="grid" height="30px" width="30px" />
+		</button>
+	</div>
 	{#if album.pictures}
-		<ul class="gallery-container">
+		<ul class:gallery-grid={!isListDisplay} class:gallery-list={isListDisplay}>
 			{#each album.pictures as picture}
-				<div>
-					{#if picture !== selected}
+				{#if picture !== selected}
+					{#if isListDisplay}
+						<img
+							src={buildImageLocatorUrl(picture)}
+							alt={picture.cloudinaryPublicId}
+							class="list-picture"
+							out:send={{ key: picture.id }}
+							in:receive={{ key: picture.id }}
+							on:click={() => handlePictureChange(picture)}
+						/>
+					{:else}
 						<div
 							role="img"
 							aria-label={picture.id}
 							out:send={{ key: picture.id }}
 							in:receive={{ key: picture.id }}
 							on:click={() => handlePictureChange(picture)}
-							class="image"
+							class="grid-picture"
 							style="background-image: url({buildImageLocatorUrl(picture)});"
 						/>
 					{/if}
-				</div>
+				{/if}
 			{/each}
 		</ul>
 
@@ -54,40 +65,44 @@
 </div>
 
 <style>
-	/* .pictures-list {
-		width: 60%;
-	}
-	@media (max-width: 800px) {
-		.pictures-list {
-			width: 100%;
-		}
-	}
-	@media (min-width: 1600px) {
-		.pictures-list {
-			width: 50%;
-		}
-	}
-	.picture-grid {
-		width: 80%;
-		display: grid;
-		grid-gap: 1rem;
-		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-		margin-left: 0;
-	} */
-
 	* {
 		box-sizing: border-box;
 	}
 
-	.gallery-container {
-		display: grid;
-		grid-template-columns: repeat(3, 400px);
-		grid-gap: 10px;
+	.container {
+		width: 80%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 	}
 
-	.image {
+	.gallery-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		grid-gap: 10px;
+		width: 100%;
+	}
+
+	.gallery-list {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 80%;
+	}
+	@media (min-width: 900px) {
+		.gallery-list {
+			width: 70%;
+		}
+	}
+
+	.grid-picture {
 		width: 100%;
 		height: 300px;
 		background: center / cover no-repeat;
+	}
+
+	.list-picture {
+		width: 80%;
+		margin-top: 8px;
 	}
 </style>

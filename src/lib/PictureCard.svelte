@@ -15,6 +15,15 @@
 		duration: () => 350
 	});
 
+	const handleChange = async (picture: Picture) => {
+		handlePictureChange(picture);
+		await tick();
+		const active = gallery.querySelector('[data-selected="true"]');
+		if (active) {
+			active.scrollIntoView();
+		}
+	};
+
 	const handleArrowChange = async (e: KeyboardEvent, direction: "left" | "right") => {
 		e.preventDefault();
 		const nextIdx =
@@ -23,12 +32,7 @@
 				: currentIdx === 0
 				? pictures.length - 1
 				: (currentIdx - 1) % pictures.length;
-		handlePictureChange(pictures[nextIdx]);
-		await tick();
-		const active = gallery.querySelector('[data-selected="true"]');
-		if (active) {
-			active.scrollIntoView();
-		}
+		handleChange(pictures[nextIdx]);
 	};
 
 	const shortcut = {
@@ -58,24 +62,24 @@
 		class="gallery"
 		tabindex={0}
 	>
-		{#each pictures as d}
+		{#each pictures as picture}
 			<div
 				role="img"
-				aria-label={d.id}
-				data-selected={selected === d}
-				class:active={selected === d}
-				on:click={() => handlePictureChange(d)}
+				aria-label={picture.id}
+				data-selected={selected === picture}
+				class:active={selected === picture}
+				on:click={() => handlePictureChange(picture)}
 				class="image"
-				style="background-image:url({buildImageLocatorUrl(d)})"
+				style="background-image:url({buildImageLocatorUrl(picture)})"
 			/>
 		{/each}
 	</div>
 
 	<div class="image-container">
 		<button
-			on:click={() => {
+			on:click={async () => {
 				const nextIdx = (currentIdx - 1) % pictures.length;
-				handlePictureChange(pictures[nextIdx]);
+				handleChange(pictures[nextIdx]);
 			}}
 		>
 			Previous
@@ -89,9 +93,9 @@
 			<img src={buildImageLocatorUrl(selected)} alt={selected?.cloudinaryPublicId} />
 		</a>
 		<button
-			on:click={() => {
+			on:click={async () => {
 				const nextIdx = (currentIdx + 1) % pictures.length;
-				handlePictureChange(pictures[nextIdx]);
+				handleChange(pictures[nextIdx]);
 			}}
 		>
 			Next
