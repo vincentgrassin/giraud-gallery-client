@@ -6,7 +6,7 @@
 	const tabs: NavigationTab[] = [
 		{ label: resources.home, id: "home", path: "/", regex: "/(album|$)" },
 		{ label: resources.search, id: "search", path: "/search", regex: "/search" },
-		{ label: resources.about, id: "about", path: "/about", regex: "/about" }
+		{ label: resources.francisGiraud, id: "about", path: "/about", regex: "/about" }
 	];
 </script>
 
@@ -23,7 +23,7 @@
 <style>
 	.nav-header {
 		height: var(--headerHeight);
-		background-color: var(--munsellBlue);
+		background-color: var(--metallicBlue);
 		display: flex;
 		justify-content: space-evenly;
 	}

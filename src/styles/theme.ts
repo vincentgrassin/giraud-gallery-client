@@ -17,7 +17,8 @@ export const fontSize = {
 export const spacing = {};
 
 export const sizes = {
-	headerHeight: "64px"
+	headerHeight: "64px",
+	footerHeight: "80px"
 };
 
 export const theme = Object.entries({

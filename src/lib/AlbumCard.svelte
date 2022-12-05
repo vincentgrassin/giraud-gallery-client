@@ -40,7 +40,7 @@
 	}
 	.cover-picture {
 		width: 100%;
-		height: 300px;
+		height: 400px;
 		object-fit: cover;
 	}
 	.album-informations {

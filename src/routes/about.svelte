@@ -2,8 +2,12 @@
 	import { resources } from "../resources";
 </script>
 
-<div>
-	<h1>{resources.about}</h1>
+<div class="about">
+	<h1>{resources.francisGiraud}</h1>
+	<p>{resources.aboutDescription}</p>
 </div>
 
-<style></style>
+<style>
+	.about {
+	}
+</style>
