@@ -17,7 +17,9 @@
 			<p>{album.date}</p>
 		</div>
 	</div>
-	<PicturesGallery {album} />
+	{#if album.pictures}
+		<PicturesGallery pictures={album.pictures} />
+	{/if}
 </div>
 
 <style>

@@ -17,10 +17,14 @@
 
 	const handleChange = async (picture: Picture) => {
 		handlePictureChange(picture);
-		await tick();
-		const active = gallery.querySelector('[data-selected="true"]');
-		if (active) {
-			active.scrollIntoView();
+		try {
+			await tick();
+			const active = gallery.querySelector('[data-selected="true"]');
+			if (active) {
+				active.scrollIntoView();
+			}
+		} catch (e) {
+			console.log(e);
 		}
 	};
 

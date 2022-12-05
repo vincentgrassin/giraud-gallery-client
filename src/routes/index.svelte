@@ -25,7 +25,7 @@
 </script>
 
 <div>
-	<h1>{resources.home}</h1>
+	<h1>{resources.albums}</h1>
 	<ul class="album-grid">
 		{#each albums as album}
 			<AlbumCard {album} />

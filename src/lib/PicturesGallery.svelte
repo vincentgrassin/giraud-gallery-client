@@ -1,7 +1,7 @@
 <script lang="ts">
-	import type { Album, Picture } from "../types";
+	import type { Picture } from "../types";
 	export let isListDisplay: boolean = true;
-	export let album: Album;
+	export let pictures: Picture[];
 	import { crossfade, fade } from "svelte/transition";
 
 	import Icon from "./Icon.svelte";
@@ -30,9 +30,9 @@
 			<Icon name="grid" height="30px" width="30px" />
 		</button>
 	</div>
-	{#if album.pictures}
+	{#if pictures}
 		<ul class:gallery-grid={!isListDisplay} class:gallery-list={isListDisplay}>
-			{#each album.pictures as picture}
+			{#each pictures as picture}
 				{#if picture !== selected}
 					{#if isListDisplay}
 						<img
@@ -59,7 +59,7 @@
 		</ul>
 
 		{#if selected}
-			<PictureCard {selected} pictures={album.pictures} {handlePictureChange} />
+			<PictureCard {selected} {pictures} {handlePictureChange} />
 		{/if}
 	{/if}
 </div>
