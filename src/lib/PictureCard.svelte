@@ -2,7 +2,7 @@
 	import type { Picture } from "../types";
 	import keyboard, { buildImageLocatorUrl } from "../helpers";
 	import { tick } from "svelte";
-	import { crossfade, fade } from "svelte/transition";
+	import { crossfade } from "svelte/transition";
 
 	export let handlePictureChange: (picture: Picture | undefined) => void;
 	export let selected: Picture | undefined;
@@ -154,9 +154,5 @@
 
 	.active {
 		border: 3px solid #000;
-	}
-
-	.image-viewer > img {
-		max-height: 80%;
 	}
 </style>

@@ -1,16 +1,12 @@
 <script lang="ts">
+	import ImageLoader from "$lib/ImageLoader.svelte";
+	import Image from "./Image.svelte";
 	import type { Picture } from "../types";
+	import Icon from "./Icon.svelte";
+	import PictureCard from "./PictureCard.svelte";
 	export let isListDisplay: boolean = true;
 	export let pictures: Picture[];
-	import { crossfade, fade } from "svelte/transition";
-
-	import Icon from "./Icon.svelte";
-	import { buildImageLocatorUrl } from "../helpers";
-	import PictureCard from "./PictureCard.svelte";
 	let selected: Picture | undefined;
-	const [send, receive] = crossfade({
-		duration: () => 350
-	});
 
 	const handleListDisplay = (isList: boolean) => {
 		isListDisplay = isList;
@@ -34,30 +30,14 @@
 		<ul class:gallery-grid={!isListDisplay} class:gallery-list={isListDisplay}>
 			{#each pictures as picture}
 				{#if picture !== selected}
-					{#if isListDisplay}
-						<img
-							src={buildImageLocatorUrl(picture)}
-							alt={picture.cloudinaryPublicId}
-							class="list-picture"
-							out:send={{ key: picture.id }}
-							in:receive={{ key: picture.id }}
-							on:click={() => handlePictureChange(picture)}
-						/>
-					{:else}
-						<div
-							role="img"
-							aria-label={picture.id}
-							out:send={{ key: picture.id }}
-							in:receive={{ key: picture.id }}
-							on:click={() => handlePictureChange(picture)}
-							class="grid-picture"
-							style="background-image: url({buildImageLocatorUrl(picture)});"
-						/>
-					{/if}
+					<li>
+						<ImageLoader>
+							<Image {handlePictureChange} {picture} {isListDisplay} />
+						</ImageLoader>
+					</li>
 				{/if}
 			{/each}
 		</ul>
-
 		{#if selected}
 			<PictureCard {selected} {pictures} {handlePictureChange} />
 		{/if}
@@ -95,14 +75,11 @@
 		}
 	}
 
-	.grid-picture {
-		width: 100%;
-		height: 300px;
-		background: center / cover no-repeat;
-	}
-
-	.list-picture {
-		width: 80%;
-		margin-top: 8px;
+	li {
+		list-style: none;
+		background: #eee;
+		width: 200px;
+		height: 200px;
+		margin: 2em;
 	}
 </style>
