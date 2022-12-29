@@ -4,7 +4,7 @@
 	import type { Picture } from "../types";
 	import Icon from "./Icon.svelte";
 	import PictureCard from "./PictureCard.svelte";
-	export let isListDisplay: boolean = true;
+	export let isListDisplay: boolean = false;
 	export let pictures: Picture[];
 	let selected: Picture | undefined;
 
@@ -30,7 +30,7 @@
 		<ul class:gallery-grid={!isListDisplay} class:gallery-list={isListDisplay}>
 			{#each pictures as picture}
 				{#if picture !== selected}
-					<li>
+					<li style={`height:${isListDisplay ? picture.height * 0.9 : 300}px`}>
 						<ImageLoader>
 							<Image {handlePictureChange} {picture} {isListDisplay} />
 						</ImageLoader>
@@ -77,9 +77,6 @@
 
 	li {
 		list-style: none;
-		background: #eee;
-		width: 200px;
-		height: 200px;
-		margin: 2em;
+		width: 100%;
 	}
 </style>

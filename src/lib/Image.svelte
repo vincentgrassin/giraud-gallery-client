@@ -36,13 +36,12 @@
 
 <style>
 	.grid-picture {
-		width: 100%;
-		height: 300px;
+		height: 100%;
 		background: center / cover no-repeat;
 	}
 
 	.list-picture {
-		width: 80%;
-		margin-top: 8px;
+		height: 100%;
+		margin-top: 16px;
 	}
 </style>
