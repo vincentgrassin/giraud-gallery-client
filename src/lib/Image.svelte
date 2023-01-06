@@ -43,5 +43,6 @@
 	.list-picture {
 		height: 100%;
 		margin-top: 16px;
+		width: 100%;
 	}
 </style>

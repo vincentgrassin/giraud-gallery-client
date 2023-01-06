@@ -4,9 +4,20 @@
 	import type { Picture } from "../types";
 	import Icon from "./Icon.svelte";
 	import PictureCard from "./PictureCard.svelte";
-	export let isListDisplay: boolean = false;
+	export let isListDisplay: boolean = true;
 	export let pictures: Picture[];
 	let selected: Picture | undefined;
+	import { onMount } from "svelte";
+
+	let innerWidth: number = 0;
+
+	onMount(() => {
+		function onResize() {
+			innerWidth = window.innerWidth;
+		}
+		window.addEventListener("resize", onResize);
+		return () => window.removeEventListener("resize", onResize);
+	});
 
 	const handleListDisplay = (isList: boolean) => {
 		isListDisplay = isList;
@@ -15,8 +26,23 @@
 	const handlePictureChange = (picture: Picture | undefined) => {
 		selected = picture;
 	};
+
+	const calculateHeight = ({
+		innerWidth,
+		height,
+		width
+	}: {
+		innerWidth: number;
+		height: number;
+		width: number;
+	}) => {
+		const ratio = height / width;
+
+		return innerWidth * 0.8 * ratio ?? width;
+	};
 </script>
 
+<svelte:window bind:innerWidth />
 <div class="container">
 	<div>
 		<button on:click={() => handleListDisplay(true)} disabled={isListDisplay}>
@@ -30,7 +56,13 @@
 		<ul class:gallery-grid={!isListDisplay} class:gallery-list={isListDisplay}>
 			{#each pictures as picture}
 				{#if picture !== selected}
-					<li style={`height:${isListDisplay ? picture.height * 0.9 : 300}px`}>
+					<li
+						style={`height:${
+							isListDisplay
+								? calculateHeight({ innerWidth, height: picture.height, width: picture.width })
+								: 300
+						}px`}
+					>
 						<ImageLoader>
 							<Image {handlePictureChange} {picture} {isListDisplay} />
 						</ImageLoader>
@@ -67,12 +99,6 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		width: 80%;
-	}
-	@media (min-width: 900px) {
-		.gallery-list {
-			width: 70%;
-		}
 	}
 
 	li {
