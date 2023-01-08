@@ -37,14 +37,20 @@ export default function keyboard(node: HTMLElement, params: any) {
 	};
 }
 
+export const breakpoints = {
+	sm: 760,
+	md: 1200
+};
+
 export const getGallerySizeRatio = (screenWidth: number) => {
-	if (screenWidth < 760) {
+	const { sm, md } = breakpoints;
+	if (screenWidth < sm) {
 		return 1;
 	}
-	if (screenWidth >= 760 && screenWidth < 1200) {
+	if (screenWidth >= sm && screenWidth < md) {
 		return 0.8;
 	}
-	if (screenWidth >= 1200) {
+	if (screenWidth >= md) {
 		return 0.5;
 	}
 

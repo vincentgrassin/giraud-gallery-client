@@ -3,11 +3,6 @@
 	import { page } from "$app/stores";
 	const album = dataAlbums[`${$page.params.id}`];
 	import PicturesGallery from "$lib/PicturesGallery.svelte";
-	export let isListDisplay: boolean = true;
-
-	const handleListDisplay = (isList: boolean) => {
-		isListDisplay = isList;
-	};
 </script>
 
 <div class="album">

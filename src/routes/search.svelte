@@ -13,9 +13,15 @@
 	}, []);
 </script>
 
-<div>
+<div class="selection">
 	<h1>{resources.bestOf}</h1>
 	<PicturesGallery pictures={allPictures} />
 </div>
 
-<style></style>
+<style>
+	.selection {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+</style>

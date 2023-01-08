@@ -1,9 +1,25 @@
 <script lang="ts">
-	export let name: "picture" | "grid";
+	export let name: "picture" | "grid" | "chevronLeft" | "chevronRight";
 	export let width = "1rem";
 	export let height = "1rem";
 	export let focusable: any = false;
 	let icons = [
+		{
+			box: 24,
+			transform: "rotate(-90)",
+			name: "chevronLeft",
+			svg: `<svg width="24px" height="24px" viewBox="0 0 1200 1200" xmlns="http://www.w3.org/2000/svg">
+					<path d="m975 815.62c-7.4531-0.027344-14.594-2.9922-19.875-8.25l-355.12-355.12-355.12 355.12c-7.1797 6.6875-17.324 9.1523-26.773 6.5039-9.4453-2.6523-16.828-10.035-19.48-19.48-2.6484-9.4492-0.18359-19.594 6.5039-26.773l375-375c5.25-5.3125 12.406-8.3047 19.875-8.3047s14.625 2.9922 19.875 8.3047l375 375c5.1484 5.3164 8.0078 12.441 7.9688 19.844s-2.9766 14.492-8.1797 19.754c-5.2031 5.2656-12.262 8.2812-19.664 8.4023z"/>
+					</svg>`
+		},
+		{
+			box: 24,
+			transform: "rotate(90)",
+			name: "chevronRight",
+			svg: `<svg width="24px" height="24px" viewBox="0 0 1200 1200" xmlns="http://www.w3.org/2000/svg">
+					<path d="m975 815.62c-7.4531-0.027344-14.594-2.9922-19.875-8.25l-355.12-355.12-355.12 355.12c-7.1797 6.6875-17.324 9.1523-26.773 6.5039-9.4453-2.6523-16.828-10.035-19.48-19.48-2.6484-9.4492-0.18359-19.594 6.5039-26.773l375-375c5.25-5.3125 12.406-8.3047 19.875-8.3047s14.625 2.9922 19.875 8.3047l375 375c5.1484 5.3164 8.0078 12.441 7.9688 19.844s-2.9766 14.492-8.1797 19.754c-5.2031 5.2656-12.262 8.2812-19.664 8.4023z"/>
+					</svg>`
+		},
 		{
 			box: 24,
 			name: "grid",
@@ -34,5 +50,6 @@
 	{width}
 	{height}
 	viewBox="0 0 {displayIcon?.box} {displayIcon?.box}"
+	transform={displayIcon?.transform}
 	>{@html displayIcon?.svg}
 </svg>

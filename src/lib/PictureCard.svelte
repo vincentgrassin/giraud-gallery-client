@@ -3,6 +3,8 @@
 	import keyboard, { buildImageLocatorUrl } from "../helpers";
 	import { tick } from "svelte";
 	import { crossfade } from "svelte/transition";
+	import Button from "./Button.svelte";
+	import Icon from "./Icon.svelte";
 
 	export let handlePictureChange: (picture: Picture | undefined) => void;
 	export let selected: Picture | undefined;
@@ -80,14 +82,17 @@
 	</div>
 
 	<div class="image-container">
-		<button
-			on:click={async () => {
-				const nextIdx = (currentIdx - 1) % pictures.length;
-				handleChange(pictures[nextIdx]);
-			}}
-		>
-			Previous
-		</button>
+		<div class="button-container">
+			<Button
+				class="button"
+				on:click={async () => {
+					const nextIdx = (currentIdx - 1) % pictures.length;
+					handleChange(pictures[nextIdx]);
+				}}
+			>
+				<Icon name="chevronLeft" height="30px" width="30px" />
+			</Button>
+		</div>
 		<a
 			in:receive={{ key: selected }}
 			out:send={{ key: selected }}
@@ -96,14 +101,17 @@
 		>
 			<img src={buildImageLocatorUrl(selected)} alt={selected?.cloudinaryPublicId} />
 		</a>
-		<button
-			on:click={async () => {
-				const nextIdx = (currentIdx + 1) % pictures.length;
-				handleChange(pictures[nextIdx]);
-			}}
-		>
-			Next
-		</button>
+		<div class="button-container">
+			<Button
+				class="test"
+				on:click={async () => {
+					const nextIdx = (currentIdx + 1) % pictures.length;
+					handleChange(pictures[nextIdx]);
+				}}
+			>
+				<Icon name="chevronRight" height="30px" width="30px" />
+			</Button>
+		</div>
 	</div>
 </div>
 
@@ -154,5 +162,9 @@
 
 	.active {
 		border: 3px solid #000;
+	}
+	.button-container {
+		margin-bottom: auto;
+		margin-top: 300px;
 	}
 </style>

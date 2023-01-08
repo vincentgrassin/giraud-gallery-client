@@ -8,14 +8,16 @@
 	export let pictures: Picture[];
 	let selected: Picture | undefined;
 	import { onMount } from "svelte";
-	import { getGallerySizeRatio } from "../helpers";
+	import { breakpoints, getGallerySizeRatio } from "../helpers";
 	import Button from "./Button.svelte";
 
 	let innerWidth: number = 0;
+	let isMediumScreen = false;
 
 	onMount(() => {
 		function onResize() {
 			innerWidth = window.innerWidth;
+			isMediumScreen = innerWidth < breakpoints.md;
 		}
 		window.addEventListener("resize", onResize);
 		return () => window.removeEventListener("resize", onResize);
@@ -26,7 +28,9 @@
 	};
 
 	const handlePictureChange = (picture: Picture | undefined) => {
-		selected = picture;
+		if (!isMediumScreen) {
+			selected = picture;
+		}
 	};
 
 	const calculateHeight = ({
@@ -42,6 +46,10 @@
 
 		return innerWidth * getGallerySizeRatio(innerWidth) * ratio ?? width;
 	};
+
+	$: {
+		console.log({ isMediumScreen });
+	}
 </script>
 
 <svelte:window bind:innerWidth />
@@ -73,7 +81,7 @@
 				{/if}
 			{/each}
 		</ul>
-		{#if selected}
+		{#if selected && !isMediumScreen}
 			<PictureCard {selected} {pictures} {handlePictureChange} />
 		{/if}
 	{/if}
@@ -131,6 +139,9 @@
 
 	@media (max-width: 760px) {
 		.gallery-display-switch {
+			display: none;
+		}
+		.picture-card {
 			display: none;
 		}
 	}
