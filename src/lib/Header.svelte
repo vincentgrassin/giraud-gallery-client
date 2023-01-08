@@ -10,20 +10,47 @@
 	];
 </script>
 
-<nav class="nav-header">
-	<ul class="list">
-		{#each tabs as tab}
-			<li class="nav-item" class:active={$page.url.pathname.match(tab.regex)}>
-				<a class="nav-link" href={tab.path}>{tab.label}</a>
-			</li>
-		{/each}
-	</ul>
-</nav>
+<div class="header">
+	<div class="title-container">
+		<p class="title">{resources.francisAlbums}</p>
+	</div>
+	<nav class="nav-header">
+		<ul class="list">
+			{#each tabs as tab}
+				<li class="nav-item" class:active={$page.url.pathname.match(tab.regex)}>
+					<a class="nav-link" href={tab.path}>{tab.label}</a>
+				</li>
+			{/each}
+		</ul>
+	</nav>
+</div>
 
 <style>
-	.nav-header {
-		height: var(--headerHeight);
+	.header {
 		background-color: var(--metallicBlue);
+		height: var(--headerHeight);
+		display: flex;
+		flex-direction: column;
+	}
+
+	.title-container {
+		height: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.title {
+		margin: 0;
+		color: var(--white);
+	}
+
+	@media (min-width: 760px) {
+		.title {
+			font-size: var(--fontSizeBig);
+		}
+	}
+	.nav-header {
+		height: 50%;
 		display: flex;
 		justify-content: space-evenly;
 	}

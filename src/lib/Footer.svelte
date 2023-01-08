@@ -1,14 +1,15 @@
 <script lang="ts">
+	import { resources } from "../resources";
 	import "../styles/global.css";
 </script>
 
 <div class="footer">
-	<p>Ces images sont soumises à des droits.</p>
+	<p>{resources.footer}</p>
 </div>
 
 <style>
 	.footer {
 		height: var(--footerHeight);
-		background-color: var(--munsellBlue);
+		margin: 16px 32px;
 	}
 </style>

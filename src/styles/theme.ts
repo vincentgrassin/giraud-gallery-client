@@ -23,13 +23,15 @@ export const colors = {
 };
 
 export const fontSize = {
-	fontSizeMedium: "1rem"
+	fontSizeMedium: "1rem",
+	fontSizeBig: "2rem"
 };
 
 export const spacing = {};
 
 export const sizes = {
-	headerHeight: "64px",
+	headerHeight: "128px",
+	navHeight: "64px",
 	footerHeight: "80px"
 };
 
