@@ -8,6 +8,7 @@
 	export let pictures: Picture[];
 	let selected: Picture | undefined;
 	import { onMount } from "svelte";
+	import { getGallerySizeRatio } from "../helpers";
 
 	let innerWidth: number = 0;
 
@@ -38,7 +39,7 @@
 	}) => {
 		const ratio = height / width;
 
-		return innerWidth * 0.8 * ratio ?? width;
+		return innerWidth * getGallerySizeRatio(innerWidth) * ratio ?? width;
 	};
 </script>
 
@@ -82,7 +83,7 @@
 	}
 
 	.container {
-		width: 80%;
+		width: 90%;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -99,6 +100,19 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		width: 100%;
+	}
+
+	@media (min-width: 760px) and (max-width: 1200px) {
+		.gallery-list {
+			width: 80%;
+		}
+	}
+
+	@media (min-width: 1200px) {
+		.container {
+			width: 50%;
+		}
 	}
 
 	li {

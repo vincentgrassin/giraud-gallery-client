@@ -36,3 +36,17 @@ export default function keyboard(node: HTMLElement, params: any) {
 		}
 	};
 }
+
+export const getGallerySizeRatio = (screenWidth: number) => {
+	if (screenWidth < 760) {
+		return 1;
+	}
+	if (screenWidth >= 760 && screenWidth < 1200) {
+		return 0.8;
+	}
+	if (screenWidth >= 1200) {
+		return 0.5;
+	}
+
+	return 0.5;
+};
