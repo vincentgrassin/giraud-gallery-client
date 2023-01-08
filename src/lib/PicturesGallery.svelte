@@ -1,14 +1,15 @@
 <script lang="ts">
 	import ImageLoader from "$lib/ImageLoader.svelte";
-	import Image from "./Image.svelte";
+	import Image from "$lib/Image.svelte";
 	import type { Picture } from "../types";
-	import Icon from "./Icon.svelte";
-	import PictureCard from "./PictureCard.svelte";
+	import Icon from "$lib/Icon.svelte";
+	import PictureCard from "$lib/PictureCard.svelte";
 	export let isListDisplay: boolean = true;
 	export let pictures: Picture[];
 	let selected: Picture | undefined;
 	import { onMount } from "svelte";
 	import { getGallerySizeRatio } from "../helpers";
+	import Button from "./Button.svelte";
 
 	let innerWidth: number = 0;
 
@@ -46,12 +47,12 @@
 <svelte:window bind:innerWidth />
 <div class="container">
 	<div class="gallery-display-switch">
-		<button on:click={() => handleListDisplay(true)} disabled={isListDisplay}>
+		<Button on:click={() => handleListDisplay(true)} disabled={isListDisplay}>
 			<Icon name="picture" height="30px" width="30px" />
-		</button>
-		<button on:click={() => handleListDisplay(false)} disabled={!isListDisplay}>
+		</Button>
+		<Button on:click={() => handleListDisplay(false)} disabled={!isListDisplay}>
 			<Icon name="grid" height="30px" width="30px" />
-		</button>
+		</Button>
 	</div>
 	{#if pictures}
 		<ul class:gallery-grid={!isListDisplay} class:gallery-list={isListDisplay}>
@@ -122,6 +123,10 @@
 	}
 	.picture-listItem {
 		margin-top: 16px;
+	}
+
+	.gallery-display-switch {
+		margin: 24px 0px;
 	}
 
 	@media (max-width: 760px) {

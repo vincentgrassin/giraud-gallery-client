@@ -1,13 +1,25 @@
+const greyScale = {
+	whiteSmokeGrey: "#F0F0F0",
+	veryLightGrey: "#E8E8E8",
+	lightGrey: "#D3D3D3",
+	silverGrey: "#C0C0C0",
+	mediumGrey: "#B8B8B8",
+	darkGrey: "#A9A9A9",
+	mediumDarkGrey: "#808080",
+	veryDarkGrey: "#696969",
+	jetGrey: "#353535"
+};
+
 export const colors = {
 	babyBlue: "#88CCF1",
 	columbiaBlue: "#C1DFF0",
 	munsellBlue: "#3587A4",
 	metallicBlue: "#2D848A",
 	sunglowYellow: "#FDCA40",
-	jetGrey: "#353535",
 	xiketicBlack: "#0D0106",
-	lightGrey: "#E8E8E8",
-	white: "#ffffff"
+	...greyScale,
+	white: "#ffffff",
+	black: "#00000"
 };
 
 export const fontSize = {

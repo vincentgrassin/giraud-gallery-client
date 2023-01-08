@@ -1,5 +1,5 @@
 <script lang="ts">
-	export let name: string;
+	export let name: "picture" | "grid";
 	export let width = "1rem";
 	export let height = "1rem";
 	export let focusable: any = false;
