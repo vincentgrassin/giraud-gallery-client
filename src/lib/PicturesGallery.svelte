@@ -45,7 +45,7 @@
 
 <svelte:window bind:innerWidth />
 <div class="container">
-	<div>
+	<div class="gallery-display-switch">
 		<button on:click={() => handleListDisplay(true)} disabled={isListDisplay}>
 			<Icon name="picture" height="30px" width="30px" />
 		</button>
@@ -63,6 +63,7 @@
 								? calculateHeight({ innerWidth, height: picture.height, width: picture.width })
 								: 300
 						}px`}
+						class:picture-listItem={isListDisplay}
 					>
 						<ImageLoader>
 							<Image {handlePictureChange} {picture} {isListDisplay} />
@@ -110,7 +111,7 @@
 	}
 
 	@media (min-width: 1200px) {
-		.container {
+		.gallery-list {
 			width: 50%;
 		}
 	}
@@ -118,5 +119,14 @@
 	li {
 		list-style: none;
 		width: 100%;
+	}
+	.picture-listItem {
+		margin-top: 16px;
+	}
+
+	@media (max-width: 760px) {
+		.gallery-display-switch {
+			display: none;
+		}
 	}
 </style>
