@@ -21,6 +21,10 @@
 		handlePictureChange(picture);
 		try {
 			await tick();
+			const active = gallery.querySelector('[data-selected="true"]');
+			if (active) {
+				active.scrollIntoView();
+			}
 		} catch (e) {
 			console.log(e);
 		}
@@ -68,6 +72,7 @@
 			<div
 				role="img"
 				aria-label={picture.id}
+				data-selected={selected === picture}
 				class:active={selected === picture}
 				on:click={() => handlePictureChange(picture)}
 				class="image"

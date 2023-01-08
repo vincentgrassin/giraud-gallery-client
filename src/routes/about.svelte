@@ -9,7 +9,6 @@
 
 <style>
 	.about {
-		height: 100vh;
-		margin: 16px 80px;
+		margin: 16px 80px 96px 80px;
 	}
 </style>
