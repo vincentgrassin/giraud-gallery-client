@@ -24,7 +24,7 @@
 	export let albums: Album[];
 </script>
 
-<div>
+<div class="container">
 	<h1>{resources.albums}</h1>
 	<ul class="album-grid">
 		{#each albums as album}
@@ -34,10 +34,27 @@
 </div>
 
 <style>
+	@media (min-width: 760px) {
+		.container {
+			margin-left: 50px;
+			margin-right: 50px;
+		}
+	}
 	.album-grid {
 		display: grid;
 		grid-gap: 1rem;
-		grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-		margin-left: 0;
+		grid-template-columns: 1fr;
+	}
+
+	@media (min-width: 500px) and (max-width: 759px) {
+		.album-grid {
+			grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+		}
+	}
+
+	@media (min-width: 760px) {
+		.album-grid {
+			grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+		}
 	}
 </style>

@@ -407,5 +407,5 @@ export const A = {
 	endYear: null,
 	id: "A",
 	number: 18,
-	coverPicture: "A_100"
+	coverPicture: "A_103"
 };

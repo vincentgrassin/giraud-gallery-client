@@ -113,7 +113,7 @@
 		width: 100%;
 	}
 
-	@media (min-width: 760px) and (max-width: 1200px) {
+	@media (min-width: 760px) and (max-width: 1199px) {
 		.gallery-list {
 			width: 80%;
 		}
