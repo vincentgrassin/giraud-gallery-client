@@ -29,8 +29,13 @@
 	}
 	.list {
 		display: flex;
-		max-width: 60%;
 		flex: 1;
+	}
+
+	@media (min-width: 760px) {
+		.list {
+			max-width: 60%;
+		}
 	}
 	.nav-item {
 		width: 100%;
