@@ -4,6 +4,7 @@
 	import type { Picture } from "src/types";
 	import PicturesGallery from "$lib/PicturesGallery.svelte";
 	import { shuffleArray } from "../helpers";
+	import Title from "$lib/Title.svelte";
 
 	const allPictures = Object.values(dataAlbums).reduce((acc: Picture[], album) => {
 		if (album.pictures) {
@@ -15,7 +16,7 @@
 </script>
 
 <div class="selection">
-	<h1>{resources.bestOf}</h1>
+	<Title title={resources.bestOf} />
 	<PicturesGallery pictures={shuffleArray(allPictures)} />
 </div>
 

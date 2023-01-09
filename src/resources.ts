@@ -9,5 +9,6 @@ export const resources = {
 	addTag: "Ajouter un mot clé",
 	bestOf: "Séléction",
 	footer: "Ⓒ Copyright Francis Giraud",
-	francisAlbums: "Les carnets de Francis Giraud"
+	francisAlbums: "Les carnets de Francis Giraud",
+	unknownDate: "Date inconnue"
 };

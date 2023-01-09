@@ -522,7 +522,7 @@ export const U = {
 		}
 	],
 	name: "Infanterie militaire",
-	date: "unknown",
+	date: null,
 	startYear: null,
 	endYear: null,
 	id: "U",

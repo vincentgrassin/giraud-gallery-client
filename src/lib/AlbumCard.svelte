@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { Album } from "../types";
 	import { buildImageLocatorUrl } from "../helpers";
+	import { resources } from "../resources";
 	export let album: Album;
 
 	const coverPicture = album.pictures?.find((picture) => {
@@ -19,7 +20,7 @@
 			<h2>
 				{album.name}
 			</h2>
-			<p>{album.date}</p>
+			<p>{album.date ?? resources.unknownDate}</p>
 		</div>
 	</a>
 </li>

@@ -11,5 +11,7 @@
 	.footer {
 		height: var(--footerHeight);
 		margin: 16px 32px;
+		display: flex;
+		justify-content: center;
 	}
 </style>

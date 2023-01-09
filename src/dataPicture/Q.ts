@@ -1122,7 +1122,7 @@ export const Q = {
 		}
 	],
 	name: "Armées Etrangères",
-	date: "unknown",
+	date: null,
 	startYear: null,
 	endYear: null,
 	id: "Q",

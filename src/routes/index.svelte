@@ -21,11 +21,12 @@
 	import type { Album } from "../types";
 	import { resources } from "../resources";
 	import AlbumCard from "$lib/AlbumCard.svelte";
+	import Title from "$lib/Title.svelte";
 	export let albums: Album[];
 </script>
 
 <div class="container">
-	<h1>{resources.albums}</h1>
+	<Title title={resources.albums} />
 	<ul class="album-grid">
 		{#each albums as album}
 			<AlbumCard {album} />

@@ -46,10 +46,6 @@
 
 		return innerWidth * getGallerySizeRatio(innerWidth) * ratio ?? width;
 	};
-
-	$: {
-		console.log({ isMediumScreen });
-	}
 </script>
 
 <svelte:window bind:innerWidth />

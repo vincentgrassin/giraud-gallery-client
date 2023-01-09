@@ -3,13 +3,15 @@
 	import { page } from "$app/stores";
 	const album = dataAlbums[`${$page.params.id}`];
 	import PicturesGallery from "$lib/PicturesGallery.svelte";
+	import { resources } from "../../resources";
+	import Title from "$lib/Title.svelte";
 </script>
 
 <div class="album">
 	<div class="album-header">
 		<div class="album-informations">
-			<h2>{album.name}</h2>
-			<p>{album.date}</p>
+			<Title title={album.name} />
+			<p>{album.date ?? resources.unknownDate}</p>
 		</div>
 	</div>
 	{#if album.pictures}

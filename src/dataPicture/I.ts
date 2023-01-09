@@ -386,7 +386,7 @@ export const I = {
 		}
 	],
 	name: "Divers",
-	date: "unknown",
+	date: null,
 	startYear: null,
 	endYear: null,
 	id: "I",

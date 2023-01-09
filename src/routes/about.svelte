@@ -1,14 +1,31 @@
 <script lang="ts">
+	import Title from "$lib/Title.svelte";
 	import { resources } from "../resources";
 </script>
 
 <div class="about">
-	<h1>{resources.francisGiraud}</h1>
-	<p>{resources.aboutDescription}</p>
+	<div class="container">
+		<Title title={resources.francisGiraud} />
+		<p>{resources.aboutDescription}</p>
+	</div>
 </div>
 
 <style>
 	.about {
-		margin: 16px 80px 96px 80px;
+		display: flex;
+		flex-direction: column;
+		margin: 16px 0 96px 0;
+		width: 100%;
+		align-items: center;
+	}
+
+	.container {
+		width: 80%;
+	}
+
+	@media (min-width: 760px) {
+		.container {
+			width: 50%;
+		}
 	}
 </style>

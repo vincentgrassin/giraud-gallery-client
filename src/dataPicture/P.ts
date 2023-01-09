@@ -1338,7 +1338,7 @@ export const P = {
 		}
 	],
 	name: "Sarthe",
-	date: "unknown",
+	date: null,
 	startYear: null,
 	endYear: null,
 	id: "P",

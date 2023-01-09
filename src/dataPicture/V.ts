@@ -1034,7 +1034,7 @@ export const V = {
 		}
 	],
 	name: "Anciens uniformes militaires",
-	date: "unknown",
+	date: null,
 	startYear: null,
 	endYear: null,
 	id: "V",

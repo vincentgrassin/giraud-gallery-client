@@ -74,8 +74,11 @@
 
 	.nav-item:hover,
 	.active {
-		color: var(--golden);
 		border-bottom: 4px solid var(--golden);
+	}
+	.active a {
+		color: var(--golden);
+		font-weight: 700;
 	}
 	.nav-link {
 		color: var(--eerieBlack);
