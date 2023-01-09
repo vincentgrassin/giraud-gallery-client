@@ -1,5 +1,5 @@
 <script lang="ts">
-	export let name: "picture" | "grid" | "chevronLeft" | "chevronRight";
+	export let name: "picture" | "grid" | "chevronLeft" | "chevronRight" | "close";
 	export let width = "1rem";
 	export let height = "1rem";
 	export let focusable: any = false;
@@ -39,6 +39,13 @@
                     <path id="XMLID_523_" d="M315,0H15C6.716,0,0,6.716,0,15v300c0,8.284,6.716,15,15,15h300c8.284,0,15-6.716,15-15V15
                         C330,6.716,323.285,0,315,0z M300,300H30V30h270V300z"/><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
                     </svg>`
+		},
+		{
+			box: 24,
+			name: "close",
+			svg: `<svg width="24px" height="24px" version="1.1" viewBox="0 0 1200 1200" xmlns="http://www.w3.org/2000/svg">
+					<path d="m543.68 600-352.02-352.01c-15.551-15.555-15.551-40.77 0-56.324 15.555-15.551 40.77-15.551 56.324 0l352.01 352.02 352.01-352.02c15.555-15.551 40.77-15.551 56.324 0 15.551 15.555 15.551 40.77 0 56.324l-352.02 352.01 352.02 352.01c15.551 15.555 15.551 40.77 0 56.324-15.555 15.551-40.77 15.551-56.324 0l-352.01-352.02-352.01 352.02c-15.555 15.551-40.77 15.551-56.324 0-15.551-15.555-15.551-40.77 0-56.324z" fill-rule="evenodd"/>
+					</svg>`
 		}
 	];
 	let displayIcon = icons.find((e) => e.name === name);

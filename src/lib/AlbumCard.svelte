@@ -28,15 +28,21 @@
 	.card {
 		gap: 16px;
 		transition: box-shadow 0.3s;
+		background-color: white;
+		box-shadow: 0 0 8px var(--lightGrey);
 	}
 	.card:hover {
-		box-shadow: 0 0 11px var(--lightGrey);
+		box-shadow: 0 0 16px var(--darkGrey);
 	}
 	.card-link {
 		display: flex;
 		flex-direction: column;
 		text-decoration: none;
 		height: 100%;
+		color: var(--eerieBlack);
+	}
+	.card-link:hover {
+		color: var(--darkGrey);
 	}
 	.cover-picture {
 		width: 100%;

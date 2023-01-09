@@ -27,7 +27,7 @@
 
 <style>
 	.header {
-		background-color: var(--metallicBlue);
+		background-color: var(--eerieBlack);
 		height: var(--headerHeight);
 		display: flex;
 		flex-direction: column;
@@ -53,6 +53,8 @@
 		height: 50%;
 		display: flex;
 		justify-content: space-evenly;
+		background-color: var(--white);
+		border-bottom: 1px solid var(--eerieBlack);
 	}
 	.list {
 		display: flex;
@@ -67,9 +69,16 @@
 	.nav-item {
 		width: 100%;
 		height: 100%;
+		border-bottom: 4px solid var(--eerieBlack);
+	}
+
+	.nav-item:hover,
+	.active {
+		color: var(--golden);
+		border-bottom: 4px solid var(--golden);
 	}
 	.nav-link {
-		color: var(--white);
+		color: var(--eerieBlack);
 		text-decoration: none;
 		height: 100%;
 		display: flex;
@@ -77,8 +86,9 @@
 		justify-content: center;
 		flex: 1;
 	}
-	.nav-item:hover,
+
+	.nav-link:hover,
 	.active {
-		background-color: var(--columbiaBlue);
+		color: var(--golden);
 	}
 </style>

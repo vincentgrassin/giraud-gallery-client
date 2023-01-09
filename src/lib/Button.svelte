@@ -13,15 +13,15 @@
 		border-radius: 40px;
 		padding: 1rem 1rem;
 		cursor: pointer;
+		box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
 	}
 	button:hover {
-		background-color: var(--silverGrey);
+		background-color: var(--golden);
 	}
 	button:focus-visible {
 		border: solid var(--darkGrey) 2px;
 	}
 	button:disabled {
-		border: solid var(--darkGrey) 1px;
-		background-color: var(--veryLightGrey);
+		background-color: var(--golden);
 	}
 </style>

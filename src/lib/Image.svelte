@@ -38,11 +38,13 @@
 	.grid-picture {
 		height: 100%;
 		background: center / cover no-repeat;
+		cursor: pointer;
 	}
 
 	.list-picture {
 		height: 100%;
 		margin-top: 16px;
 		width: 100%;
+		cursor: pointer;
 	}
 </style>

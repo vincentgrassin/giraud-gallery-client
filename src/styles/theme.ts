@@ -19,6 +19,8 @@ export const colors = {
 	xiketicBlack: "#0D0106",
 	...greyScale,
 	white: "#ffffff",
+	golden: "#D5A770",
+	eerieBlack: "#201F1E",
 	black: "#00000"
 };
 

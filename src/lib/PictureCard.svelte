@@ -60,31 +60,37 @@
 		}
 	}}
 >
-	<div
-		aria-label="gallery"
-		role="group"
-		bind:this={gallery}
-		use:keyboard={{ shortcut }}
-		class="gallery"
-		tabindex={0}
-	>
-		{#each pictures as picture}
-			<div
-				role="img"
-				aria-label={picture.id}
-				data-selected={selected === picture}
-				class:active={selected === picture}
-				on:click={() => handlePictureChange(picture)}
-				class="image"
-				style="background-image:url({buildImageLocatorUrl(picture)})"
-			/>
-		{/each}
+	<div class="gallery-container">
+		<div
+			aria-label="gallery"
+			role="group"
+			bind:this={gallery}
+			use:keyboard={{ shortcut }}
+			class="gallery"
+			tabindex={0}
+		>
+			{#each pictures as picture}
+				<div
+					role="img"
+					aria-label={picture.id}
+					data-selected={selected === picture}
+					class:active={selected === picture}
+					on:click={() => handlePictureChange(picture)}
+					class="image"
+					style="background-image:url({buildImageLocatorUrl(picture)})"
+				/>
+			{/each}
+		</div>
+		<div class="close-button-container">
+			<Button on:click={() => handlePictureChange(undefined)}>
+				<Icon name="close" height="30px" width="30px" />
+			</Button>
+		</div>
 	</div>
 
 	<div class="image-container">
 		<div class="button-container">
 			<Button
-				class="button"
 				on:click={async () => {
 					const nextIdx = (currentIdx - 1) % pictures.length;
 					handleChange(pictures[nextIdx]);
@@ -103,7 +109,6 @@
 		</a>
 		<div class="button-container">
 			<Button
-				class="test"
 				on:click={async () => {
 					const nextIdx = (currentIdx + 1) % pictures.length;
 					handleChange(pictures[nextIdx]);
@@ -167,5 +172,13 @@
 	.button-container {
 		margin-bottom: auto;
 		margin-top: 300px;
+	}
+	.gallery-container {
+		display: flex;
+	}
+	.close-button-container {
+		display: flex;
+		align-items: center;
+		margin-left: 8px;
 	}
 </style>
