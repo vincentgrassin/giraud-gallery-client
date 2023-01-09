@@ -138,6 +138,7 @@
 		flex-wrap: nowrap;
 		width: 100%;
 		overflow-x: auto;
+		margin: 16px 0;
 	}
 
 	.gallery > .image {
@@ -148,7 +149,7 @@
 	}
 
 	.image-viewer {
-		padding: 20px;
+		padding: 0px 24px;
 		position: fixed;
 		overflow-y: auto;
 		width: 100%;

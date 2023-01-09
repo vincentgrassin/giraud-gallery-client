@@ -141,8 +141,5 @@
 		.gallery-display-switch {
 			display: none;
 		}
-		.picture-card {
-			display: none;
-		}
 	}
 </style>
