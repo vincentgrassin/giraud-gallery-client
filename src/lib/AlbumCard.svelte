@@ -22,10 +22,13 @@
 		<div class="album-informations">
 			<Title title={album.name} variant="h2" />
 			<div class="album-description">
-				<p>{album.date ?? resources.unknownDate}</p>
+				<div>
+					<p>{album.date ?? resources.unknownDate}</p>
+					<p>{album.pictures?.length} {resources.drawings.toLowerCase()}</p>
+				</div>
 				<Badge
 					--color={album.isDiary ? colors.zomp : colors.redwood}
-					content={album.isDiary ? resources.diary : resources.drawing}
+					content={album.isDiary ? resources.diary : resources.drawings}
 				/>
 			</div>
 		</div>

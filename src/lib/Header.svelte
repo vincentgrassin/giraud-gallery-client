@@ -4,15 +4,15 @@
 
 	import type { NavigationTab } from "../types";
 	const tabs: NavigationTab[] = [
-		{ label: resources.albums, id: "home", path: "/", regex: "/(album|$)" },
-		{ label: resources.bestOf, id: "search", path: "/search", regex: "/search" },
-		{ label: resources.francisGiraud, id: "about", path: "/about", regex: "/about" }
+		{ label: resources.albums, id: "albums", path: "/albums", regex: "/(album|$)" },
+		{ label: resources.francisGiraud, id: "about", path: "/about", regex: "/about" },
+		{ label: resources.contact, id: "contact", path: "/contact", regex: "/contact" }
 	];
 </script>
 
 <div class="header">
 	<div class="title-container">
-		<p class="title">{resources.francisAlbums}</p>
+		<a class="title" href={"/"}>{resources.francisAlbums}</a>
 	</div>
 	<nav class="nav-header">
 		<ul class="list">
@@ -44,6 +44,7 @@
 		color: var(--white);
 		font-family: "Caveat";
 		font-size: var(--fontSizeBig);
+		text-decoration: none;
 	}
 
 	@media (min-width: 760px) {

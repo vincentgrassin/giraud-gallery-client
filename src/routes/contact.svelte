@@ -4,7 +4,7 @@
 </script>
 
 <div class="about">
-	<div class="container">home again</div>
+	<div class="container">contact</div>
 </div>
 
 <style>

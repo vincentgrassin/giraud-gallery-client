@@ -15,9 +15,10 @@
 		<Title title={album.name} />
 		<div class="album-informations">
 			<Title variant="h2" title={album.date ?? resources.unknownDate} />
+			<Title variant="h2" title={`${album.pictures?.length} ${resources.drawings.toLowerCase()}`} />
 			<Badge
 				--color={album.isDiary ? colors.metallicBlue : colors.redwood}
-				content={album.isDiary ? resources.diary : resources.drawing}
+				content={album.isDiary ? resources.diary : resources.drawings}
 			/>
 		</div>
 		<div class="album-tags">
