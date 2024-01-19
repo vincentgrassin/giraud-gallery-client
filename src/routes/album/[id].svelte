@@ -1,17 +1,33 @@
 <script lang="ts">
 	import { dataAlbums } from "../../dataPicture";
 	import { page } from "$app/stores";
-	const album = dataAlbums[`${$page.params.id}`];
 	import PicturesGallery from "$lib/PicturesGallery.svelte";
 	import { resources } from "../../resources";
 	import Title from "$lib/Title.svelte";
+	import Badge from "$lib/Badge.svelte";
+	import { colors } from "../../styles/theme";
+
+	const album = dataAlbums[`${$page.params.id}`];
 </script>
 
 <div class="album">
 	<div class="album-header">
+		<Title title={album.name} />
 		<div class="album-informations">
-			<Title title={album.name} />
-			<p>{album.date ?? resources.unknownDate}</p>
+			<Title variant="h2" title={album.date ?? resources.unknownDate} />
+			<Badge
+				--color={colors.metallicBlue}
+				content={album.isDiary ? resources.diary : resources.drawing}
+			/>
+		</div>
+		<div class="album-tags">
+			{#if album.description}
+				{#each album.description.split(",") as tag}
+					<div class="album-tag">
+						<Badge --color={colors.golden} content={tag} />
+					</div>
+				{/each}
+			{/if}
 		</div>
 	</div>
 	{#if album.pictures}
@@ -27,7 +43,25 @@
 	}
 	.album-header {
 		display: flex;
+		flex-direction: column;
 		width: 80%;
+		margin: 0 10%;
+	}
+
+	.album-informations {
+		display: flex;
+		margin: 20px 0px;
 		justify-content: space-around;
+		align-items: center;
+	}
+
+	.album-tags {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.album-tag {
+		margin-right: 10px;
+		margin-bottom: 10px;
 	}
 </style>

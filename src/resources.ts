@@ -10,5 +10,7 @@ export const resources = {
 	bestOf: "Séléction",
 	footer: "Ⓒ Copyright Francis Giraud",
 	francisAlbums: "Les carnets de Francis Giraud",
-	unknownDate: "Date inconnue"
+	unknownDate: "Date inconnue",
+	diary: "Journal",
+	drawing: "Dessins"
 };
