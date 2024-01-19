@@ -6,7 +6,7 @@
 	const tabs: NavigationTab[] = [
 		{ label: resources.albums, id: "albums", path: "/albums", regex: "/(album|$)" },
 		{ label: resources.francisGiraud, id: "about", path: "/about", regex: "/about" },
-		{ label: resources.contact, id: "contact", path: "/contact", regex: "/contact" }
+		{ label: resources.around, id: "around", path: "/around", regex: "/around" }
 	];
 </script>
 

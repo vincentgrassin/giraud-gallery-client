@@ -22,11 +22,15 @@
 	import { resources } from "../resources";
 	import AlbumCard from "$lib/AlbumCard.svelte";
 	import Title from "$lib/Title.svelte";
+	import TextBloc from "$lib/TextBloc.svelte";
 	export let albums: Album[];
 </script>
 
 <div class="container">
 	<Title title={resources.albums} />
+	<TextBloc content={resources.albumDescribe} />
+	<TextBloc content={resources.aboutAlbums} />
+
 	<ul class="album-grid">
 		{#each albums as album}
 			<AlbumCard {album} />

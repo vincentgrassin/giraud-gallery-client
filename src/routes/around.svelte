@@ -1,10 +1,15 @@
 <script lang="ts">
+	import TextBloc from "$lib/TextBloc.svelte";
 	import Title from "$lib/Title.svelte";
 	import { resources } from "../resources";
 </script>
 
 <div class="about">
-	<div class="container">contact</div>
+	<div class="container">
+		<Title title={resources.around} />
+		<TextBloc content={resources.aroundAlbums} />
+		<TextBloc content={resources.aboutDescription} />
+	</div>
 </div>
 
 <style>
