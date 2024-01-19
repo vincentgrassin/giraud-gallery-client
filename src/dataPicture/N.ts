@@ -267,6 +267,6 @@ export const N: Album = {
 	endYear: null,
 	id: "N",
 	number: 13,
-	coverPicture: "N_131",
+	coverPicture: "N_110",
 	isDiary: true
 };

@@ -21,12 +21,15 @@ export const colors = {
 	white: "#ffffff",
 	golden: "#D5A770",
 	eerieBlack: "#201F1E",
-	black: "#00000"
+	black: "#00000",
+	redwood: "#A64253",
+	zomp: "#43AA8B"
 };
 
 export const fontSize = {
 	fontSizeMedium: "1rem",
-	fontSizeBig: "2rem"
+	fontSizeBig: "2rem",
+	fontSizeVeryBig: "3rem"
 };
 
 export const spacing = {};

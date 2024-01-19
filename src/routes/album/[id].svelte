@@ -16,7 +16,7 @@
 		<div class="album-informations">
 			<Title variant="h2" title={album.date ?? resources.unknownDate} />
 			<Badge
-				--color={colors.metallicBlue}
+				--color={album.isDiary ? colors.metallicBlue : colors.redwood}
 				content={album.isDiary ? resources.diary : resources.drawing}
 			/>
 		</div>

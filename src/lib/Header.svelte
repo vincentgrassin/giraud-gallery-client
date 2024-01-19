@@ -42,11 +42,13 @@
 	.title {
 		margin: 0;
 		color: var(--white);
+		font-family: "Caveat";
+		font-size: var(--fontSizeBig);
 	}
 
 	@media (min-width: 760px) {
 		.title {
-			font-size: var(--fontSizeBig);
+			font-size: var(--fontSizeVeryBig);
 		}
 	}
 	.nav-header {
