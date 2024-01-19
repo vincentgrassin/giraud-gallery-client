@@ -1,4 +1,7 @@
-export const U = {
+import type { Album } from "src/types";
+
+export const U: Album = {
+	description: "De Louis XV à la Restauration",
 	pictures: [
 		{
 			id: "U_101",
@@ -527,5 +530,5 @@ export const U = {
 	endYear: null,
 	id: "U",
 	number: 16,
-	coverPicture: "U_102"
+	coverPicture: "U_150"
 };

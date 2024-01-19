@@ -1,4 +1,7 @@
-export const V = {
+import type { Album } from "src/types";
+
+export const V: Album = {
+	description: "France et armées étrangères XVIIIème",
 	pictures: [
 		{
 			id: "V_app0001",
@@ -1039,5 +1042,5 @@ export const V = {
 	endYear: null,
 	id: "V",
 	number: 20,
-	coverPicture: "V_app0002"
+	coverPicture: "V_app0031"
 };

@@ -1,4 +1,6 @@
-export const D = {
+import type { Album } from "src/types";
+
+export const D: Album = {
 	pictures: [
 		{
 			id: "D_100",
@@ -1303,5 +1305,7 @@ export const D = {
 	endYear: null,
 	id: "D",
 	number: 10,
-	coverPicture: "D_101"
+	coverPicture: "D_130",
+	description:
+		"Porte d’Auteuil, Bois de Boulogne, Mont-Valérien, Saint Cloud, Boulogne, Redoute de Brinbaron, le Moulin Saquet, Arcueil, Montrouge, Pont de Neuilly, Ballon la Liberté, Vincennes, Porte d’Auteuil, Porte de Clichy, Nogent-sur-Marne, Saint Maur, Redoute de Montretout, Châtillon, Bagneux, Villejuif, Cantonnement à Saint-Mandé, Montmartre, Épinay, Choisy-le-Roi, Cantonnement à Vitry, Château de Vitry, la Gare-aux-bœufs, Prussiens à Paris, Château de Meudon, Manifestation de la lanterne à la Bastille, Manifestation des amis de l’ordre, Paris le 24 mai 1871"
 };

@@ -10,12 +10,14 @@ export type Picture = {
 export type Album = {
 	id: string;
 	name: string;
-	date?: string;
+	date?: string | null;
 	startYear?: number | null;
 	endYear?: number | null;
 	number: number;
 	coverPicture: string;
 	pictures?: Picture[];
+	description: string | null;
+	isDiary?: boolean;
 };
 export type NavigationTab = {
 	label: string;

@@ -1,4 +1,6 @@
-export const B = {
+import type { Album } from "src/types";
+
+export const B: Album = {
 	pictures: [
 		{
 			id: "B_100",
@@ -383,5 +385,7 @@ export const B = {
 	endYear: null,
 	id: "B",
 	number: 1,
-	coverPicture: "B_101"
+	coverPicture: "B_116",
+	description:
+		"Boulogne, Newcastle, Édimbourg, Vallée de la Tyne, les Lochs, Glasgow, Londres, Guards, Cristal Palace, ‘En mer’, Trouville"
 };

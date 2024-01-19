@@ -1,4 +1,7 @@
-export const O = {
+import type { Album } from "src/types";
+
+export const O: Album = {
+	description: "Exposition 1890 Paris, Pavillons divers, Artisans, Exposition 1900 Vincennes",
 	pictures: [
 		{
 			id: "O_101",
@@ -1007,5 +1010,5 @@ export const O = {
 	endYear: null,
 	id: "O",
 	number: 22,
-	coverPicture: "O_102"
+	coverPicture: "O_224"
 };

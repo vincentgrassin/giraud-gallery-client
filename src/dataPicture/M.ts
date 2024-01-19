@@ -1,4 +1,8 @@
-export const M = {
+import type { Album } from "src/types";
+
+export const M: Album = {
+	description:
+		"Exposition de la ville de Paris, Les villages sénégalais, Transval, Algérien malgache, Pavillon central des colonies, Tonkin, Exposition aérostatique, Cayenne, Village canaque, Cochinchine, Exposition de l’histoire militaire de la France, Pavillon de l’hygiène, Pavillon des eaux minérales, Habits militaires, Kampong javanais, Village annamite, Agriculture et alimentation, Exposition viticole, Palais de l’alimentation, Pavillons étrangers",
 	pictures: [
 		{
 			id: "M_100",
@@ -927,5 +931,6 @@ export const M = {
 	endYear: null,
 	id: "M",
 	number: 12,
-	coverPicture: "M_101"
+	coverPicture: "M_106",
+	isDiary: true
 };

@@ -1,4 +1,8 @@
-export const N = {
+import type { Album } from "src/types";
+
+export const N: Album = {
+	description:
+		"Exposition de la ville de Paris, Champ de Mars, Arts libéraux sections étrangères, Palais des arts libéraux, Palais de l’anthropologie, Histoire des industries de la construction, de la chasse, de la sculpture, des découvertes scientifiques, Ministère de l’intérieur, service des prisons, Histoire du théâtre, Manufacture de Sèvres, Histoire des mines de diamant du Cap, Imprimerie nationale, Médailles et monnaies, Collections diverses, Pavillons étrangers",
 	pictures: [
 		{
 			id: "N_100",
@@ -263,5 +267,6 @@ export const N = {
 	endYear: null,
 	id: "N",
 	number: 13,
-	coverPicture: "N_101"
+	coverPicture: "N_131",
+	isDiary: true
 };

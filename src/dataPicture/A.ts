@@ -1,4 +1,6 @@
-export const A = {
+import type { Album } from "src/types";
+
+export const A: Album = {
 	pictures: [
 		{
 			id: "A_100",
@@ -407,5 +409,7 @@ export const A = {
 	endYear: null,
 	id: "A",
 	number: 18,
-	coverPicture: "A_103"
+	coverPicture: "A_146",
+	description:
+		"Auteuil, Chartres, Poitou, Bordeaux, Landes, Biarritz, l’Adour à Bayonne, Irun, Saint Sebastien, Dax, Pau, Vallée d’Ossau, Eaux-Bonnes, Eaux-Chaudes, Laruns, Betharram, Lac de Gaubes, Pont d’Espagne, Gèdre, Gavarnie, Col de Riou, Cauterets, Bagnères-de-Bigorre,les Landes"
 };

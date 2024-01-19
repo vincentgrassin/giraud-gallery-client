@@ -1,4 +1,6 @@
-export const C = {
+import type { Album } from "src/types";
+
+export const C: Album = {
 	pictures: [
 		{
 			id: "C_100",
@@ -847,5 +849,7 @@ export const C = {
 	endYear: 1870,
 	id: "C",
 	number: 17,
-	coverPicture: "C_101"
+	coverPicture: "C_126",
+	description:
+		"Copies de tableaux d’exposition, Salon 1869, Deauville, Villers, Beuzeval, Houlgate, les Vaches noires, la Dive, près Caen, Cabourg, Criquebeuf, Trouville, Honfleur, Bord de la Meuse, Huy, Liège, Anvers, Bruxelles, Dol, Saint Malo, Dinard, l’Ile Cézembre, Harbourg, près Saint Lunaire, Saint Brieuc, Rennes"
 };

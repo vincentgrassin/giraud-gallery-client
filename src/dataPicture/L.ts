@@ -1,4 +1,8 @@
-export const L = {
+import type { Album } from "src/types";
+
+export const L: Album = {
+	description:
+		"Exposition de la ville de Paris, 1er pavillon : exposition de la préfecture de police service de mensuration, 2eme pavillon : modèle de la nouvelle Sorbonne et de l’école de médecine, plan du quartier de Monceau, la parfumerie, artisanats divers, portiques de l’horlogerie, des armes portatives, de la céramique, de la section japonaise, métallurgie, ébénisterie, orfèvrerie, projet de pont sur la Manche, exposition d’horticulture au Trocadéro",
 	pictures: [
 		{
 			id: "L_100",
@@ -287,5 +291,6 @@ export const L = {
 	endYear: null,
 	id: "L",
 	number: 4,
-	coverPicture: "L_101"
+	coverPicture: "L_113",
+	isDiary: true
 };
