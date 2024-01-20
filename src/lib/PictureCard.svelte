@@ -5,13 +5,24 @@
 	import { crossfade } from "svelte/transition";
 	import Button from "./Button.svelte";
 	import Icon from "./Icon.svelte";
+	import { resources } from "../resources";
 
 	export let handlePictureChange: (picture: Picture | undefined) => void;
 	export let selected: Picture | undefined;
 	export let pictures: Picture[];
+	let isDisplayedGallery: boolean = true;
 	let gallery: HTMLElement;
 
+	import { onMount } from "svelte";
+
+	onMount(async () => {
+		gallery.focus();
+	});
 	$: currentIdx = selected ? pictures.findIndex((d) => d === selected) : -1;
+
+	const toggleGallery = () => {
+		isDisplayedGallery = !isDisplayedGallery;
+	};
 
 	const [send, receive] = crossfade({
 		duration: () => 350
@@ -28,6 +39,7 @@
 		} catch (e) {
 			console.log(e);
 		}
+		gallery.focus();
 	};
 
 	const handleArrowChange = async (e: KeyboardEvent, direction: "left" | "right") => {
@@ -61,27 +73,34 @@
 	}}
 >
 	<div class="gallery-container">
-		<div
-			aria-label="gallery"
-			role="group"
-			bind:this={gallery}
-			use:keyboard={{ shortcut }}
-			class="gallery"
-			tabindex={0}
-		>
-			{#each pictures as picture}
-				<div
-					role="img"
-					aria-label={picture.id}
-					data-selected={selected === picture}
-					class:active={selected === picture}
-					on:click={() => handlePictureChange(picture)}
-					class="image"
-					style="background-image:url({buildImageLocatorUrl(picture)})"
-				/>
-			{/each}
+		<div class="gallery-button-container">
+			<Button on:click={toggleGallery}
+				>{isDisplayedGallery ? resources.hideGallery : resources.showGallery}</Button
+			>
 		</div>
-		<div class="close-button-container">
+		{#if isDisplayedGallery}
+			<div
+				aria-label="gallery"
+				role="group"
+				bind:this={gallery}
+				use:keyboard={{ shortcut }}
+				class="gallery"
+				tabindex={0}
+			>
+				{#each pictures as picture}
+					<div
+						role="img"
+						aria-label={picture.id}
+						data-selected={selected === picture}
+						class:active={selected === picture}
+						on:click={() => handlePictureChange(picture)}
+						class="image"
+						style="background-image:url({buildImageLocatorUrl(picture)})"
+					/>
+				{/each}
+			</div>
+		{/if}
+		<div class="gallery-button-container">
 			<Button on:click={() => handlePictureChange(undefined)} variant="icon">
 				<Icon name="close" height="30px" width="30px" />
 			</Button>
@@ -148,7 +167,7 @@
 		flex-wrap: nowrap;
 		width: 100%;
 		overflow-x: auto;
-		margin: 16px 0;
+		margin: 16px 8px;
 	}
 
 	.gallery > .image {
@@ -167,12 +186,12 @@
 		left: 0;
 		bottom: 0;
 		right: 0;
-		top: var(--headerHeight);
 		background-color: rgba(0, 0, 0, 0.95);
+		z-index: 9999;
 	}
 
 	.active {
-		border: 3px solid #000;
+		border: 3px solid var(--golden);
 	}
 	.button-container {
 		margin-bottom: auto;
@@ -180,12 +199,14 @@
 	}
 	.gallery-container {
 		display: flex;
+		justify-content: space-between;
+		height: 150px;
 	}
-	.close-button-container {
+	.gallery-button-container {
 		display: flex;
 		align-items: center;
-		margin-left: 8px;
 	}
+
 	.picture-informations {
 		color: white;
 	}

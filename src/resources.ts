@@ -25,7 +25,9 @@ export const resources = {
 	displayAll: "Afficher tous",
 	listDisplay: "Afficher en liste",
 	gridDisplay: "Afficher en grille",
-	discover: "Découvrir les carnets"
+	discover: "Découvrir les carnets",
+	hideGallery: "Masquer la pellicule",
+	showGallery: "Afficher la pellicule"
 };
 
 export const QUALITY_PICTURE = {
