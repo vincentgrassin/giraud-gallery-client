@@ -68,7 +68,7 @@ export function shuffleArray<T>(array: T[]) {
 }
 
 export function shuffleGridDisplayKey() {
-	const options = ["", "-alt", "-alt1"];
+	const options = ["", "-alt", "-alt1", "-alt2"];
 	const randomIndex = Math.floor(Math.random() * options.length);
 	return options[randomIndex];
 }
