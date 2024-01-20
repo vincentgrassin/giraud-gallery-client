@@ -11,6 +11,11 @@
 	export let pictures: Picture[];
 	let gallery: HTMLElement;
 
+	import { onMount } from "svelte";
+
+	onMount(async () => {
+		gallery.focus();
+	});
 	$: currentIdx = selected ? pictures.findIndex((d) => d === selected) : -1;
 
 	const [send, receive] = crossfade({
@@ -28,6 +33,7 @@
 		} catch (e) {
 			console.log(e);
 		}
+		gallery.focus();
 	};
 
 	const handleArrowChange = async (e: KeyboardEvent, direction: "left" | "right") => {
@@ -81,8 +87,8 @@
 				/>
 			{/each}
 		</div>
-		<div class="close-button-container">
-			<Button on:click={() => handlePictureChange(undefined)}>
+		<div class="gallery-button-container">
+			<Button on:click={() => handlePictureChange(undefined)} variant="icon">
 				<Icon name="close" height="30px" width="30px" />
 			</Button>
 		</div>
@@ -95,24 +101,29 @@
 					const nextIdx = (currentIdx - 1) % pictures.length;
 					handleChange(pictures[nextIdx]);
 				}}
+				variant="icon"
 			>
 				<Icon name="chevronLeft" height="30px" width="30px" />
 			</Button>
 		</div>
-		<a
-			in:receive={{ key: selected }}
-			out:send={{ key: selected }}
-			href={buildImageLocatorUrl(selected)}
-			target="_blank"
-		>
-			<img src={buildImageLocatorUrl(selected)} alt={selected?.cloudinaryPublicId} />
-		</a>
+		<div>
+			<a
+				in:receive={{ key: selected }}
+				out:send={{ key: selected }}
+				href={buildImageLocatorUrl(selected)}
+				target="_blank"
+			>
+				<img src={buildImageLocatorUrl(selected)} alt={selected?.cloudinaryPublicId} />
+			</a>
+			<p class="picture-informations">{selected?.id}</p>
+		</div>
 		<div class="button-container">
 			<Button
 				on:click={async () => {
 					const nextIdx = (currentIdx + 1) % pictures.length;
 					handleChange(pictures[nextIdx]);
 				}}
+				variant="icon"
 			>
 				<Icon name="chevronRight" height="30px" width="30px" />
 			</Button>
@@ -143,7 +154,7 @@
 		flex-wrap: nowrap;
 		width: 100%;
 		overflow-x: auto;
-		margin: 16px 0;
+		margin: 16px 8px;
 	}
 
 	.gallery > .image {
@@ -162,12 +173,12 @@
 		left: 0;
 		bottom: 0;
 		right: 0;
-		top: var(--headerHeight);
-		background-color: rgba(100, 100, 100, 0.8);
+		background-color: rgba(0, 0, 0, 0.95);
+		z-index: 9999;
 	}
 
 	.active {
-		border: 3px solid #000;
+		border: 3px solid var(--golden);
 	}
 	.button-container {
 		margin-bottom: auto;
@@ -175,10 +186,15 @@
 	}
 	.gallery-container {
 		display: flex;
+		justify-content: space-between;
+		height: 150px;
 	}
-	.close-button-container {
+	.gallery-button-container {
 		display: flex;
 		align-items: center;
-		margin-left: 8px;
+	}
+
+	.picture-informations {
+		color: white;
 	}
 </style>

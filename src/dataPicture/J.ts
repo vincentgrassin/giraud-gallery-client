@@ -1,4 +1,8 @@
-export const J = {
+import type { Album } from "src/types";
+
+export const J: Album = {
+	description:
+		"Expositions et ventes diverses, musée des archives monogrammes, Chalis, Abbaye d’Ermenonville,  Montlhery, Longpont, Cernay, Copies de portraits divers, Copies de tableaux salon de 1885, Funérailles de Victor Hugo, Saint Gervais, Saint Étienne-du-Mont, Saint Merry, Saint Sulpice, Saint Séverin, Cathédrale du Mans, Pontvallain, Pontoise, Saint Maclou, Abbaye du Val près Mériel, Montmorency, Exposition du travail au palais de l’industrie",
 	pictures: [
 		{
 			id: "J_100",
@@ -1119,5 +1123,6 @@ export const J = {
 	endYear: null,
 	id: "J",
 	number: 21,
-	coverPicture: "J_101"
+	coverPicture: "J_143",
+	isDiary: true
 };

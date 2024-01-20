@@ -1,4 +1,8 @@
-export const S = {
+import type { Album } from "src/types";
+
+export const S: Album = {
+	description:
+		"Moitron, Douillet-le-Joly, Saint Germain, Nogent-le-Rotrou, Saint Léonard-des-bois, Villaines-la-Carelle, Louze, Saint Ouen, Fresnay, Linthe, Mimbré, La Folletière, le Bourg- Neuf, Saint Aubin, Les Roches, Rochâtre, Le Haut Fourché, le Rocher sur Narbonne, Gratey, Saint Victeur, la Souris",
 	pictures: [
 		{
 			id: "S_100",
@@ -1023,5 +1027,5 @@ export const S = {
 	endYear: 1902,
 	id: "S",
 	number: 9,
-	coverPicture: "S_101"
+	coverPicture: "S_223"
 };

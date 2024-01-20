@@ -1,4 +1,7 @@
-export const Q = {
+import type { Album } from "src/types";
+
+export const Q: Album = {
+	description: null,
 	pictures: [
 		{
 			id: "Q_100",
@@ -1127,5 +1130,5 @@ export const Q = {
 	endYear: null,
 	id: "Q",
 	number: 19,
-	coverPicture: "Q_101"
+	coverPicture: "Q_128"
 };

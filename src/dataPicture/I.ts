@@ -1,4 +1,8 @@
-export const I = {
+import type { Album } from "src/types";
+
+export const I: Album = {
+	description:
+		"Militaires français coloniaux, militaires étrangers, 14juillet 1884, départs de ballons 1888",
 	pictures: [
 		{
 			id: "I_101",
@@ -391,5 +395,5 @@ export const I = {
 	endYear: null,
 	id: "I",
 	number: 6,
-	coverPicture: "I_101"
+	coverPicture: "I_148"
 };

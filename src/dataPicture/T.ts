@@ -1,4 +1,7 @@
-export const T = {
+import type { Album } from "src/types";
+
+export const T: Album = {
+	description: "Détails par régiment",
 	pictures: [
 		{
 			id: "T_101",
@@ -1079,5 +1082,5 @@ export const T = {
 	endYear: null,
 	id: "T",
 	number: 8,
-	coverPicture: "T_101"
+	coverPicture: "T_115"
 };

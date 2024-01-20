@@ -1,4 +1,6 @@
-export const B = {
+import type { Album } from "src/types";
+
+export const B: Album = {
 	pictures: [
 		{
 			id: "B_100",
@@ -314,7 +316,7 @@ export const B = {
 		},
 		{
 			id: "B_139",
-			quality: 1,
+			quality: 2,
 			cloudinaryPublicId: "giraud-images/B/139",
 			cloudinaryId: "75446e102e7cf0eb95999dc35ebd3a66",
 			width: 799,
@@ -346,7 +348,7 @@ export const B = {
 		},
 		{
 			id: "B_143",
-			quality: 1,
+			quality: 2,
 			cloudinaryPublicId: "giraud-images/B/143",
 			cloudinaryId: "6bfbcdf780975f33c22ad9cb3b2c9b31",
 			width: 562,
@@ -354,7 +356,7 @@ export const B = {
 		},
 		{
 			id: "B_144",
-			quality: 1,
+			quality: 2,
 			cloudinaryPublicId: "giraud-images/B/144",
 			cloudinaryId: "ba36541dad0f067c9779d425cc7db96b",
 			width: 799,
@@ -362,7 +364,7 @@ export const B = {
 		},
 		{
 			id: "B_145",
-			quality: 1,
+			quality: 2,
 			cloudinaryPublicId: "giraud-images/B/145",
 			cloudinaryId: "a69e85fd7b84fe6e0f5918880baffb62",
 			width: 799,
@@ -383,5 +385,7 @@ export const B = {
 	endYear: null,
 	id: "B",
 	number: 1,
-	coverPicture: "B_101"
+	coverPicture: "B_116",
+	description:
+		"Boulogne, Newcastle, Édimbourg, Vallée de la Tyne, les Lochs, Glasgow, Londres, Guards, Cristal Palace, ‘En mer’, Trouville"
 };

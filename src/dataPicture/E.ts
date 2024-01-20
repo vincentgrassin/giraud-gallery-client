@@ -1,4 +1,6 @@
-export const E = {
+import type { Album } from "src/types";
+
+export const E: Album = {
 	pictures: [
 		{
 			id: "E_100",
@@ -751,5 +753,6 @@ export const E = {
 	endYear: 1876,
 	id: "E",
 	number: 2,
-	coverPicture: "E_101"
+	coverPicture: "E_116",
+	description: `Caïeux, Saint Valéry-sur-Somme, Berk, Calais, Dunkerque, Saint Malo, Dinard, Saint Brieuc, Cesson, Portrieux, Saint Quay, Paimpol, Beauport, Lannion, Plougastel, Port-Louis, Copies de tableaux d’exposition`
 };

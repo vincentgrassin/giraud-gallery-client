@@ -2,6 +2,9 @@
 	import type { Album } from "../types";
 	import { buildImageLocatorUrl } from "../helpers";
 	import { resources } from "../resources";
+	import Title from "./Title.svelte";
+	import Badge from "./Badge.svelte";
+	import { colors } from "../styles/theme";
 	export let album: Album;
 
 	const coverPicture = album.pictures?.find((picture) => {
@@ -17,10 +20,17 @@
 			class="cover-picture"
 		/>
 		<div class="album-informations">
-			<h2>
-				{album.name}
-			</h2>
-			<p>{album.date ?? resources.unknownDate}</p>
+			<Title title={album.name} variant="h2" />
+			<div class="album-description">
+				<div>
+					<p>{album.date ?? resources.unknownDate}</p>
+					<p>{album.pictures?.length} {resources.drawings.toLowerCase()}</p>
+				</div>
+				<Badge
+					--color={album.isDiary ? colors.zomp : colors.redwood}
+					content={album.isDiary ? resources.diary : resources.drawings}
+				/>
+			</div>
 		</div>
 	</a>
 </li>
@@ -51,10 +61,16 @@
 		object-fit: cover;
 	}
 	.album-informations {
-		margin: 16px;
+		margin: 32px;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
 		flex: 1;
+	}
+
+	.album-description {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
 	}
 </style>

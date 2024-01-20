@@ -1,4 +1,8 @@
-export const R = {
+import type { Album } from "src/types";
+
+export const R: Album = {
+	description:
+		"Expositions diverses à Paris, Centenaire de Corot, Soudan, Falaise, Argentan, ‘dans la Sarthe’, Madagascar, le centenaire de la lithographie",
 	pictures: [
 		{
 			id: "R_100",
@@ -527,5 +531,6 @@ export const R = {
 	endYear: null,
 	id: "R",
 	number: 5,
-	coverPicture: "R_101"
+	coverPicture: "R_149",
+	isDiary: true
 };
