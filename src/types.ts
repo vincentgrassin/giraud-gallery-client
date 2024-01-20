@@ -22,6 +22,7 @@ export type Album = {
 export type NavigationTab = {
 	label: string;
 	id: string;
-	path: string;
-	regex: string;
+	path?: string;
+	regex?: string;
+	children?: NavigationTab[];
 };

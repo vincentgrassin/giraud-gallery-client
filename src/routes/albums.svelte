@@ -28,9 +28,6 @@
 
 <div class="container">
 	<Title title={resources.albums} />
-	<TextBloc content={resources.albumDescribe} />
-	<TextBloc content={resources.aboutAlbums} />
-
 	<ul class="album-grid">
 		{#each albums as album}
 			<AlbumCard {album} />
