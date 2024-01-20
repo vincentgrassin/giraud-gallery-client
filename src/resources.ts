@@ -28,6 +28,8 @@ export const resources = {
 	discover: "Découvrir les carnets",
 	hideGallery: "Masquer la pellicule",
 	showGallery: "Afficher la pellicule",
+	documents: "Document admninistratifs",
+	description: "Présentation",
 	albumsGathering: "Comment ont été rassemblés les carnets de Francis-Léon Giraud",
 	albumsGatheringDetails: `C’est en 1999, au cours du règlement de la succession de mes parents, que j’ai découvert un carnet
 	d’aquarelles non signées. Il s’agissait d’une bonne centaine de papiers jaunis rectangulaires de
