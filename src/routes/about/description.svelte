@@ -1,4 +1,5 @@
 <script lang="ts">
+	import TextBloc from "$lib/TextBloc.svelte";
 	import Title from "$lib/Title.svelte";
 	import { resources } from "../../resources";
 </script>
@@ -6,7 +7,46 @@
 <div class="about">
 	<div class="container">
 		<Title title={resources.francisGiraud} />
-		description
+		<div class="main-description">
+			<div class="image-wrapper">
+				<img
+					class="francis-img"
+					src={"../images/FRANCIS LEON GIRAUD PHOTO.jpg"}
+					alt={resources.francisGiraud}
+					loading="lazy"
+				/>
+			</div>
+			<div class="description-text">
+				<Title variant="h2" title={resources.francisDescriptionTitle} />
+				<TextBloc bold smallMargin content={resources.francisDescriptionLegend} />
+				<TextBloc smallMargin content={resources.francisDescriptionContent} />
+			</div>
+		</div>
+		<div class="document">
+			<Title variant="h2" title={resources.familyTree} />
+			<img
+				class="family-tree"
+				src={"../images/ARBRE GENEALOGIQUE GIRAUD-1.png"}
+				alt={"arbre généalogique Francis Giraud"}
+				loading="lazy"
+			/>
+		</div>
+		<div class="document">
+			<Title variant="h2" title={resources.documetnPatronymique} />
+			<img
+				class="family-tree"
+				src={"../images/FICHE PATRONYMIQUE GIRAUD-1.png"}
+				alt={"Fiche patronymique Francis Giraud 1"}
+				loading="lazy"
+			/>
+
+			<img
+				class="family-tree"
+				src={"../images/FICHE PATRONYMIQUE GIRAUD-2.png"}
+				alt={"Fiche patronymique Francis Giraud 2"}
+				loading="lazy"
+			/>
+		</div>
 	</div>
 </div>
 
@@ -19,13 +59,57 @@
 		align-items: center;
 	}
 
+	.francis-img {
+		width: 100%;
+	}
+
+	.main-description {
+		display: flex;
+		flex-direction: column;
+	}
+
 	.container {
 		width: 80%;
 	}
 
+	.description-text {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.image-wrapper {
+		margin: 16px;
+	}
+
+	.document {
+		margin: 32px 0 64px 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.family-tree {
+		width: 100%;
+	}
+
 	@media (min-width: 760px) {
 		.container {
-			width: 50%;
+			width: 70%;
+		}
+
+		.main-description {
+			flex-direction: row;
+		}
+
+		.description-text {
+			flex: 1;
+		}
+
+		.image-wrapper {
+			flex: 1;
+		}
+		.family-tree {
+			width: 80%;
 		}
 	}
 </style>

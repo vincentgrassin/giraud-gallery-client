@@ -7,8 +7,14 @@
 <div class="about">
 	<div class="container">
 		<Title title={resources.around} />
-		<TextBloc content={resources.aroundAlbums} />
-		<TextBloc content={resources.aboutDescription} />
+		<div class="description">
+			<Title variant="h2" title={resources.albumsGathering} />
+			<TextBloc content={resources.albumsGatheringDetails} />
+			<TextBloc content={resources.albumsGatheringDetails2} />
+			<TextBloc content={resources.albumsGatheringDetails3} />
+			<TextBloc content={resources.albumsGatheringDetails4} />
+			<TextBloc content={resources.albumsGatheringDetails5} />
+		</div>
 	</div>
 </div>
 
@@ -25,9 +31,12 @@
 		width: 80%;
 	}
 
+	.description {
+		margin: 16px 0 32px 0;
+	}
 	@media (min-width: 760px) {
 		.container {
-			width: 50%;
+			width: 70%;
 		}
 	}
 </style>

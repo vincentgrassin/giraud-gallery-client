@@ -28,14 +28,6 @@
 
 <div class="container">
 	<Title title={resources.albums} />
-	<div class="description">
-		<Title variant="h2" title={resources.albumsGathering} />
-		<TextBloc content={resources.albumsGatheringDetails} />
-		<TextBloc content={resources.albumsGatheringDetails2} />
-		<TextBloc content={resources.albumsGatheringDetails3} />
-		<TextBloc content={resources.albumsGatheringDetails4} />
-		<TextBloc content={resources.albumsGatheringDetails5} />
-	</div>
 	<ul class="album-grid">
 		{#each albums as album}
 			<AlbumCard {album} />
@@ -66,9 +58,6 @@
 	@media (min-width: 760px) {
 		.album-grid {
 			grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-		}
-		.description {
-			margin: 16px 10% 32px 10%;
 		}
 	}
 </style>
