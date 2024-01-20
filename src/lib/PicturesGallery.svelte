@@ -40,8 +40,8 @@
 		isListDisplay = isList;
 	};
 
-	const filterFavourite = (isFavourite: boolean) => {
-		isFavouriteDisplay = isFavourite;
+	const filterFavourite = () => {
+		isFavouriteDisplay = !isFavouriteDisplay;
 	};
 
 	const handlePictureChange = (picture: Picture | undefined) => {
@@ -68,7 +68,7 @@
 <svelte:window bind:innerWidth />
 <div class="container">
 	<div class="buttons-container">
-		<Button on:click={() => filterFavourite(!isFavouriteDisplay)} --color={colors.golden}>
+		<Button on:click={filterFavourite} --color={colors.golden}>
 			<span>
 				{isFavouriteDisplay ? resources.displayAll : resources.displayFavourites}
 			</span>

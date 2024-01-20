@@ -100,14 +100,17 @@
 				<Icon name="chevronLeft" height="30px" width="30px" />
 			</Button>
 		</div>
-		<a
-			in:receive={{ key: selected }}
-			out:send={{ key: selected }}
-			href={buildImageLocatorUrl(selected)}
-			target="_blank"
-		>
-			<img src={buildImageLocatorUrl(selected)} alt={selected?.cloudinaryPublicId} />
-		</a>
+		<div>
+			<a
+				in:receive={{ key: selected }}
+				out:send={{ key: selected }}
+				href={buildImageLocatorUrl(selected)}
+				target="_blank"
+			>
+				<img src={buildImageLocatorUrl(selected)} alt={selected?.cloudinaryPublicId} />
+			</a>
+			<p class="picture-informations">{selected?.id}</p>
+		</div>
 		<div class="button-container">
 			<Button
 				on:click={async () => {
@@ -165,7 +168,7 @@
 		bottom: 0;
 		right: 0;
 		top: var(--headerHeight);
-		background-color: rgba(100, 100, 100, 0.8);
+		background-color: rgba(0, 0, 0, 0.95);
 	}
 
 	.active {
@@ -182,5 +185,8 @@
 		display: flex;
 		align-items: center;
 		margin-left: 8px;
+	}
+	.picture-informations {
+		color: white;
 	}
 </style>

@@ -2,6 +2,7 @@
 	export let disabled: boolean = false;
 	export let variant: "icon" | "regular" = "regular";
 	export let tooltip: string | undefined = undefined;
+	export let size: "small" | "medium" = "medium";
 </script>
 
 <button
@@ -9,6 +10,7 @@
 	on:click
 	{...$$restProps}
 	class:iconButton={variant === "icon"}
+	class:small={size === "small"}
 	data-tooltip={tooltip}
 >
 	{#if variant === "icon"}
@@ -40,6 +42,9 @@
 	}
 	.iconButton {
 		border-radius: 40px;
+	}
+	.small {
+		padding: 0.5rem 0.5rem;
 	}
 
 	.text-button {
