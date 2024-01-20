@@ -82,7 +82,7 @@
 			{/each}
 		</div>
 		<div class="close-button-container">
-			<Button on:click={() => handlePictureChange(undefined)}>
+			<Button on:click={() => handlePictureChange(undefined)} variant="icon">
 				<Icon name="close" height="30px" width="30px" />
 			</Button>
 		</div>
@@ -95,6 +95,7 @@
 					const nextIdx = (currentIdx - 1) % pictures.length;
 					handleChange(pictures[nextIdx]);
 				}}
+				variant="icon"
 			>
 				<Icon name="chevronLeft" height="30px" width="30px" />
 			</Button>
@@ -113,6 +114,7 @@
 					const nextIdx = (currentIdx + 1) % pictures.length;
 					handleChange(pictures[nextIdx]);
 				}}
+				variant="icon"
 			>
 				<Icon name="chevronRight" height="30px" width="30px" />
 			</Button>

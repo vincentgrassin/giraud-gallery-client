@@ -13,6 +13,5 @@
 		border-radius: 0.25em;
 		background-color: var(--color);
 		color: white;
-		font-weight: bold;
 	}
 </style>

@@ -2,7 +2,7 @@ import type { Album } from "src/types";
 
 export const F: Album = {
 	description:
-		"Près, Gand, Ostende, Anvers, Blackenberge, Westerkerk, Gand, Tête-de-Flandres, Rotterdam, Scheveningen, La Haye, Katwijk-aan-zee, Leyde, l’Yssel, Grottes de Ham, près Rochefort, près Maubeuge",
+		"Près Gand, Ostende, Anvers, Blackenberge, Westerkerk, Gand, Tête-de-Flandres, Rotterdam, Scheveningen, La Haye, Katwijk-aan-zee, Leyde, l’Yssel, Grottes de Ham, près Rochefort, près Maubeuge",
 	pictures: [
 		{
 			id: "F_100",

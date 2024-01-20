@@ -14,8 +14,10 @@
 	<div class="album-header">
 		<Title title={album.name} />
 		<div class="album-informations">
-			<Title variant="h2" title={album.date ?? resources.unknownDate} />
-			<Title variant="h2" title={`${album.pictures?.length} ${resources.drawings.toLowerCase()}`} />
+			<div>
+				<Title variant="h2" title={album.date ?? resources.unknownDate} />
+				<p>{`${album.pictures?.length} ${resources.drawings.toLowerCase()}`}</p>
+			</div>
 			<Badge
 				--color={album.isDiary ? colors.metallicBlue : colors.redwood}
 				content={album.isDiary ? resources.diary : resources.drawings}
@@ -25,7 +27,7 @@
 			{#if album.description}
 				{#each album.description.split(",") as tag}
 					<div class="album-tag">
-						<Badge --color={colors.golden} content={tag} />
+						<Badge --color={colors.veryDarkGrey} content={tag} />
 					</div>
 				{/each}
 			{/if}
@@ -59,6 +61,12 @@
 	.album-tags {
 		display: flex;
 		flex-wrap: wrap;
+	}
+
+	@media (min-width: 1200px) {
+		.album-tags {
+			margin: 0 10%;
+		}
 	}
 
 	.album-tag {

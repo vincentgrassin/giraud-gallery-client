@@ -41,6 +41,7 @@
 <style>
 	@media (min-width: 760px) {
 		.container {
+			margin-top: 16px;
 			margin-left: 50px;
 			margin-right: 50px;
 		}

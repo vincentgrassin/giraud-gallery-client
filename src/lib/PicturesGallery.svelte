@@ -4,12 +4,25 @@
 	import type { Picture } from "../types";
 	import Icon from "$lib/Icon.svelte";
 	import PictureCard from "$lib/PictureCard.svelte";
-	export let isListDisplay: boolean = true;
-	export let pictures: Picture[];
-	let selected: Picture | undefined;
 	import { onMount } from "svelte";
 	import { breakpoints, getGallerySizeRatio } from "../helpers";
 	import Button from "./Button.svelte";
+	import { QUALITY_PICTURE, resources } from "../resources";
+	import { colors } from "../styles/theme";
+
+	export let isListDisplay: boolean = false;
+	export let isFavouriteDisplay: boolean = false;
+	export let pictures: Picture[];
+	let selected: Picture | undefined;
+	let currentPictures: Picture[];
+
+	$: {
+		if (isFavouriteDisplay) {
+			currentPictures = pictures.filter((picture) => picture.quality === QUALITY_PICTURE.HIGH);
+		} else {
+			currentPictures = pictures;
+		}
+	}
 
 	let innerWidth: number = 0;
 	let isMediumScreen = false;
@@ -25,6 +38,10 @@
 
 	const handleListDisplay = (isList: boolean) => {
 		isListDisplay = isList;
+	};
+
+	const filterFavourite = (isFavourite: boolean) => {
+		isFavouriteDisplay = isFavourite;
 	};
 
 	const handlePictureChange = (picture: Picture | undefined) => {
@@ -50,17 +67,35 @@
 
 <svelte:window bind:innerWidth />
 <div class="container">
-	<div class="gallery-display-switch">
-		<Button on:click={() => handleListDisplay(true)} disabled={isListDisplay}>
-			<Icon name="picture" height="30px" width="30px" />
+	<div class="buttons-container">
+		<Button on:click={() => filterFavourite(!isFavouriteDisplay)} --color={colors.golden}>
+			<span>
+				{isFavouriteDisplay ? resources.displayAll : resources.displayFavourites}
+			</span>
 		</Button>
-		<Button on:click={() => handleListDisplay(false)} disabled={!isListDisplay}>
-			<Icon name="grid" height="30px" width="30px" />
-		</Button>
+
+		<div class="gallery-display-switch">
+			<Button
+				on:click={() => handleListDisplay(false)}
+				disabled={!isListDisplay}
+				variant="icon"
+				tooltip={resources.gridDisplay}
+			>
+				<Icon name="grid" height="30px" width="30px" />
+			</Button>
+			<Button
+				on:click={() => handleListDisplay(true)}
+				disabled={isListDisplay}
+				variant="icon"
+				tooltip={resources.listDisplay}
+			>
+				<Icon name="picture" height="30px" width="30px" />
+			</Button>
+		</div>
 	</div>
-	{#if pictures}
+	{#if currentPictures}
 		<ul class:gallery-grid={!isListDisplay} class:gallery-list={isListDisplay}>
-			{#each pictures as picture}
+			{#each currentPictures as picture}
 				{#if picture !== selected}
 					<li
 						style={`height:${
@@ -78,7 +113,7 @@
 			{/each}
 		</ul>
 		{#if selected && !isMediumScreen}
-			<PictureCard {selected} {pictures} {handlePictureChange} />
+			<PictureCard {selected} pictures={currentPictures} {handlePictureChange} />
 		{/if}
 	{/if}
 </div>
@@ -131,11 +166,22 @@
 
 	.gallery-display-switch {
 		margin: 24px 0px;
+		display: flex;
+		width: 15%;
+		justify-content: space-around;
 	}
 
 	@media (max-width: 760px) {
 		.gallery-display-switch {
 			display: none;
 		}
+	}
+
+	.buttons-container {
+		display: flex;
+		width: 100%;
+		align-items: center;
+		justify-content: space-between;
+		padding: 32px;
 	}
 </style>

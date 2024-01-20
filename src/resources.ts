@@ -20,5 +20,15 @@ export const resources = {
 	unknownDate: "Date inconnue",
 	diary: "Journal",
 	drawings: "Dessins",
-	around: "Autour des carnets"
+	around: "Autour des carnets",
+	displayFavourites: "Afficher la séléction",
+	displayAll: "Afficher tous",
+	listDisplay: "Afficher en liste",
+	gridDisplay: "Afficher en grille"
+};
+
+export const QUALITY_PICTURE = {
+	HIGH: 2,
+	MEDIUM: 1,
+	LOW: 0
 };

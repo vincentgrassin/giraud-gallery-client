@@ -17,7 +17,6 @@
 		align-items: center;
 		background-color: var(--eerieBlack);
 		color: var(--white);
-		position: fixed;
 		bottom: 0;
 		width: 100%;
 	}
