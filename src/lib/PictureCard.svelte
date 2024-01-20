@@ -5,12 +5,10 @@
 	import { crossfade } from "svelte/transition";
 	import Button from "./Button.svelte";
 	import Icon from "./Icon.svelte";
-	import { resources } from "../resources";
 
 	export let handlePictureChange: (picture: Picture | undefined) => void;
 	export let selected: Picture | undefined;
 	export let pictures: Picture[];
-	let isDisplayedGallery: boolean = true;
 	let gallery: HTMLElement;
 
 	import { onMount } from "svelte";
@@ -19,10 +17,6 @@
 		gallery.focus();
 	});
 	$: currentIdx = selected ? pictures.findIndex((d) => d === selected) : -1;
-
-	const toggleGallery = () => {
-		isDisplayedGallery = !isDisplayedGallery;
-	};
 
 	const [send, receive] = crossfade({
 		duration: () => 350
@@ -73,33 +67,26 @@
 	}}
 >
 	<div class="gallery-container">
-		<div class="gallery-button-container">
-			<Button on:click={toggleGallery}
-				>{isDisplayedGallery ? resources.hideGallery : resources.showGallery}</Button
-			>
+		<div
+			aria-label="gallery"
+			role="group"
+			bind:this={gallery}
+			use:keyboard={{ shortcut }}
+			class="gallery"
+			tabindex={0}
+		>
+			{#each pictures as picture}
+				<div
+					role="img"
+					aria-label={picture.id}
+					data-selected={selected === picture}
+					class:active={selected === picture}
+					on:click={() => handlePictureChange(picture)}
+					class="image"
+					style="background-image:url({buildImageLocatorUrl(picture)})"
+				/>
+			{/each}
 		</div>
-		{#if isDisplayedGallery}
-			<div
-				aria-label="gallery"
-				role="group"
-				bind:this={gallery}
-				use:keyboard={{ shortcut }}
-				class="gallery"
-				tabindex={0}
-			>
-				{#each pictures as picture}
-					<div
-						role="img"
-						aria-label={picture.id}
-						data-selected={selected === picture}
-						class:active={selected === picture}
-						on:click={() => handlePictureChange(picture)}
-						class="image"
-						style="background-image:url({buildImageLocatorUrl(picture)})"
-					/>
-				{/each}
-			</div>
-		{/if}
 		<div class="gallery-button-container">
 			<Button on:click={() => handlePictureChange(undefined)} variant="icon">
 				<Icon name="close" height="30px" width="30px" />
