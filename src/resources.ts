@@ -24,7 +24,8 @@ export const resources = {
 	displayFavourites: "Afficher la séléction",
 	displayAll: "Afficher tous",
 	listDisplay: "Afficher en liste",
-	gridDisplay: "Afficher en grille"
+	gridDisplay: "Afficher en grille",
+	discover: "Découvrir les carnets"
 };
 
 export const QUALITY_PICTURE = {
