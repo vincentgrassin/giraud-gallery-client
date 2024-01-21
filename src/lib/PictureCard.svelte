@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { Picture } from "../types";
-	import keyboard, { buildImageLocatorUrl } from "../helpers";
+	import keyboard, { buildImageStaticPath } from "../helpers";
 	import { tick } from "svelte";
 	import { crossfade } from "svelte/transition";
 	import Button from "./Button.svelte";
@@ -83,7 +83,7 @@
 					class:active={selected === picture}
 					on:click={() => handlePictureChange(picture)}
 					class="image"
-					style="background-image:url({buildImageLocatorUrl(picture)})"
+					style="background-image:url({buildImageStaticPath(picture, 1)})"
 				/>
 			{/each}
 		</div>
@@ -110,10 +110,10 @@
 			<a
 				in:receive={{ key: selected }}
 				out:send={{ key: selected }}
-				href={buildImageLocatorUrl(selected)}
+				href={buildImageStaticPath(selected, 1)}
 				target="_blank"
 			>
-				<img src={buildImageLocatorUrl(selected)} alt={selected?.cloudinaryPublicId} />
+				<img src={buildImageStaticPath(selected, 1)} alt={selected?.id} />
 			</a>
 			<p class="picture-informations">{selected?.id}</p>
 		</div>

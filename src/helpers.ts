@@ -7,11 +7,16 @@ export const environnement = {
 };
 export const apiBaseUrl = environnement.apiUrl;
 
-export const buildImageLocatorUrl = (picture: Picture | undefined) => {
+export const buildImageStaticPath = (picture: Picture | undefined, level = 0) => {
 	if (!picture) {
 		return "";
 	}
-	return `https://res.cloudinary.com/dyivtryy7/image/upload/v1652346037/${picture.cloudinaryPublicId}.jpg`;
+	if (level === 0) {
+		return `images/${picture.staticPath}.jpg`;
+	}
+	if (level === 1) {
+		return `../images/${picture.staticPath}.jpg`;
+	}
 };
 
 export default function keyboard(node: HTMLElement, params: any) {
@@ -68,7 +73,7 @@ export function shuffleArray<T>(array: T[]) {
 }
 
 export function shuffleGridDisplayKey() {
-	const options = ["", "-alt", "-alt1"];
+	const options = ["", "-alt", "-alt1", "-alt2"];
 	const randomIndex = Math.floor(Math.random() * options.length);
 	return options[randomIndex];
 }

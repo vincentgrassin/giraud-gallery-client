@@ -2,7 +2,7 @@
 	import type { Picture } from "../types";
 	import { crossfade } from "svelte/transition";
 
-	import { buildImageLocatorUrl } from "../helpers";
+	import { buildImageStaticPath } from "../helpers";
 	export let picture: Picture;
 	export let handlePictureChange: (p: Picture | undefined) => void;
 	export let isListDisplay: boolean;
@@ -14,8 +14,8 @@
 
 {#if isListDisplay}
 	<img
-		src={buildImageLocatorUrl(picture)}
-		alt={picture.cloudinaryPublicId}
+		src={buildImageStaticPath(picture, 1)}
+		alt={picture.id}
 		class="list-picture"
 		out:send={{ key: picture.id }}
 		in:receive={{ key: picture.id }}
@@ -30,7 +30,7 @@
 		in:receive={{ key: picture.id }}
 		on:click={() => handlePictureChange(picture)}
 		class="grid-picture"
-		style="background-image: url({buildImageLocatorUrl(picture)});"
+		style="background-image: url({buildImageStaticPath(picture, 1)});"
 	/>
 {/if}
 
