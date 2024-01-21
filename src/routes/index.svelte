@@ -1,12 +1,10 @@
 <script lang="ts">
-	import TextBloc from "$lib/TextBloc.svelte";
 	import Title from "$lib/Title.svelte";
 	import { resources } from "../resources";
 
 	import { dataAlbums } from "../dataPicture";
 	import type { Picture } from "src/types";
-	import { shuffleArray, shuffleGridDisplayKey } from "../helpers";
-	import HomeImage from "$lib/HomeImage.svelte";
+	import { buildImageStaticPath, shuffleArray, shuffleGridDisplayKey } from "../helpers";
 	import Button from "$lib/Button.svelte";
 	import { colors } from "../styles/theme";
 
@@ -25,8 +23,8 @@
 <div class="homeContainer">
 	<Title title={resources.francisAlbums} />
 	<div class="homeDescription">
-		<Button --color={colors.golden}>
-			<a href="/albums" class="nav-link"> {resources.discover}</a>
+		<Button --color={colors.golden} buttonType="a" href="/albums">
+			{resources.discover}
 		</Button>
 	</div>
 
@@ -41,7 +39,12 @@
 		</div>
 		{#each homeSelection as picture, index}
 			<div class={`div${index + 1}${gridKey}`}>
-				<HomeImage picture={homeSelection[index]} />
+				<img
+					class="home-image"
+					src={buildImageStaticPath(picture)}
+					alt={picture.id}
+					loading="lazy"
+				/>
 			</div>
 		{/each}
 	</div>
@@ -61,10 +64,7 @@
 		}
 	}
 
-	.nav-link {
-		text-decoration: none;
-		color: var(--eerieBlack);
-	}
+
 
 	.homeDescription {
 		display: flex;
@@ -72,6 +72,12 @@
 		justify-content: center;
 		align-items: center;
 		margin: 16px 0 64px 0;
+	}
+
+	.home-image {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
 	}
 
 	.parent {

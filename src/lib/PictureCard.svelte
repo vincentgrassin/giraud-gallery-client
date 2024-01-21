@@ -113,7 +113,7 @@
 				href={buildImageStaticPath(selected, 1)}
 				target="_blank"
 			>
-				<img src={buildImageStaticPath(selected, 1)} alt={selected?.cloudinaryPublicId} />
+				<img src={buildImageStaticPath(selected, 1)} alt={selected?.id} />
 			</a>
 			<p class="picture-informations">{selected?.id}</p>
 		</div>

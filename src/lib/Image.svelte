@@ -15,7 +15,7 @@
 {#if isListDisplay}
 	<img
 		src={buildImageStaticPath(picture, 1)}
-		alt={picture.cloudinaryPublicId}
+		alt={picture.id}
 		class="list-picture"
 		out:send={{ key: picture.id }}
 		in:receive={{ key: picture.id }}
