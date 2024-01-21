@@ -19,8 +19,8 @@
 			</div>
 			<div class="description-text">
 				<Title variant="h2" title={resources.francisDescriptionTitle} />
-				<TextBloc bold smallMargin content={resources.francisDescriptionLegend} />
-				<TextBloc smallMargin content={resources.francisDescriptionContent} />
+				<TextBloc bold margin="none" content={resources.francisDescriptionLegend} />
+				<TextBloc margin="small" content={resources.francisDescriptionContent} />
 			</div>
 		</div>
 		<Divider />

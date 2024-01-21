@@ -16,8 +16,8 @@
 				alt={"certificat naissance Francis Giraud"}
 				loading="lazy"
 			/>
-			<TextBloc bold smallMargin content={resources.documentBirthDescription} />
-			<TextBloc smallMargin content={resources.documentBirthDescription2} />
+			<TextBloc bold margin="none" content={resources.documentBirthDescription} />
+			<TextBloc margin="small" content={resources.documentBirthDescription2} />
 		</div>
 		<Divider />
 		<div class="document">
@@ -34,7 +34,7 @@
 				alt={"certificat mariage 2 Francis Giraud"}
 				loading="lazy"
 			/>
-			<TextBloc smallMargin content={resources.documentWeddingDescription} />
+			<TextBloc margin="small" content={resources.documentWeddingDescription} />
 		</div>
 		<Divider />
 		<div class="document">
@@ -45,8 +45,8 @@
 				alt={"certificat deces Francis Giraud"}
 				loading="lazy"
 			/>
-			<TextBloc bold smallMargin content={resources.documentDeathDescription} />
-			<TextBloc smallMargin content={resources.documentDeathDescription2} />
+			<TextBloc bold margin="none" content={resources.documentDeathDescription} />
+			<TextBloc margin="small" content={resources.documentDeathDescription2} />
 		</div>
 	</div>
 </div>

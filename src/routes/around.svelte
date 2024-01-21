@@ -9,10 +9,10 @@
 		<Title title={resources.around} />
 		<div class="description">
 			<Title variant="h2" title={resources.albumsGathering} />
-			<TextBloc smallMargin content={resources.albumsGatheringDetails} />
-			<TextBloc smallMargin content={resources.albumsGatheringDetails2} />
-			<TextBloc smallMargin content={resources.albumsGatheringDetails3} />
-			<TextBloc smallMargin content={resources.albumsGatheringDetails4} />
+			<TextBloc margin="small" content={resources.albumsGatheringDetails} />
+			<TextBloc margin="small" content={resources.albumsGatheringDetails2} />
+			<TextBloc margin="small" content={resources.albumsGatheringDetails3} />
+			<TextBloc margin="small" content={resources.albumsGatheringDetails4} />
 			<TextBloc content={resources.albumsGatheringDetails5} />
 		</div>
 	</div>
