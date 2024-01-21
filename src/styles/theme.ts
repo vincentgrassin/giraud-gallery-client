@@ -36,9 +36,9 @@ export const fontSize = {
 export const spacing = {};
 
 export const sizes = {
-	headerHeight: "128px",
+	headerHeight: "140px",
 	navHeight: "64px",
-	footerHeight: "80px"
+	footerHeight: "60px"
 };
 
 export const theme = Object.entries({
