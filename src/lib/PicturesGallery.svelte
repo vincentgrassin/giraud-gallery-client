@@ -32,6 +32,7 @@
 			innerWidth = window.innerWidth;
 			isMediumScreen = innerWidth < breakpoints.md;
 		}
+		onResize();
 		window.addEventListener("resize", onResize);
 		return () => window.removeEventListener("resize", onResize);
 	});
