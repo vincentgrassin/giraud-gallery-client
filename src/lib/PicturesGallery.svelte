@@ -25,12 +25,12 @@
 	}
 
 	let innerWidth: number = 0;
-	let isMediumScreen = false;
+	let isSmallScreen = false;
 
 	onMount(() => {
 		function onResize() {
 			innerWidth = window.innerWidth;
-			isMediumScreen = innerWidth < breakpoints.md;
+			isSmallScreen = innerWidth < breakpoints.sm;
 		}
 		onResize();
 		window.addEventListener("resize", onResize);
@@ -46,7 +46,7 @@
 	};
 
 	const handlePictureChange = (picture: Picture | undefined) => {
-		if (!isMediumScreen) {
+		if (!isSmallScreen) {
 			selected = picture;
 		}
 	};
@@ -113,7 +113,7 @@
 				{/if}
 			{/each}
 		</ul>
-		{#if selected && !isMediumScreen}
+		{#if selected && !isSmallScreen}
 			<PictureCard {selected} pictures={currentPictures} {handlePictureChange} />
 		{/if}
 	{/if}
