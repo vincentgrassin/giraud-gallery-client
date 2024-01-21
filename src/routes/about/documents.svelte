@@ -10,31 +10,43 @@
 	<Title title={resources.documents} />
 	<div class="document">
 		<Title variant="h2" title={resources.documentBirth} />
-		<img
-			class="francis-img"
-			src={"../images/certificat_naissance.jpg"}
-			alt={"certificat naissance Francis Giraud"}
-			loading="lazy"
-		/>
-		<TextBloc bold margin="none" content={resources.documentBirthDescription} />
-		<TextBloc margin="small" content={resources.documentBirthDescription2} />
+		<div class="text-with-image">
+			<div class="image-wrapper">
+				<img
+					class="francis-img"
+					src={"../images/certificat_naissance.jpg"}
+					alt={"certificat naissance Francis Giraud"}
+					loading="lazy"
+				/>
+			</div>
+			<div class="description-text">
+				<TextBloc bold margin="none" content={resources.documentBirthDescription} />
+				<TextBloc margin="small" content={resources.documentBirthDescription2} />
+			</div>
+		</div>
 	</div>
 	<Divider />
 	<div class="document">
 		<Title variant="h2" title={resources.documentWedding} />
-		<img
-			class="francis-img"
-			src={"../images/certificat_mariage.png"}
-			alt={"certificat mariage 1 Francis Giraud"}
-			loading="lazy"
-		/>
-		<img
-			class="francis-img"
-			src={"../images/certificat_mariage2.png"}
-			alt={"certificat mariage 2 Francis Giraud"}
-			loading="lazy"
-		/>
-		<TextBloc margin="small" content={resources.documentWeddingDescription} />
+		<div class="text-with-image">
+			<div class="image-wrapper">
+				<img
+					class="francis-img"
+					src={"../images/certificat_mariage.png"}
+					alt={"certificat mariage 1 Francis Giraud"}
+					loading="lazy"
+				/>
+				<img
+					class="francis-img"
+					src={"../images/certificat_mariage2.png"}
+					alt={"certificat mariage 2 Francis Giraud"}
+					loading="lazy"
+				/>
+			</div>
+			<div class="description-text">
+				<TextBloc margin="small" content={resources.documentWeddingDescription} />
+			</div>
+		</div>
 	</div>
 	<Divider />
 	<div class="document">
@@ -62,15 +74,29 @@
 		width: 90%;
 	}
 
-	@media (min-width: 1260px) {
-		.document {
-			margin: 32px 0;
-		}
+	.text-with-image {
+		display: flex;
+		flex-direction: column;
+		margin-top: 16px;
 	}
 
 	@media (min-width: 1260px) {
-		img {
-			width: 80%;
+		.text-with-image {
+			flex-direction: row;
+		}
+		.document {
+			margin: 32px 0;
+		}
+
+		.image-wrapper {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.description-text {
+			flex: 1;
 		}
 	}
 </style>
