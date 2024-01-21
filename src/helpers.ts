@@ -7,22 +7,15 @@ export const environnement = {
 };
 export const apiBaseUrl = environnement.apiUrl;
 
-export const buildImageLocatorUrl = (picture: Picture | undefined) => {
-	if (!picture) {
-		return "";
-	}
-	return `https://res.cloudinary.com/dyivtryy7/image/upload/v1652346037/${picture.cloudinaryPublicId}.jpg`;
-};
-
 export const buildImageStaticPath = (picture: Picture | undefined, level = 0) => {
 	if (!picture) {
 		return "";
 	}
 	if (level === 0) {
-		return `images/${picture.cloudinaryPublicId}.jpg`;
+		return `images/${picture.staticPath}.jpg`;
 	}
 	if (level === 1) {
-		return `../images/${picture.cloudinaryPublicId}.jpg`;
+		return `../images/${picture.staticPath}.jpg`;
 	}
 };
 
