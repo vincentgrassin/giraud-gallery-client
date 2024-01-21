@@ -36,7 +36,7 @@
 		<ul class="list">
 			{#each tabs as tab}
 				{#if !tab.children}
-					<li class="nav-item" class:active={$page.url.pathname.match(tab.regex)}>
+					<li class="nav-item" class:active={tab.regex && $page.url.pathname.match(tab.regex)}>
 						<a class="dropdown__title" href={tab.path}>{tab.label}</a>
 					</li>
 				{:else}
@@ -49,7 +49,8 @@
 								<li class="dropdown__element">
 									<a
 										class="dropdown__link"
-										class:activeDropdownLink={$page.url.pathname.match(childrenTab.regex)}
+										class:activeDropdownLink={childrenTab.regex &&
+											$page.url.pathname.match(childrenTab.regex)}
 										href={childrenTab.path}>{childrenTab.label}</a
 									>
 								</li>

@@ -75,7 +75,7 @@ export const resources = {
 	albumsGatheringDetails5: `Jean-Francois GRASSIN, fils de Philippe GRASSIN, fils de Geneviève GIRAUD fille de Francis-Léon
 	 GIRAUD`,
 	documentBirth: "Certificat de naissance de Francis-Léon GIRAUD né le 4 mars 1842 au Mans",
-	documentWedding: "Certificat de margiage",
+	documentWedding: "Certificat de mariage",
 	documentDeath: "Certificat de décès",
 	documentBirthDescription: `Préfecture du département de la Seine. Extrait du registre des actes de naissance de 1842.`,
 	documentBirthDescription2: `L’an 1842, le 5 mars à 11h du matin, par devant nous Barthélémy Benoît Desan, Chevalier de la Légion
