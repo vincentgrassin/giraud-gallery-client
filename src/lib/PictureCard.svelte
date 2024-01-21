@@ -113,7 +113,7 @@
 				href={buildImageStaticPath(selected, 1)}
 				target="_blank"
 			>
-				<img src={buildImageStaticPath(selected, 1)} alt={selected?.id} />
+				<img class="link-image" src={buildImageStaticPath(selected, 1)} alt={selected?.id} />
 			</a>
 			<p class="picture-informations">{selected?.id}</p>
 		</div>
@@ -147,6 +147,10 @@
 		width: 100%;
 		height: 300px;
 		background: center / cover no-repeat;
+	}
+
+	.link-image {
+		width: 100%;
 	}
 
 	.gallery {
