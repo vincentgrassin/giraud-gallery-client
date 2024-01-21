@@ -377,6 +377,166 @@ export const B: Album = {
 			cloudinaryId: "cfef8f8786b9962737d149ce0ec819b7",
 			width: 799,
 			height: 561
+		},
+		{
+			id: "B_147",
+			quality: 1,
+			staticPath: "giraud-images/B/147",
+			cloudinaryId: "unknown",
+			width: 799,
+			height: 561
+		},
+		{
+			id: "B_148",
+			quality: 1,
+			staticPath: "giraud-images/B/148",
+			cloudinaryId: "unknown",
+			width: 799,
+			height: 561
+		},
+		{
+			id: "B_149",
+			quality: 1,
+			staticPath: "giraud-images/B/149",
+			cloudinaryId: "unknown",
+			width: 799,
+			height: 561
+		},
+		{
+			id: "B_150",
+			quality: 1,
+			staticPath: "giraud-images/B/150",
+			cloudinaryId: "unknown",
+			width: 799,
+			height: 561
+		},
+		{
+			id: "B_151",
+			quality: 1,
+			staticPath: "giraud-images/B/151",
+			cloudinaryId: "unknown",
+			width: 799,
+			height: 561
+		},
+		{
+			id: "B_152",
+			quality: 1,
+			staticPath: "giraud-images/B/152",
+			cloudinaryId: "unknown",
+			width: 799,
+			height: 561
+		},
+		{
+			id: "B_153",
+			quality: 1,
+			staticPath: "giraud-images/B/153",
+			cloudinaryId: "unknown",
+			width: 799,
+			height: 561
+		},
+		{
+			id: "B_154",
+			quality: 1,
+			staticPath: "giraud-images/B/154",
+			cloudinaryId: "unknown",
+			width: 799,
+			height: 561
+		},
+		{
+			id: "B_155",
+			quality: 1,
+			staticPath: "giraud-images/B/155",
+			cloudinaryId: "unknown",
+			width: 799,
+			height: 561
+		},
+		{
+			id: "B_156",
+			quality: 1,
+			staticPath: "giraud-images/B/156",
+			cloudinaryId: "unknown",
+			width: 799,
+			height: 561
+		},
+		{
+			id: "B_157",
+			quality: 1,
+			staticPath: "giraud-images/B/157",
+			cloudinaryId: "unknown",
+			width: 799,
+			height: 561
+		},
+		{
+			id: "B_158",
+			quality: 1,
+			staticPath: "giraud-images/B/158",
+			cloudinaryId: "unknown",
+			width: 799,
+			height: 561
+		},
+		{
+			id: "B_159",
+			quality: 1,
+			staticPath: "giraud-images/B/159",
+			cloudinaryId: "unknown",
+			width: 799,
+			height: 561
+		},
+		{
+			id: "B_160",
+			quality: 1,
+			staticPath: "giraud-images/B/160",
+			cloudinaryId: "unknown",
+			width: 799,
+			height: 561
+		},
+		{
+			id: "B_161",
+			quality: 1,
+			staticPath: "giraud-images/B/161",
+			cloudinaryId: "unknown",
+			width: 799,
+			height: 561
+		},
+		{
+			id: "B_162",
+			quality: 1,
+			staticPath: "giraud-images/B/162",
+			cloudinaryId: "unknown",
+			width: 799,
+			height: 561
+		},
+		{
+			id: "B_163",
+			quality: 1,
+			staticPath: "giraud-images/B/163",
+			cloudinaryId: "unknown",
+			width: 799,
+			height: 561
+		},
+		{
+			id: "B_164",
+			quality: 1,
+			staticPath: "giraud-images/B/164",
+			cloudinaryId: "unknown",
+			width: 799,
+			height: 561
+		},
+		{
+			id: "B_165",
+			quality: 1,
+			staticPath: "giraud-images/B/165",
+			cloudinaryId: "unknown",
+			width: 799,
+			height: 561
+		},
+		{
+			id: "B_166",
+			quality: 1,
+			staticPath: "giraud-images/B/166",
+			cloudinaryId: "unknown",
+			width: 799,
+			height: 561
 		}
 	],
 	name: "Ecosse",

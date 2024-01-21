@@ -25,13 +25,14 @@
 	}
 
 	let innerWidth: number = 0;
-	let isMediumScreen = false;
+	let isSmallScreen = false;
 
 	onMount(() => {
 		function onResize() {
 			innerWidth = window.innerWidth;
-			isMediumScreen = innerWidth < breakpoints.md;
+			isSmallScreen = innerWidth < breakpoints.sm;
 		}
+		onResize();
 		window.addEventListener("resize", onResize);
 		return () => window.removeEventListener("resize", onResize);
 	});
@@ -45,7 +46,7 @@
 	};
 
 	const handlePictureChange = (picture: Picture | undefined) => {
-		if (!isMediumScreen) {
+		if (!isSmallScreen) {
 			selected = picture;
 		}
 	};
@@ -112,7 +113,7 @@
 				{/if}
 			{/each}
 		</ul>
-		{#if selected && !isMediumScreen}
+		{#if selected && !isSmallScreen}
 			<PictureCard {selected} pictures={currentPictures} {handlePictureChange} />
 		{/if}
 	{/if}
@@ -144,16 +145,12 @@
 		width: 100%;
 	}
 
-	@media (min-width: 760px) and (max-width: 1199px) {
-		.gallery-list {
-			width: 80%;
-		}
-	}
-
-	@media (min-width: 1200px) {
-		.gallery-list {
-			width: 50%;
-		}
+	.buttons-container {
+		display: flex;
+		width: 100%;
+		align-items: center;
+		justify-content: space-between;
+		padding: 32px;
 	}
 
 	li {
@@ -177,11 +174,20 @@
 		}
 	}
 
-	.buttons-container {
-		display: flex;
-		width: 100%;
-		align-items: center;
-		justify-content: space-between;
-		padding: 32px;
+	@media (min-width: 760px) and (max-width: 1199px) {
+		.gallery-list {
+			width: 80%;
+		}
+	}
+
+	@media (min-width: 1200px) {
+		.gallery-list {
+			width: 50%;
+		}
+
+		.buttons-container {
+			padding-left: 20%;
+			padding-right: 20%;
+		}
 	}
 </style>

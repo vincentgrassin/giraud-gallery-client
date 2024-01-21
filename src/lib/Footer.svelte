@@ -15,8 +15,8 @@
 		flex-direction: column;
 		justify-content: space-evenly;
 		align-items: center;
-		background-color: var(--eerieBlack);
-		color: var(--white);
+		background-color: var(--lightGrey);
+		color: var(--eerieBlack);
 		bottom: 0;
 		width: 100%;
 	}

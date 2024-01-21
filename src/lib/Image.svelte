@@ -12,8 +12,10 @@
 	});
 </script>
 
+<!-- FIXME: accessibility is really bad here -->
 {#if isListDisplay}
 	<img
+		role="button"
 		src={buildImageStaticPath(picture, 1)}
 		alt={picture.id}
 		class="list-picture"
@@ -24,7 +26,7 @@
 	/>
 {:else}
 	<div
-		role="img"
+		role="button"
 		aria-label={picture.id}
 		out:send={{ key: picture.id }}
 		in:receive={{ key: picture.id }}

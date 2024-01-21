@@ -44,7 +44,7 @@ export default function keyboard(node: HTMLElement, params: any) {
 
 export const breakpoints = {
 	sm: 760,
-	md: 1200
+	md: 1260
 };
 
 export const getGallerySizeRatio = (screenWidth: number) => {
