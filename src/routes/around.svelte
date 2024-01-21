@@ -9,10 +9,10 @@
 		<Title title={resources.around} />
 		<div class="description">
 			<Title variant="h2" title={resources.albumsGathering} />
-			<TextBloc content={resources.albumsGatheringDetails} />
-			<TextBloc content={resources.albumsGatheringDetails2} />
-			<TextBloc content={resources.albumsGatheringDetails3} />
-			<TextBloc content={resources.albumsGatheringDetails4} />
+			<TextBloc smallMargin content={resources.albumsGatheringDetails} />
+			<TextBloc smallMargin content={resources.albumsGatheringDetails2} />
+			<TextBloc smallMargin content={resources.albumsGatheringDetails3} />
+			<TextBloc smallMargin content={resources.albumsGatheringDetails4} />
 			<TextBloc content={resources.albumsGatheringDetails5} />
 		</div>
 	</div>
@@ -28,15 +28,21 @@
 	}
 
 	.container {
-		width: 80%;
+		width: 90%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 	}
 
 	.description {
 		margin: 16px 0 32px 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 	}
-	@media (min-width: 760px) {
+	@media (min-width: 1260px) {
 		.container {
-			width: 70%;
+			width: 60%;
 		}
 	}
 </style>

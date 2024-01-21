@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Divider from "$lib/Divider.svelte";
 	import TextBloc from "$lib/TextBloc.svelte";
 	import Title from "$lib/Title.svelte";
 	import { resources } from "../../resources";
@@ -18,6 +19,7 @@
 			<TextBloc bold smallMargin content={resources.documentBirthDescription} />
 			<TextBloc smallMargin content={resources.documentBirthDescription2} />
 		</div>
+		<Divider />
 		<div class="document">
 			<Title variant="h2" title={resources.documentWedding} />
 			<img
@@ -34,6 +36,7 @@
 			/>
 			<TextBloc smallMargin content={resources.documentWeddingDescription} />
 		</div>
+		<Divider />
 		<div class="document">
 			<Title variant="h2" title={resources.documentDeath} />
 			<img
@@ -58,7 +61,10 @@
 	}
 
 	.container {
-		width: 80%;
+		width: 90%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 	}
 
 	.document {
@@ -72,9 +78,9 @@
 		width: 90%;
 	}
 
-	@media (min-width: 760px) {
+	@media (min-width: 1260px) {
 		.container {
-			width: 70%;
+			width: 60%;
 		}
 		.document {
 			margin: 32px 0;

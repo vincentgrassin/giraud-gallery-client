@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Divider from "$lib/Divider.svelte";
 	import TextBloc from "$lib/TextBloc.svelte";
 	import Title from "$lib/Title.svelte";
 	import { resources } from "../../resources";
@@ -22,6 +23,7 @@
 				<TextBloc smallMargin content={resources.francisDescriptionContent} />
 			</div>
 		</div>
+		<Divider />
 		<div class="document">
 			<Title variant="h2" title={resources.familyTree} />
 			<img
@@ -31,6 +33,7 @@
 				loading="lazy"
 			/>
 		</div>
+		<Divider />
 		<div class="document">
 			<Title variant="h2" title={resources.documetnPatronymique} />
 			<img
@@ -69,7 +72,10 @@
 	}
 
 	.container {
-		width: 80%;
+		width: 90%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 	}
 
 	.description-text {
@@ -92,9 +98,9 @@
 		width: 100%;
 	}
 
-	@media (min-width: 760px) {
+	@media (min-width: 1260px) {
 		.container {
-			width: 70%;
+			width: 60%;
 		}
 
 		.main-description {
