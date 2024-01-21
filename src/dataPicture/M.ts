@@ -669,6 +669,14 @@ export const M: Album = {
 			height: 758
 		},
 		{
+			id: "M_163a",
+			quality: 1,
+			staticPath: "giraud-images/M/163a",
+			cloudinaryId: "unknown",
+			width: 540,
+			height: 758
+		},
+		{
 			id: "M_164a",
 			quality: 1,
 			staticPath: "giraud-images/M/164a",
