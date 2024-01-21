@@ -14,6 +14,18 @@ export const buildImageLocatorUrl = (picture: Picture | undefined) => {
 	return `https://res.cloudinary.com/dyivtryy7/image/upload/v1652346037/${picture.cloudinaryPublicId}.jpg`;
 };
 
+export const buildImageStaticPath = (picture: Picture | undefined, level = 0) => {
+	if (!picture) {
+		return "";
+	}
+	if (level === 0) {
+		return `images/${picture.cloudinaryPublicId}.jpg`;
+	}
+	if (level === 1) {
+		return `../images/${picture.cloudinaryPublicId}.jpg`;
+	}
+};
+
 export default function keyboard(node: HTMLElement, params: any) {
 	// params.shortcut
 	function handleKeyDown(e: KeyboardEvent) {

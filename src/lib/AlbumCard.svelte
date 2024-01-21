@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { Album } from "../types";
-	import { buildImageLocatorUrl } from "../helpers";
+	import { buildImageStaticPath } from "../helpers";
 	import { resources } from "../resources";
 	import Title from "./Title.svelte";
 	import Badge from "./Badge.svelte";
@@ -15,7 +15,7 @@
 <li class="card">
 	<a href={`/album/${album.id}`} class="card-link">
 		<img
-			src={coverPicture ? buildImageLocatorUrl(coverPicture) : ""}
+			src={coverPicture ? buildImageStaticPath(coverPicture) : ""}
 			alt={album.name}
 			class="cover-picture"
 		/>

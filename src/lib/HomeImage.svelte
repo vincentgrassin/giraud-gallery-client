@@ -1,10 +1,10 @@
 <script lang="ts">
 	import type { Picture } from "../types";
-	import { buildImageLocatorUrl } from "../helpers";
+	import { buildImageStaticPath } from "../helpers";
 	export let picture: Picture;
 </script>
 
-<img src={buildImageLocatorUrl(picture)} alt={picture.cloudinaryPublicId} loading="lazy" />
+<img src={buildImageStaticPath(picture)} alt={picture.cloudinaryPublicId} loading="lazy" />
 
 <style>
 	img {
