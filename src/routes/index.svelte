@@ -16,17 +16,36 @@
 		return acc;
 	}, []);
 
-	const homeSelection = shuffleArray(allPictures).slice(0, 15);
+	let homeSelection = shuffleArray(allPictures).slice(0, 15);
 	const gridKey = shuffleGridDisplayKey();
+
+	const handleRefresh = () => {
+		homeSelection = shuffleArray(allPictures).slice(0, 15);
+	};
 </script>
 
 <div class="homeContainer">
-	<Title title={resources.francisAlbums} />
+	<Title title={resources.francisAlbums} srOnly />
 	<div class="homeDescription">
+		<div class="introWrapper">
+			<p class="introText">
+				{resources.homeIntro}
+			</p>
+			<p class="introText">
+				{resources.homeIntro2}
+			</p>
+			<p class="introText">
+				{resources.homeIntro3}
+			</p>
+		</div>
 		<Button --color={colors.golden} buttonType="a" href="/albums">
 			{resources.discover}
 		</Button>
 	</div>
+
+	<Button --color={colors.golden} on:click={handleRefresh}>
+		{resources.refreshHome}
+	</Button>
 
 	<div class="parent">
 		<div class={`francis${gridKey}`}>
@@ -64,14 +83,28 @@
 		}
 	}
 
-
-
 	.homeDescription {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
 		margin: 16px 0 64px 0;
+		width: 90%;
+	}
+
+	.introWrapper {
+		padding: 16px;
+		border-radius: 5px;
+		margin-bottom: 48px;
+	}
+
+	.introText {
+		font-family: var(--handwriting);
+		font-size: var(--fontSizeBig);
+		display: block;
+		margin: 0;
+		margin-bottom: 8px;
+		text-align: center;
 	}
 
 	.home-image {
@@ -100,6 +133,10 @@
 			width: 100%;
 			grid-column-gap: 5px;
 			grid-row-gap: 5px;
+		}
+
+		.homeDescription {
+			width: 90%;
 		}
 
 		.div1 {

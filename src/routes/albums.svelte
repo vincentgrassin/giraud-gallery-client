@@ -27,7 +27,7 @@
 </script>
 
 <div class="container">
-	<Title title={resources.albums} />
+	<Title title={resources.albums22} />
 	<ul class="album-grid">
 		{#each albums as album}
 			<AlbumCard {album} />
@@ -51,13 +51,13 @@
 
 	@media (min-width: 500px) and (max-width: 759px) {
 		.album-grid {
-			grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 		}
 	}
 
 	@media (min-width: 760px) {
 		.album-grid {
-			grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+			grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 		}
 	}
 </style>

@@ -33,6 +33,10 @@ export const fontSize = {
 	fontSizeVeryBig: "3rem"
 };
 
+export const fontFamily = {
+	handwriting: "Caveat"
+};
+
 export const spacing = {};
 
 export const sizes = {
@@ -45,7 +49,8 @@ export const theme = Object.entries({
 	...colors,
 	...fontSize,
 	...spacing,
-	...sizes
+	...sizes,
+	...fontFamily
 })
 	.map(([key, value]) => `--${key}:${value}`)
 	.join(";");

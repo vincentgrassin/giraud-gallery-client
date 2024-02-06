@@ -265,768 +265,768 @@ export const N: Album = {
 			quality: 1,
 			staticPath: "giraud-images/N/117bis",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 886,
+			height: 1229
 		},
 		{
 			id: "N_117ter",
 			quality: 1,
 			staticPath: "giraud-images/N/117ter",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 867,
+			height: 1232
 		},
 		{
 			id: "N_118",
 			quality: 1,
 			staticPath: "giraud-images/N/118",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 894,
+			height: 1230
 		},
 		{
 			id: "N_119",
 			quality: 1,
 			staticPath: "giraud-images/N/119",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 891,
+			height: 1217
 		},
 		{
 			id: "N_120",
 			quality: 1,
 			staticPath: "giraud-images/N/120",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 868,
+			height: 1211
 		},
 		{
 			id: "N_121",
 			quality: 1,
 			staticPath: "giraud-images/N/121",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 873,
+			height: 1211
 		},
 		{
 			id: "N_121a",
 			quality: 2,
 			staticPath: "giraud-images/N/121a",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 333,
+			height: 337
 		},
 		{
 			id: "N_122",
 			quality: 1,
 			staticPath: "giraud-images/N/122",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 887,
+			height: 1224
 		},
 		{
 			id: "N_123",
 			quality: 1,
 			staticPath: "giraud-images/N/123",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 866,
+			height: 1227
 		},
 		{
 			id: "N_124",
 			quality: 1,
 			staticPath: "giraud-images/N/124",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 891,
+			height: 1217
 		},
 		{
 			id: "N_125",
 			quality: 1,
 			staticPath: "giraud-images/N/125",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 855,
+			height: 1211
 		},
 		{
 			id: "N_125a",
 			quality: 1,
 			staticPath: "giraud-images/N/125a",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 198,
+			height: 390
 		},
 		{
 			id: "N_126",
 			quality: 1,
 			staticPath: "giraud-images/N/126",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 861,
+			height: 1199
 		},
 		{
 			id: "N_127",
 			quality: 1,
 			staticPath: "giraud-images/N/127",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 870,
+			height: 1227
 		},
 		{
 			id: "N_127a",
 			quality: 1,
 			staticPath: "giraud-images/N/127a",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 346,
+			height: 331
 		},
 		{
 			id: "N_128",
 			quality: 1,
 			staticPath: "giraud-images/N/128",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 894,
+			height: 1220
 		},
 		{
 			id: "N_130",
 			quality: 1,
 			staticPath: "giraud-images/N/130",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 901,
+			height: 1224
 		},
 		{
 			id: "N_130a",
 			quality: 1,
 			staticPath: "giraud-images/N/130a",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 191,
+			height: 282
 		},
 		{
 			id: "N_131",
 			quality: 2,
 			staticPath: "giraud-images/N/131",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 885,
+			height: 1203
 		},
 		{
 			id: "N_131a",
 			quality: 2,
 			staticPath: "giraud-images/N/131a",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 641,
+			height: 429
 		},
 		{
 			id: "N_132",
 			quality: 1,
 			staticPath: "giraud-images/N/132",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 880,
+			height: 1221
 		},
 		{
 			id: "N_133",
 			quality: 1,
 			staticPath: "giraud-images/N/133",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 869,
+			height: 1212
 		},
 		{
 			id: "N_134",
 			quality: 1,
 			staticPath: "giraud-images/N/134",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 906,
+			height: 1235
 		},
 		{
 			id: "N_135",
 			quality: 2,
 			staticPath: "giraud-images/N/135",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 867,
+			height: 1221
 		},
 		{
 			id: "N_135a",
 			quality: 2,
 			staticPath: "giraud-images/N/135a",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 381,
+			height: 592
 		},
 		{
 			id: "N_136",
 			quality: 1,
 			staticPath: "giraud-images/N/136",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 883,
+			height: 1209
 		},
 		{
 			id: "N_137",
 			quality: 2,
 			staticPath: "giraud-images/N/137",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 876,
+			height: 1203
 		},
 		{
 			id: "N_137a",
 			quality: 2,
 			staticPath: "giraud-images/N/137a",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 362,
+			height: 505
 		},
 		{
 			id: "N_137b",
 			quality: 1,
 			staticPath: "giraud-images/N/137b",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 449,
+			height: 359
 		},
 		{
 			id: "N_138",
 			quality: 2,
 			staticPath: "giraud-images/N/138",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 888,
+			height: 1231
 		},
 		{
 			id: "N_138a",
 			quality: 1,
 			staticPath: "giraud-images/N/138a",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 392,
+			height: 268
 		},
 		{
 			id: "N_138b",
 			quality: 1,
 			staticPath: "giraud-images/N/138b",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 322,
+			height: 330
 		},
 		{
 			id: "N_138c",
 			quality: 2,
 			staticPath: "giraud-images/N/138c",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 392,
+			height: 355
 		},
 		{
 			id: "N_139",
 			quality: 2,
 			staticPath: "giraud-images/N/139",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 873,
+			height: 1230
 		},
 		{
 			id: "N_139a",
 			quality: 1,
 			staticPath: "giraud-images/N/139a",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 323,
+			height: 306
 		},
 		{
 			id: "N_139b",
 			quality: 1,
 			staticPath: "giraud-images/N/139b",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 400,
+			height: 376
 		},
 		{
 			id: "N_139c",
 			quality: 1,
 			staticPath: "giraud-images/N/139c",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 415,
+			height: 268
 		},
 		{
 			id: "N_140",
 			quality: 2,
 			staticPath: "giraud-images/N/140",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 876,
+			height: 1228
 		},
 		{
 			id: "N_141",
 			quality: 2,
 			staticPath: "giraud-images/N/141",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 876,
+			height: 1234
 		},
 		{
 			id: "N_141a",
 			quality: 1,
 			staticPath: "giraud-images/N/141a",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 417,
+			height: 262
 		},
 		{
 			id: "N_142",
 			quality: 2,
 			staticPath: "giraud-images/N/142",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 894,
+			height: 1206
 		},
 		{
 			id: "N_143",
 			quality: 2,
 			staticPath: "giraud-images/N/143",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 876,
+			height: 1217
 		},
 		{
 			id: "N_144",
 			quality: 2,
 			staticPath: "giraud-images/N/144",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 88,
+			height: 1202
 		},
 		{
 			id: "N_145",
 			quality: 2,
 			staticPath: "giraud-images/N/145",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 865,
+			height: 1217
 		},
 		{
 			id: "N_146",
 			quality: 2,
 			staticPath: "giraud-images/N/146",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 878,
+			height: 1219
 		},
 		{
 			id: "N_146a",
 			quality: 1,
 			staticPath: "giraud-images/N/146a",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 358,
+			height: 421
 		},
 		{
 			id: "N_147",
 			quality: 2,
 			staticPath: "giraud-images/N/147",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 883,
+			height: 1196
 		},
 		{
 			id: "N_148",
 			quality: 1,
 			staticPath: "giraud-images/N/148",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 862,
+			height: 1220
 		},
 		{
 			id: "N_148a",
 			quality: 1,
 			staticPath: "giraud-images/N/148a",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 391,
+			height: 409
 		},
 		{
 			id: "N_149",
 			quality: 2,
 			staticPath: "giraud-images/N/149",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 876,
+			height: 1217
 		},
 		{
 			id: "N_149a",
 			quality: 2,
 			staticPath: "giraud-images/N/149a",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 813,
+			height: 283
 		},
 		{
 			id: "N_150",
 			quality: 2,
 			staticPath: "giraud-images/N/150",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 879,
+			height: 1206
 		},
 		{
 			id: "N_151",
 			quality: 2,
 			staticPath: "giraud-images/N/151",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 873,
+			height: 1217
 		},
 		{
 			id: "N_152",
 			quality: 2,
 			staticPath: "giraud-images/N/152",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 883,
+			height: 1213
 		},
 		{
 			id: "N_153",
 			quality: 2,
 			staticPath: "giraud-images/N/153",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 848,
+			height: 1206
 		},
 		{
 			id: "N_153a",
 			quality: 2,
 			staticPath: "giraud-images/N/153a",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 178,
+			height: 487
 		},
 		{
 			id: "N_154",
 			quality: 2,
 			staticPath: "giraud-images/N/154",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 870,
+			height: 1219
 		},
 		{
 			id: "N_155",
 			quality: 1,
 			staticPath: "giraud-images/N/155",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 877,
+			height: 1196
 		},
 		{
 			id: "N_156",
 			quality: 2,
 			staticPath: "giraud-images/N/156",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 866,
+			height: 1203
 		},
 		{
 			id: "N_157",
 			quality: 2,
 			staticPath: "giraud-images/N/157",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 876,
+			height: 1211
 		},
 		{
 			id: "N_158",
 			quality: 2,
 			staticPath: "giraud-images/N/158",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 891,
+			height: 1214
 		},
 		{
 			id: "N_159",
 			quality: 2,
 			staticPath: "giraud-images/N/159",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 867,
+			height: 1219
 		},
 		{
 			id: "N_160",
 			quality: 2,
 			staticPath: "giraud-images/N/160",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 888,
+			height: 1206
 		},
 		{
 			id: "N_160a",
 			quality: 2,
 			staticPath: "giraud-images/N/160a",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 337,
+			height: 337
 		},
 		{
 			id: "N_161",
 			quality: 2,
 			staticPath: "giraud-images/N/161",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 876,
+			height: 1217
 		},
 		{
 			id: "N_162",
 			quality: 2,
 			staticPath: "giraud-images/N/162",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 888,
+			height: 1219
 		},
 		{
 			id: "N_162a",
 			quality: 2,
 			staticPath: "giraud-images/N/162a",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 819,
+			height: 385
 		},
 		{
 			id: "N_162b",
 			quality: 1,
 			staticPath: "giraud-images/N/162b",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 858,
+			height: 345
 		},
 		{
 			id: "N_163",
 			quality: 2,
 			staticPath: "giraud-images/N/163",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 806,
+			height: 1160
 		},
 		{
 			id: "N_163a",
 			quality: 1,
 			staticPath: "giraud-images/N/163a",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 617,
+			height: 449
 		},
 		{
 			id: "N_163b",
 			quality: 1,
 			staticPath: "giraud-images/N/163b",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 495,
+			height: 441
 		},
 		{
 			id: "N_164",
 			quality: 2,
 			staticPath: "giraud-images/N/164",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 873,
+			height: 1214
 		},
 		{
 			id: "N_165",
 			quality: 2,
 			staticPath: "giraud-images/N/165",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 883,
+			height: 1224
 		},
 		{
 			id: "N_165a",
 			quality: 1,
 			staticPath: "giraud-images/N/165a",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 403,
+			height: 373
 		},
 		{
 			id: "N_166",
 			quality: 2,
 			staticPath: "giraud-images/N/166",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 870,
+			height: 1217
 		},
 		{
 			id: "N_167",
 			quality: 2,
 			staticPath: "giraud-images/N/167",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 891,
+			height: 1202
 		},
 		{
 			id: "N_168",
 			quality: 2,
 			staticPath: "giraud-images/N/168",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 877,
+			height: 1221
 		},
 		{
 			id: "N_169",
 			quality: 2,
 			staticPath: "giraud-images/N/169",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 881,
+			height: 1206
 		},
 		{
 			id: "N_169a",
 			quality: 1,
 			staticPath: "giraud-images/N/169a",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 184,
+			height: 481
 		},
 		{
 			id: "N_170",
 			quality: 2,
 			staticPath: "giraud-images/N/170",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 876,
+			height: 1217
 		},
 		{
 			id: "N_170a",
 			quality: 1,
 			staticPath: "giraud-images/N/170a",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 341,
+			height: 349
 		},
 		{
 			id: "N_170b",
 			quality: 1,
 			staticPath: "giraud-images/N/170b",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 179,
+			height: 269
 		},
 		{
 			id: "N_171",
 			quality: 2,
 			staticPath: "giraud-images/N/171",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 870,
+			height: 1214
 		},
 		{
 			id: "N_172",
 			quality: 2,
 			staticPath: "giraud-images/N/172",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 873,
+			height: 1213
 		},
 		{
 			id: "N_173",
 			quality: 2,
 			staticPath: "giraud-images/N/173",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 837,
+			height: 1218
 		},
 		{
 			id: "N_174",
 			quality: 2,
 			staticPath: "giraud-images/N/174",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 840,
+			height: 1196
 		},
 		{
 			id: "N_175",
 			quality: 1,
 			staticPath: "giraud-images/N/175",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 807,
+			height: 1209
 		},
 		{
 			id: "N_175a",
 			quality: 2,
 			staticPath: "giraud-images/N/175a",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 448,
+			height: 337
 		},
 		{
 			id: "N_175b",
 			quality: 1,
 			staticPath: "giraud-images/N/175b",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 437,
+			height: 437
 		},
 		{
 			id: "N_176",
 			quality: 1,
 			staticPath: "giraud-images/N/176",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 1158,
+			height: 862
 		},
 		{
 			id: "N_177",
 			quality: 1,
 			staticPath: "giraud-images/N/177",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 1178,
+			height: 885
 		},
 		{
 			id: "N_178",
 			quality: 1,
 			staticPath: "giraud-images/N/178",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 1177,
+			height: 862
 		},
 		{
 			id: "N_179",
 			quality: 1,
 			staticPath: "giraud-images/N/179",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 1162,
+			height: 420
 		},
 		{
 			id: "N_180",
 			quality: 1,
 			staticPath: "giraud-images/N/180",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 808,
+			height: 559
 		},
 		{
 			id: "N_181",
 			quality: 1,
 			staticPath: "giraud-images/N/181",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 833,
+			height: 562
 		},
 		{
 			id: "N_182",
 			quality: 1,
 			staticPath: "giraud-images/N/182",
 			cloudinaryId: "unknown",
-			width: null,
-			height: null
+			width: 712,
+			height: 588
 		}
 	],
 	name: "Exposition - Journal",

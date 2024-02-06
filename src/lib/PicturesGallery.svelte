@@ -150,7 +150,7 @@
 		width: 100%;
 		align-items: center;
 		justify-content: space-between;
-		padding: 32px;
+		padding: 16px;
 	}
 
 	li {

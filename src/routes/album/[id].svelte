@@ -4,8 +4,7 @@
 	import PicturesGallery from "$lib/PicturesGallery.svelte";
 	import { resources } from "../../resources";
 	import Title from "$lib/Title.svelte";
-	import Badge from "$lib/Badge.svelte";
-	import { colors } from "../../styles/theme";
+	import TextBloc from "$lib/TextBloc.svelte";
 
 	const album = dataAlbums[`${$page.params.id}`];
 </script>
@@ -14,22 +13,13 @@
 	<div class="album-header">
 		<Title title={album.name} />
 		<div class="album-informations">
-			<div>
-				<Title variant="h2" title={album.date ?? resources.unknownDate} />
-				<p>{`${album.pictures?.length} ${resources.drawings.toLowerCase()}`}</p>
-			</div>
-			<Badge
-				--color={album.isDiary ? colors.metallicBlue : colors.redwood}
-				content={album.isDiary ? resources.diary : resources.drawings}
-			/>
+			<Title variant="h2" title={album.date ?? resources.unknownDate} />
+			<p>{`${album.pictures?.length} ${resources.drawings.toLowerCase()}`}</p>
+			<p>{`${resources.numberTag} ${album.number}`}</p>
 		</div>
 		<div class="album-tags">
 			{#if album.description}
-				{#each album.description.split(",") as tag}
-					<div class="album-tag">
-						<Badge --color={colors.veryDarkGrey} content={tag} />
-					</div>
-				{/each}
+				<TextBloc content={album.description} margin="none" />
 			{/if}
 		</div>
 	</div>
@@ -53,7 +43,6 @@
 
 	.album-informations {
 		display: flex;
-		margin: 20px 0px;
 		justify-content: space-around;
 		align-items: center;
 	}

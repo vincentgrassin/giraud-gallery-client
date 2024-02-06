@@ -5,10 +5,10 @@
 	import type { NavigationTab } from "../types";
 	import { children } from "svelte/internal";
 	const tabs: NavigationTab[] = [
-		{ label: resources.albums, id: "albums", path: "/albums", regex: "/(album|$)" },
+		{ label: resources.albums, id: "albums", path: "/albums", regex: "/album" },
 		{
 			label: resources.francisGiraud,
-			id: "blabla2",
+			id: "francisGiraud",
 			children: [
 				{
 					label: resources.description,
@@ -80,7 +80,7 @@
 	.title {
 		margin: 0;
 		color: var(--white);
-		font-family: "Caveat";
+		font-family: var(--handwriting);
 		font-size: var(--fontSizeBig);
 		text-decoration: none;
 	}
