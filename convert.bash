@@ -41,7 +41,7 @@ for folder_letter in {A..V}; do
         thumbnail_name="${base_name}-thumbnail.webp"
         
         # Create thumbnail
-        mogrify -format webp -resize 300x300 "$file"
+        mogrify -format webp -resize 500x500 "$file"
 
         mv "$wepb_name" "$thumbnail_name"
         mv "$thumbnail_name" "$destination_dir"

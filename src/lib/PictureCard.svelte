@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { Picture } from "../types";
-	import keyboard, { buildImageStaticPath } from "../helpers";
+	import keyboard, { buildImageStaticPath, buildThumbnailPath } from "../helpers";
 	import { tick } from "svelte";
 	import { crossfade } from "svelte/transition";
 	import Button from "./Button.svelte";
@@ -83,7 +83,7 @@
 					class:active={selected === picture}
 					on:click={() => handlePictureChange(picture)}
 					class="image"
-					style="background-image:url({buildImageStaticPath(picture, 1)})"
+					style="background-image:url({buildThumbnailPath(picture, 1)})"
 				/>
 			{/each}
 		</div>
