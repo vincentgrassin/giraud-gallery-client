@@ -17,10 +17,11 @@
 	}, []);
 
 	let homeSelection = shuffleArray(allPictures).slice(0, 15);
-	const gridKey = shuffleGridDisplayKey();
+	let gridKey = shuffleGridDisplayKey();
 
 	const handleRefresh = () => {
 		homeSelection = shuffleArray(allPictures).slice(0, 15);
+		gridKey = shuffleGridDisplayKey();
 	};
 </script>
 
@@ -38,14 +39,17 @@
 				{resources.homeIntro3}
 			</p>
 		</div>
+	</div>
+	<div class="buttonsContainer">
 		<Button --color={colors.golden} buttonType="a" href="/albums">
 			{resources.discover}
 		</Button>
+		<div class="refresh-button">
+			<Button --color={colors.golden} on:click={handleRefresh} variant="outline">
+				{resources.refreshHome}
+			</Button>
+		</div>
 	</div>
-
-	<Button --color={colors.golden} on:click={handleRefresh}>
-		{resources.refreshHome}
-	</Button>
 
 	<div class="parent">
 		<div class={`francis${gridKey}`}>
@@ -83,19 +87,29 @@
 		}
 	}
 
+	.buttonsContainer {
+		display: flex;
+		width: 100%;
+		align-items: center;
+		justify-content: space-evenly;
+	}
+
+	.refresh-button {
+		display: none;
+	}
+
 	.homeDescription {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		margin: 16px 0 64px 0;
+		margin: 16px 0 32px 0;
 		width: 90%;
 	}
 
 	.introWrapper {
 		padding: 16px;
 		border-radius: 5px;
-		margin-bottom: 48px;
 	}
 
 	.introText {
@@ -118,7 +132,8 @@
 		grid-template-columns: repeat(1, 1fr);
 		grid-template-rows: repeat(8, 1fr);
 		grid-row-gap: 5px;
-		width: 100%;
+		margin-top: 24px;
+		width: 90%;
 	}
 
 	.francis-img {
@@ -130,13 +145,18 @@
 			display: grid;
 			grid-template-columns: repeat(6, 1fr);
 			grid-template-rows: repeat(8, 200px);
-			width: 100%;
+			margin-top: 48px;
+			width: 90%;
 			grid-column-gap: 5px;
 			grid-row-gap: 5px;
 		}
 
 		.homeDescription {
 			width: 90%;
+		}
+
+		.refresh-button {
+			display: block;
 		}
 
 		.div1 {

@@ -6,7 +6,7 @@
 </script>
 
 <PageLayout>
-	<Title title={resources.around} />
+	<Title variant="h1" title={resources.around} />
 	<div class="description">
 		<Title variant="h2" title={resources.albumsGathering} />
 		<TextBloc margin="small" content={resources.albumsGatheringDetails} />

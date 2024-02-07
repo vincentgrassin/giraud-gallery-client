@@ -27,7 +27,7 @@
 </script>
 
 <div class="container">
-	<Title title={resources.albums22} />
+	<Title title={resources.albums22} variant="h1" />
 	<ul class="album-grid">
 		{#each albums as album}
 			<AlbumCard {album} />

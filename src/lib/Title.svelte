@@ -1,19 +1,20 @@
 <script lang="ts">
 	export let title: string;
 	export let srOnly: boolean = false;
-	export let variant: "h1" | "h2" = "h1";
+	export let variant: "h1" | "h2" | "p" = "p";
+	export let isHandWritting: boolean = false;
 </script>
 
 {#if variant === "h1"}
-	<h1 class="h1" class:sr-only={srOnly}>
+	<h1 class="h1" class:sr-only={srOnly} class:handWriting={isHandWritting}>
 		{title}
 	</h1>
 {:else if variant === "h2"}
-	<h2 class="h2" class:sr-only={srOnly}>
+	<h2 class="h2" class:sr-only={srOnly} class:handWriting={isHandWritting}>
 		{title}
 	</h2>
 {:else}
-	<p class:sr-only={srOnly}>{title}</p>
+	<p class:sr-only={srOnly} class:handWriting={isHandWritting}>{title}</p>
 {/if}
 
 <style>
@@ -33,6 +34,11 @@
 		width: 1px;
 		height: 1px;
 		overflow: hidden;
+	}
+
+	.handWriting {
+		font-family: var(--handwriting);
+		font-size: var(--fontSizeBig);
 	}
 
 	@media (min-width: 760px) {

@@ -88,7 +88,7 @@
 			{/each}
 		</div>
 		<div class="gallery-button-container">
-			<Button on:click={() => handlePictureChange(undefined)} variant="icon">
+			<Button on:click={() => handlePictureChange(undefined)} iconButton>
 				<Icon name="close" height="30px" width="30px" />
 			</Button>
 		</div>
@@ -101,20 +101,13 @@
 					const nextIdx = (currentIdx - 1) % pictures.length;
 					handleChange(pictures[nextIdx]);
 				}}
-				variant="icon"
+				iconButton
 			>
 				<Icon name="chevronLeft" height="30px" width="30px" />
 			</Button>
 		</div>
 		<div>
-			<a
-				in:receive={{ key: selected }}
-				out:send={{ key: selected }}
-				href={buildImageStaticPath(selected, 1)}
-				target="_blank"
-			>
-				<img class="link-image" src={buildImageStaticPath(selected, 1)} alt={selected?.id} />
-			</a>
+			<img class="link-image" src={buildImageStaticPath(selected, 1)} alt={selected?.id} />
 			<p class="picture-informations">{selected?.id}</p>
 		</div>
 		<div class="button-container">
@@ -123,7 +116,7 @@
 					const nextIdx = (currentIdx + 1) % pictures.length;
 					handleChange(pictures[nextIdx]);
 				}}
-				variant="icon"
+				iconButton
 			>
 				<Icon name="chevronRight" height="30px" width="30px" />
 			</Button>

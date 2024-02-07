@@ -79,7 +79,7 @@
 			<Button
 				on:click={() => handleListDisplay(false)}
 				disabled={!isListDisplay}
-				variant="icon"
+				iconButton
 				tooltip={resources.gridDisplay}
 			>
 				<Icon name="grid" height="30px" width="30px" />
@@ -87,7 +87,7 @@
 			<Button
 				on:click={() => handleListDisplay(true)}
 				disabled={isListDisplay}
-				variant="icon"
+				iconButton
 				tooltip={resources.listDisplay}
 			>
 				<Icon name="picture" height="30px" width="30px" />

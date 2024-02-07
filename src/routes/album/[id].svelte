@@ -11,15 +11,15 @@
 
 <div class="album">
 	<div class="album-header">
-		<Title title={album.name} />
+		<Title variant="h1" title={album.name} />
 		<div class="album-informations">
-			<Title variant="h2" title={album.date ?? resources.unknownDate} />
-			<p>{`${album.pictures?.length} ${resources.drawings.toLowerCase()}`}</p>
-			<p>{`${resources.numberTag} ${album.number}`}</p>
+			<Title isHandWritting title={album.date ?? resources.unknownDate} variant="h2" />
+			<p class="text">{`${album.pictures?.length} ${resources.drawings.toLowerCase()}`}</p>
+			<p class="text">{`${resources.numberTag} ${album.number}`}</p>
 		</div>
 		<div class="album-tags">
 			{#if album.description}
-				<TextBloc content={album.description} margin="none" />
+				<p class="text">{`${resources.inThisAlbum} ${album.description}`}</p>
 			{/if}
 		</div>
 	</div>
@@ -33,6 +33,11 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+	}
+	.text {
+		font-family: var(--handwriting);
+		font-size: var(--fontSizeBig);
+		margin: 0;
 	}
 	.album-header {
 		display: flex;
