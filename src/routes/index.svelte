@@ -16,16 +16,39 @@
 		return acc;
 	}, []);
 
-	const homeSelection = shuffleArray(allPictures).slice(0, 15);
-	const gridKey = shuffleGridDisplayKey();
+	let homeSelection = shuffleArray(allPictures).slice(0, 15);
+	let gridKey = shuffleGridDisplayKey();
+
+	const handleRefresh = () => {
+		homeSelection = shuffleArray(allPictures).slice(0, 15);
+		gridKey = shuffleGridDisplayKey();
+	};
 </script>
 
 <div class="homeContainer">
-	<Title title={resources.francisAlbums} />
+	<Title title={resources.francisAlbums} srOnly />
 	<div class="homeDescription">
+		<div class="introWrapper">
+			<p class="introText">
+				{resources.homeIntro}
+			</p>
+			<p class="introText">
+				{resources.homeIntro2}
+			</p>
+			<p class="introText">
+				{resources.homeIntro3}
+			</p>
+		</div>
+	</div>
+	<div class="buttonsContainer">
 		<Button --color={colors.golden} buttonType="a" href="/albums">
 			{resources.discover}
 		</Button>
+		<div class="refresh-button">
+			<Button --color={colors.golden} on:click={handleRefresh} variant="outline">
+				{resources.refreshHome}
+			</Button>
+		</div>
 	</div>
 
 	<div class="parent">
@@ -64,14 +87,38 @@
 		}
 	}
 
+	.buttonsContainer {
+		display: flex;
+		width: 100%;
+		align-items: center;
+		justify-content: space-evenly;
+	}
 
+	.refresh-button {
+		display: none;
+	}
 
 	.homeDescription {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		margin: 16px 0 64px 0;
+		margin: 16px 0 32px 0;
+		width: 90%;
+	}
+
+	.introWrapper {
+		padding: 16px;
+		border-radius: 5px;
+	}
+
+	.introText {
+		font-family: var(--handwriting);
+		font-size: var(--fontSizeBig);
+		display: block;
+		margin: 0;
+		margin-bottom: 8px;
+		text-align: center;
 	}
 
 	.home-image {
@@ -85,7 +132,8 @@
 		grid-template-columns: repeat(1, 1fr);
 		grid-template-rows: repeat(8, 1fr);
 		grid-row-gap: 5px;
-		width: 100%;
+		margin-top: 24px;
+		width: 90%;
 	}
 
 	.francis-img {
@@ -97,9 +145,18 @@
 			display: grid;
 			grid-template-columns: repeat(6, 1fr);
 			grid-template-rows: repeat(8, 200px);
-			width: 100%;
+			margin-top: 48px;
+			width: 90%;
 			grid-column-gap: 5px;
 			grid-row-gap: 5px;
+		}
+
+		.homeDescription {
+			width: 90%;
+		}
+
+		.refresh-button {
+			display: block;
 		}
 
 		.div1 {

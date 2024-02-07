@@ -7,7 +7,7 @@
 </script>
 
 <PageLayout>
-	<Title title={resources.francisGiraud} />
+	<Title variant="h1" title={resources.francisGiraud} />
 	<div class="main-description">
 		<div class="image-wrapper">
 			<img

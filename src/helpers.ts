@@ -12,10 +12,22 @@ export const buildImageStaticPath = (picture: Picture | undefined, level = 0) =>
 		return "";
 	}
 	if (level === 0) {
-		return `images/${picture.staticPath}.jpg`;
+		return `images/giraud-images/${picture.staticPath}.webp`;
 	}
 	if (level === 1) {
-		return `../images/${picture.staticPath}.jpg`;
+		return `../images/giraud-images/${picture.staticPath}.webp`;
+	}
+};
+
+export const buildThumbnailPath = (picture: Picture | undefined, level = 0) => {
+	if (!picture) {
+		return "";
+	}
+	if (level === 0) {
+		return `images/giraud-images/${picture.staticPath}-thumbnail.webp`;
+	}
+	if (level === 1) {
+		return `../images/giraud-images/${picture.staticPath}-thumbnail.webp`;
 	}
 };
 

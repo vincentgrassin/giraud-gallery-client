@@ -7,7 +7,7 @@
 </script>
 
 <PageLayout>
-	<Title title={resources.documents} />
+	<Title variant="h1" title={resources.documents} />
 	<div class="document">
 		<Title variant="h2" title={resources.documentBirth} />
 		<div class="text-with-image">

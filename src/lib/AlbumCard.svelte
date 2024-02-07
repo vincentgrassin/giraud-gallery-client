@@ -22,14 +22,9 @@
 		<div class="album-informations">
 			<Title title={album.name} variant="h2" />
 			<div class="album-description">
-				<div>
-					<p>{album.date ?? resources.unknownDate}</p>
-					<p>{album.pictures?.length} {resources.drawings.toLowerCase()}</p>
-				</div>
-				<Badge
-					--color={album.isDiary ? colors.zomp : colors.redwood}
-					content={album.isDiary ? resources.diary : resources.drawings}
-				/>
+				<p>{album.date ?? resources.unknownDate}</p>
+				<p>{album.pictures?.length} {resources.drawings.toLowerCase()}</p>
+				<p>{`${resources.numberTag} ${album.number}`}</p>
 			</div>
 		</div>
 	</a>
@@ -61,7 +56,7 @@
 		object-fit: cover;
 	}
 	.album-informations {
-		margin: 32px;
+		margin: 16px 32px;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
@@ -72,5 +67,6 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		flex-direction: row;
 	}
 </style>

@@ -3,8 +3,8 @@ export type Picture = {
 	staticPath: string;
 	cloudinaryId: string;
 	quality: number;
-	height: number | null;
-	width: number | null;
+	height: number;
+	width: number;
 };
 
 export type Album = {

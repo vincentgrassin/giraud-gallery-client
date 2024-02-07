@@ -2,7 +2,7 @@
 	import type { Picture } from "../types";
 	import { crossfade } from "svelte/transition";
 
-	import { buildImageStaticPath } from "../helpers";
+	import { buildImageStaticPath, buildThumbnailPath } from "../helpers";
 	export let picture: Picture;
 	export let handlePictureChange: (p: Picture | undefined) => void;
 	export let isListDisplay: boolean;
@@ -32,7 +32,7 @@
 		in:receive={{ key: picture.id }}
 		on:click={() => handlePictureChange(picture)}
 		class="grid-picture"
-		style="background-image: url({buildImageStaticPath(picture, 1)});"
+		style="background-image: url({buildThumbnailPath(picture, 1)});"
 	/>
 {/if}
 

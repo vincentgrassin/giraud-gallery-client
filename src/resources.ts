@@ -2,9 +2,11 @@ export const resources = {
 	home: "Accueil",
 	about: "A propos de",
 	albums: "Les Carnets",
+	albums22: "Les 22 carnets et journaux",
 	francisGiraud: "Qui est Francis Giraud ?",
 	whoIsFrancisGiraud: "Qui est Francis Giraud",
 	contact: "Contact",
+	numberTag: "n°",
 	aboutAlbums:
 		" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean varius elementum nulla, et posuere nisi fermentum in. Fusce suscipit elit sit amet finibus laoreet. Suspendisse malesuada nibh vel nibh dapibus interdum. Praesent at nisi et odio faucibus pretium. Fusce bibendum est in volutpat interdum. Suspendisse ac sapien egestas, lobortis magna vel, aliquet odio. Phasellus tellus tellus, mattis vel condimentum vel, ultrices ut justo. Vestibulum ac aliquet metus. Suspendisse blandit est lacinia, sodales massa et, vehicula leo. Proin pellentesque, leo tempor scelerisque imperdiet, nunc metus rutrum urna, sed tempus justo augue at leo. Ut aliquet elementum malesuada. In imperdiet commodo turpis a dictum. In gravida varius lacinia. Pellentesque feugiat in lorem vel suscipit. ",
 	aboutDescription:
@@ -21,7 +23,8 @@ export const resources = {
 	diary: "Journal",
 	drawings: "Dessins",
 	around: "Autour des carnets",
-	displayFavourites: "Afficher la séléction",
+	inThisAlbum: "A découvrir dans ce carnet	:",
+	displayFavourites: "Afficher un best-of",
 	displayAll: "Afficher tous",
 	listDisplay: "Afficher en liste",
 	gridDisplay: "Afficher en grille",
@@ -29,7 +32,11 @@ export const resources = {
 	hideGallery: "Masquer la pellicule",
 	showGallery: "Afficher la pellicule",
 	documents: "Documents administratifs",
+	homeIntro: `Vous entrez dans l’œuvre de Francis-Léon Giraud.`,
+	homeIntro2: `Cette œuvre est constituée à ce jour de plus de	3000 dessins et aquarelles rassemblés dans 22 carnets et journaux.`,
+	homeIntro3: `Ces carnets et journaux ont été peints et écrits entre 1848 et 1900`,
 	description: "Présentation",
+	refreshHome: "Recharger la mosaïque",
 	albumsGathering: "Comment ont été rassemblés les carnets de Francis-Léon Giraud",
 	albumsGatheringDetails: `C’est en 1999, au cours du règlement de la succession de mes parents, que j’ai découvert un carnet
 	d’aquarelles non signées. Il s’agissait d’une bonne centaine de papiers jaunis rectangulaires de
@@ -74,7 +81,7 @@ export const resources = {
 	satisfaction... bien méritée.`,
 	albumsGatheringDetails5: `Jean-Francois GRASSIN, fils de Philippe GRASSIN, fils de Geneviève GIRAUD fille de Francis-Léon
 	 GIRAUD`,
-	documentBirth: "Certificat de naissance de Francis-Léon GIRAUD né le 4 mars 1842 au Mans",
+	documentBirth: "Certificat de naissance",
 	documentWedding: "Certificat de mariage",
 	documentDeath: "Certificat de décès",
 	documentBirthDescription: `Préfecture du département de la Seine. Extrait du registre des actes de naissance de 1842.`,
