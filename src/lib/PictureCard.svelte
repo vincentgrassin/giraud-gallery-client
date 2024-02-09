@@ -140,6 +140,7 @@
 		width: 100%;
 		height: 300px;
 		background: center / cover no-repeat;
+		cursor: pointer;
 	}
 
 	.link-image {
