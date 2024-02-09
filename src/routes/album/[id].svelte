@@ -11,7 +11,7 @@
 
 <div class="album">
 	<div class="album-header">
-		<Title variant="h1" title={album.name} />
+		<Title variant="h1" title={album.name} isHandWritting />
 		<div class="album-informations">
 			<Title isHandWritting title={album.date ?? resources.unknownDate} variant="h2" />
 			<p class="text">{`${album.pictures?.length} ${resources.drawings.toLowerCase()}`}</p>
@@ -19,7 +19,7 @@
 		</div>
 		<div class="album-tags">
 			{#if album.description}
-				<p class="text">{`${resources.inThisAlbum} ${album.description}`}</p>
+				<p class="description-tags">{`${resources.inThisAlbum} ${album.description}`}</p>
 			{/if}
 		</div>
 	</div>
@@ -36,7 +36,13 @@
 	}
 	.text {
 		font-family: var(--handwriting);
-		font-size: var(--fontSizeBig);
+		font-size: var(--fontSizeMediumBig);
+		margin: 0;
+	}
+
+	.description-tags {
+		font-family: var(--handwriting);
+		font-size: var(--fontSizeMediumBig);
 		margin: 0;
 	}
 	.album-header {
@@ -48,7 +54,7 @@
 
 	.album-informations {
 		display: flex;
-		justify-content: space-around;
+		justify-content: space-between;
 		align-items: center;
 	}
 
@@ -57,14 +63,15 @@
 		flex-wrap: wrap;
 	}
 
-	@media (min-width: 1200px) {
-		.album-tags {
-			margin: 0 10%;
+	@media (min-width: 760px) {
+		.text {
+			font-size: var(--fontSizeBig);
 		}
 	}
 
-	.album-tag {
-		margin-right: 10px;
-		margin-bottom: 10px;
+	@media (min-width: 1200px) {
+		.album-header {
+			max-width: 60%;
+		}
 	}
 </style>
