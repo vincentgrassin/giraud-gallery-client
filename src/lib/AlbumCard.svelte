@@ -3,9 +3,8 @@
 	import { buildImageStaticPath } from "../helpers";
 	import { resources } from "../resources";
 	import Title from "./Title.svelte";
-	import Badge from "./Badge.svelte";
-	import { colors } from "../styles/theme";
 	export let album: Album;
+	export let index: number;
 
 	const coverPicture = album.pictures?.find((picture) => {
 		return picture.id === album.coverPicture;
@@ -24,7 +23,7 @@
 			<div class="album-description">
 				<p>{album.date ?? resources.unknownDate}</p>
 				<p>{album.pictures?.length} {resources.drawings.toLowerCase()}</p>
-				<p>{`${resources.numberTag} ${album.number}`}</p>
+				<p>{`${resources.numberTag} ${index + 1}`}</p>
 			</div>
 		</div>
 	</a>
@@ -54,9 +53,10 @@
 		width: 100%;
 		height: 400px;
 		object-fit: cover;
+		object-position: center;
 	}
 	.album-informations {
-		margin: 16px 32px;
+		margin: 8px 16px;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;

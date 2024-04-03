@@ -31,7 +31,7 @@ export const resources = {
 	discover: "Découvrir les carnets",
 	hideGallery: "Masquer la pellicule",
 	showGallery: "Afficher la pellicule",
-	documents: "Documents administratifs",
+	documents: "Documents",
 	homeIntro: `Vous entrez dans l’œuvre de Francis-Léon Giraud.`,
 	homeIntro2: `Cette œuvre est constituée à ce jour de plus de	3000 dessins et aquarelles rassemblés dans 22 carnets et journaux.`,
 	homeIntro3: `Ces carnets et journaux ont été peints et écrits entre 1848 et 1900`,

@@ -113,8 +113,7 @@
 	}
 
 	.introText {
-		font-family: var(--handwriting);
-		font-size: var(--fontSizeBig);
+		font-size: var(--fontSizeMediumBig);
 		display: block;
 		margin: 0;
 		margin-bottom: 8px;
@@ -125,6 +124,7 @@
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
+		object-position: center;
 	}
 
 	.parent {
@@ -236,6 +236,7 @@
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
+			object-position: center;
 		}
 
 		.div1-alt {
