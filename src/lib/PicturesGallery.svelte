@@ -51,6 +51,11 @@
 	const handlePictureChange = (picture: Picture | undefined) => {
 		if (!isSmallScreen) {
 			selected = picture;
+			if (picture) {
+				document.body.classList.add("picture-viewer-open");
+			} else {
+				document.body.classList.remove("picture-viewer-open");
+			}
 		}
 	};
 
