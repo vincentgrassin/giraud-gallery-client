@@ -13,6 +13,7 @@
 	export let isListDisplay: boolean = false;
 	export let isFavouriteDisplay: boolean = false;
 	export let pictures: Picture[];
+	export let isDiary: boolean = false;
 	let selected: Picture | undefined;
 	let currentPictures: Picture[];
 
@@ -26,6 +27,8 @@
 
 	let innerWidth: number = 0;
 	let isSmallScreen = false;
+
+	console.log(isListDisplay);
 
 	onMount(() => {
 		function onResize() {
@@ -48,6 +51,11 @@
 	const handlePictureChange = (picture: Picture | undefined) => {
 		if (!isSmallScreen) {
 			selected = picture;
+			if (picture) {
+				document.body.classList.add("picture-viewer-open");
+			} else {
+				document.body.classList.remove("picture-viewer-open");
+			}
 		}
 	};
 
@@ -63,6 +71,14 @@
 		const ratio = height / width;
 
 		return innerWidth * getGallerySizeRatio(innerWidth) * ratio ?? width;
+	};
+
+	const calculateImageDisplayHeight = (picture: Picture) => {
+		return isListDisplay || isSmallScreen
+			? calculateHeight({ innerWidth, height: picture.height, width: picture.width })
+			: isDiary
+			? 500
+			: 400;
 	};
 </script>
 
@@ -99,11 +115,7 @@
 			{#each currentPictures as picture}
 				{#if picture !== selected}
 					<li
-						style={`height:${
-							isListDisplay
-								? calculateHeight({ innerWidth, height: picture.height, width: picture.width })
-								: 300
-						}px`}
+						style={`height:${calculateImageDisplayHeight(picture)}px`}
 						class:picture-listItem={isListDisplay}
 					>
 						<ImageLoader>
@@ -178,11 +190,17 @@
 		.gallery-list {
 			width: 80%;
 		}
+		.gallery-grid {
+			grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+		}
 	}
 
 	@media (min-width: 1200px) {
 		.gallery-list {
 			width: 50%;
+		}
+		.gallery-grid {
+			grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 		}
 
 		.buttons-container {

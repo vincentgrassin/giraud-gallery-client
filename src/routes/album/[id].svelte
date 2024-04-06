@@ -11,9 +11,9 @@
 
 <div class="album">
 	<div class="album-header">
-		<Title variant="h1" title={album.name} isHandWritting />
+		<Title variant="h1" title={album.name} />
 		<div class="album-informations">
-			<Title isHandWritting title={album.date ?? resources.unknownDate} variant="h2" />
+			<p class="text">{album.date ?? resources.unknownDate}</p>
 			<p class="text">{`${album.pictures?.length} ${resources.drawings.toLowerCase()}`}</p>
 			<p class="text">{`${resources.numberTag} ${album.number}`}</p>
 		</div>
@@ -24,7 +24,7 @@
 		</div>
 	</div>
 	{#if album.pictures}
-		<PicturesGallery pictures={album.pictures} />
+		<PicturesGallery pictures={album.pictures} isDiary={album.isDiary} />
 	{/if}
 </div>
 
@@ -35,15 +35,14 @@
 		align-items: center;
 	}
 	.text {
-		font-family: var(--handwriting);
-		font-size: var(--fontSizeMediumBig);
+		font-size: var(--fsm);
 		margin: 0;
 	}
 
 	.description-tags {
-		font-family: var(--handwriting);
-		font-size: var(--fontSizeMediumBig);
+		font-size: var(--fs2m);
 		margin: 0;
+		padding-top: 16px;
 	}
 	.album-header {
 		display: flex;
@@ -65,7 +64,7 @@
 
 	@media (min-width: 760px) {
 		.text {
-			font-size: var(--fontSizeBig);
+			font-size: var(--fs3m);
 		}
 	}
 

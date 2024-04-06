@@ -109,12 +109,10 @@
 
 	.introWrapper {
 		padding: 16px;
-		border-radius: 5px;
 	}
 
 	.introText {
-		font-family: var(--handwriting);
-		font-size: var(--fontSizeBig);
+		font-size: var(--fs3m);
 		display: block;
 		margin: 0;
 		margin-bottom: 8px;
@@ -125,6 +123,7 @@
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
+		object-position: center;
 	}
 
 	.parent {
@@ -138,6 +137,18 @@
 
 	.francis-img {
 		width: 100%;
+	}
+
+	@media (min-width: 760px) and (max-width: 1199px) {
+		.introWrapper {
+			padding: 16px 10%;
+		}
+	}
+
+	@media (min-width: 1260px) {
+		.introWrapper {
+			padding: 16px 25%;
+		}
 	}
 
 	@media (min-width: 760px) {
@@ -236,6 +247,7 @@
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
+			object-position: center;
 		}
 
 		.div1-alt {

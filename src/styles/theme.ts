@@ -28,10 +28,11 @@ export const colors = {
 };
 
 export const fontSize = {
-	fontSizeMedium: "1rem",
-	fontSizeMediumBig: "1.5rem",
-	fontSizeBig: "2rem",
-	fontSizeVeryBig: "3rem"
+	fsm: "1rem",
+	fs2m: "1.25rem",
+	fs3m: "1.5rem",
+	fsxl: "2rem",
+	fs4xl: "3rem"
 };
 
 export const fontFamily = {

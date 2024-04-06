@@ -81,13 +81,13 @@
 		margin: 0;
 		color: var(--white);
 		font-family: var(--handwriting);
-		font-size: var(--fontSizeBig);
+		font-size: var(--fsxl);
 		text-decoration: none;
 	}
 
 	@media (min-width: 760px) {
 		.title {
-			font-size: var(--fontSizeVeryBig);
+			font-size: var(--fs4xl);
 		}
 	}
 	.nav-header {

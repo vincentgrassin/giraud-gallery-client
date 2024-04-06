@@ -39,7 +39,7 @@
 <style>
 	.grid-picture {
 		height: 100%;
-		background: center / cover no-repeat;
+		background: center / contain no-repeat;
 		cursor: pointer;
 	}
 

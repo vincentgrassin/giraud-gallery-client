@@ -2,19 +2,18 @@
 	export let title: string;
 	export let srOnly: boolean = false;
 	export let variant: "h1" | "h2" | "p" = "p";
-	export let isHandWritting: boolean = false;
 </script>
 
 {#if variant === "h1"}
-	<h1 class="h1" class:sr-only={srOnly} class:handWriting={isHandWritting}>
+	<h1 class="h1" class:sr-only={srOnly}>
 		{title}
 	</h1>
 {:else if variant === "h2"}
-	<h2 class="h2" class:sr-only={srOnly} class:handWriting={isHandWritting}>
+	<h2 class="h2" class:sr-only={srOnly}>
 		{title}
 	</h2>
 {:else}
-	<p class:sr-only={srOnly} class:handWriting={isHandWritting}>{title}</p>
+	<p class:sr-only={srOnly}>{title}</p>
 {/if}
 
 <style>
@@ -34,11 +33,6 @@
 		width: 1px;
 		height: 1px;
 		overflow: hidden;
-	}
-
-	.handWriting {
-		font-family: var(--handwriting);
-		font-size: var(--fontSizeBig);
 	}
 
 	@media (min-width: 760px) {
