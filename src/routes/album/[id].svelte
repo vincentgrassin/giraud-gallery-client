@@ -24,7 +24,7 @@
 		</div>
 	</div>
 	{#if album.pictures}
-		<PicturesGallery pictures={album.pictures} />
+		<PicturesGallery pictures={album.pictures} isDiary={album.isDiary} />
 	{/if}
 </div>
 
@@ -35,13 +35,14 @@
 		align-items: center;
 	}
 	.text {
-		font-size: var(--fontSizeMedium);
+		font-size: var(--fsm);
 		margin: 0;
 	}
 
 	.description-tags {
-		font-size: var(--fontSizeMedium);
+		font-size: var(--fs2m);
 		margin: 0;
+		padding-top: 16px;
 	}
 	.album-header {
 		display: flex;
@@ -63,7 +64,7 @@
 
 	@media (min-width: 760px) {
 		.text {
-			font-size: var(--fontSizeMediumBig);
+			font-size: var(--fs3m);
 		}
 	}
 

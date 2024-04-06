@@ -109,11 +109,10 @@
 
 	.introWrapper {
 		padding: 16px;
-		border-radius: 5px;
 	}
 
 	.introText {
-		font-size: var(--fontSizeMediumBig);
+		font-size: var(--fs3m);
 		display: block;
 		margin: 0;
 		margin-bottom: 8px;
@@ -138,6 +137,18 @@
 
 	.francis-img {
 		width: 100%;
+	}
+
+	@media (min-width: 760px) and (max-width: 1199px) {
+		.introWrapper {
+			padding: 16px 10%;
+		}
+	}
+
+	@media (min-width: 1260px) {
+		.introWrapper {
+			padding: 16px 25%;
+		}
 	}
 
 	@media (min-width: 760px) {
