@@ -95,3 +95,7 @@ main {
 	visibility: hidden;
 	opacity: 0;
 }
+
+.picture-viewer-open {
+	overflow: hidden;
+}
