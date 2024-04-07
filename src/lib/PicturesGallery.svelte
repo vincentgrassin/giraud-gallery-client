@@ -70,14 +70,6 @@
 
 		return innerWidth * getGallerySizeRatio(innerWidth) * ratio ?? width;
 	};
-
-	const calculateImageDisplayHeight = (picture: Picture) => {
-		return isListDisplay || isSmallScreen
-			? calculateHeight({ innerWidth, height: picture.height, width: picture.width })
-			: isDiary
-			? 500
-			: 400;
-	};
 </script>
 
 <svelte:window bind:innerWidth />
@@ -113,7 +105,13 @@
 			{#each currentPictures as picture}
 				{#if picture !== selected}
 					<li
-						style={`height:${calculateImageDisplayHeight(picture)}px`}
+						style={`height:${
+							isListDisplay || isSmallScreen
+								? calculateHeight({ innerWidth, height: picture.height, width: picture.width })
+								: isDiary
+								? 500
+								: 400
+						}px`}
 						class:picture-listItem={isListDisplay}
 					>
 						<ImageLoader>
