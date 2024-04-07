@@ -89,3 +89,16 @@ export function shuffleGridDisplayKey() {
 	const randomIndex = Math.floor(Math.random() * options.length);
 	return options[randomIndex];
 }
+
+export function getIndexInAlphabet(letter: string) {
+	letter = letter.toUpperCase();
+
+	if (letter.length !== 1 || !/[A-Z]/.test(letter)) {
+		return "Invalid input. Please enter a single letter.";
+	}
+
+	const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	const index = alphabet.indexOf(letter) + 1;
+
+	return index;
+}

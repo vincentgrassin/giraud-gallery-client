@@ -29,8 +29,8 @@
 <div class="container">
 	<Title title={resources.albums22} variant="h1" />
 	<ul class="album-grid">
-		{#each albums as album, index}
-			<AlbumCard {album} {index} />
+		{#each albums as album}
+			<AlbumCard {album} />
 		{/each}
 	</ul>
 </div>

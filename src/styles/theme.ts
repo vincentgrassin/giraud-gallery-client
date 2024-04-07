@@ -20,7 +20,7 @@ export const colors = {
 	...greyScale,
 	white: "#ffffff",
 	golden: "#DB9D47",
-	// golden: "#DB9D47",
+	darkGolden: "#a86508",
 	eerieBlack: "#201F1E",
 	black: "#00000",
 	redwood: "#A64253",
