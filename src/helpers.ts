@@ -104,3 +104,19 @@ export function getIndexInAlphabet(letter: string) {
 }
 
 export const cleanText = (text: string) => text.toLowerCase().trim();
+
+export function countLetterOccurrences(word: string | null, letter: string) {
+	if (!word) return 0;
+	word = word.toLowerCase();
+	letter = letter.toLowerCase();
+
+	let count = 0;
+
+	for (let i = 0; i < word.length; i++) {
+		if (word[i] === letter) {
+			count++;
+		}
+	}
+
+	return count;
+}

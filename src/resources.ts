@@ -156,7 +156,9 @@ export const resources = {
 	documetnPatronymique: "Fiche Patronymique",
 	show: "Afficher",
 	hide: "Masquer",
-	search: "Rechercher dans les carnets",
+	searchInAlbum: "Rechercher dans les carnets",
+	search: "Recherche",
+	discovery: "Découverte",
 	keyword: "Mot-clé"
 };
 

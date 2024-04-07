@@ -1,6 +1,6 @@
 <script context="module" lang="ts">
 	import type { Load } from "@sveltejs/kit";
-	import { dataAlbums } from "../dataPicture";
+	import { dataAlbums } from "../../dataPicture";
 
 	export const load: Load = async () => {
 		const albums = Object.values(dataAlbums);
@@ -18,12 +18,12 @@
 </script>
 
 <script lang="ts">
-	import type { Album, Tag } from "../types";
+	import type { Album, Tag } from "../../types";
 	import AlbumCard from "$lib/AlbumCard.svelte";
 	import PageLayout from "$lib/PageLayout.svelte";
 	import Title from "$lib/Title.svelte";
-	import { resources } from "../resources";
-	import { cleanText } from "../helpers";
+	import { resources } from "../../resources";
+	import { cleanText } from "../../helpers";
 
 	export let albums: Album[];
 	let selected: Tag;
@@ -34,11 +34,12 @@
 			(acc: Tag[], album: Album) => {
 				const albumTags = album.description?.split(",");
 				albumTags?.forEach((tag) => {
-					const index = acc.findIndex((o) => o.label === tag);
+					const trimmedTag = tag.trim();
+					const index = acc.findIndex((o) => o.label === trimmedTag);
 					if (index !== -1) {
 						acc[index].albumIds.push(album.id);
 					} else {
-						acc.push({ label: tag, albumIds: [album.id] });
+						acc.push({ label: trimmedTag, albumIds: [album.id] });
 					}
 				});
 				return acc;
@@ -48,6 +49,7 @@
 		.sort((a, b) => {
 			const aLabel = cleanText(a.label);
 			const bLabel = cleanText(b.label);
+
 			return aLabel > bLabel ? 1 : aLabel < bLabel ? -1 : 0;
 		});
 
@@ -60,7 +62,7 @@
 </script>
 
 <PageLayout>
-	<Title title={resources.search} variant="h1" />
+	<Title title={resources.searchInAlbum} variant="h1" />
 	<div class="search-page">
 		<label for="tag">{resources.keyword}</label>
 		<select id="tag" bind:value={selected}>

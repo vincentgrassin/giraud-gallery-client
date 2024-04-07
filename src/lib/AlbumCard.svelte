@@ -1,19 +1,22 @@
 <script lang="ts">
 	import type { Album } from "../types";
-	import { buildImageStaticPath, getIndexInAlphabet } from "../helpers";
+	import { buildImageStaticPath, countLetterOccurrences, getIndexInAlphabet } from "../helpers";
 	import { resources } from "../resources";
 	import Title from "./Title.svelte";
 	export let album: Album;
 
+	import { page } from "$app/stores";
+
 	const coverPicture = album.pictures?.find((picture) => {
 		return picture.id === album.coverPicture;
 	});
+	const pageNestedLevelRouting = countLetterOccurrences($page.routeId, "/");
 </script>
 
 <li class="card">
 	<a href={`/album/${album.id}`} class="card-link">
 		<img
-			src={coverPicture ? buildImageStaticPath(coverPicture) : ""}
+			src={coverPicture ? buildImageStaticPath(coverPicture, pageNestedLevelRouting) : ""}
 			alt={album.name}
 			class="cover-picture"
 		/>

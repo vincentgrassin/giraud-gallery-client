@@ -2,7 +2,7 @@
 	import PageLayout from "$lib/PageLayout.svelte";
 	import TextBloc from "$lib/TextBloc.svelte";
 	import Title from "$lib/Title.svelte";
-	import { resources } from "../resources";
+	import { resources } from "../../resources";
 </script>
 
 <PageLayout>
