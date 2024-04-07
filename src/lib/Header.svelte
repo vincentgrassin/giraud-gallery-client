@@ -7,7 +7,7 @@
 		{ label: resources.albums, id: "albums", path: "/albums", regex: "/album" },
 		{
 			label: resources.francisGiraud,
-			id: "francisGiraud",
+			id: "about",
 			children: [
 				{
 					label: resources.description,
@@ -45,13 +45,16 @@
 	</div>
 	<nav class="nav-header">
 		<ul class="list">
-			{#each tabs as tab}
+			{#each tabs as tab, index}
 				{#if !tab.children}
 					<li class="nav-item" class:active={tab.regex && $page.url.pathname.match(tab.regex)}>
 						<a class="dropdown__title" href={tab.path}>{tab.label}</a>
 					</li>
 				{:else}
-					<li class="dropdown nav-item" class:activeDropdown={$page.url.pathname.match("/about")}>
+					<li
+						class="dropdown nav-item"
+						class:activeDropdown={$page.url.pathname.match(`/${tabs[index].id}`)}
+					>
 						<button type="button" class="dropdown__title" aria-controls="sweets-dropdown">
 							{tab.label}
 						</button>
