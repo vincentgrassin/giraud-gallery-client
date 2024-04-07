@@ -2,7 +2,7 @@
 	export let disabled: boolean = false;
 	export let iconButton: boolean = false;
 	export let tooltip: string | undefined = undefined;
-	export let variant: "regular" | "outline" = "regular";
+	export let variant: "regular" | "outline" | "ghost" = "regular";
 	export let size: "small" | "medium" = "medium";
 	export let buttonType: "a" | "button" = "button";
 	export let href: string | undefined = undefined;
@@ -16,6 +16,7 @@
 		class:iconButton
 		class:small={size === "small"}
 		class:outline-button={variant === "outline"}
+		class:ghost-button={variant === "ghost"}
 		data-tooltip={tooltip}
 	>
 		<slot />
@@ -26,6 +27,7 @@
 		class:iconButton
 		class:small={size === "small"}
 		class:outline-button={variant === "outline"}
+		class:ghost-button={variant === "ghost"}
 	>
 		<slot /></a
 	>
@@ -58,8 +60,18 @@
 		border: 2px solid var(--golden);
 	}
 
+	.ghost-button {
+		background-color: transparent;
+		color: var(--color, var(--eerieBlack));
+	}
+
 	.outline-button:hover {
 		background-color: var(--white);
+		opacity: 0.8;
+	}
+	.ghost-button:hover {
+		background-color: transparent;
+		color: var(--color, var(--eerieBlack));
 		opacity: 0.8;
 	}
 
