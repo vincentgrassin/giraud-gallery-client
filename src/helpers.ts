@@ -102,3 +102,5 @@ export function getIndexInAlphabet(letter: string) {
 
 	return index;
 }
+
+export const cleanText = (text: string) => text.toLowerCase().trim();

@@ -2,7 +2,7 @@ import type { Album } from "src/types";
 
 export const H: Album = {
 	description:
-		"Exposition universelle de Bruxelles 1897, Exposition internationale industrielle et coloniale d’Amsterdam 1883, Anvers, Neubrücke, Courseuilles, Bernières, Caen, Alençon, Arromanches, Houdan, 14 juillet 1881 et 1882, Char de La Marseillaise, Chantilly, Cherbourg, Grandcamps, Caen, Dol, Malines, Armée française 1890-1891, Rivoire, La Romanche, Colombier près Neuchatel, Sarthe",
+		"Exposition universelle de Bruxelles 1897, Exposition internationale industrielle et coloniale d’Amsterdam 1883, Anvers, Neubrücke, Courseuilles, Bernières, Caen, Alençon, Arromanches, Houdan, 14 juillet 1881 et 1882, Char de La Marseillaise, Chantilly, Cherbourg, Grandcamps, Dol, Malines, Armée française 1890-1891, Rivoire, La Romanche, Colombier près Neuchatel, Sarthe",
 	pictures: [
 		{
 			id: "H_101",
