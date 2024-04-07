@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Title from "$lib/Title.svelte";
-	import { resources } from "../resources";
+	import { QUALITY_PICTURE, resources } from "../resources";
 
 	import { dataAlbums } from "../dataPicture";
 	import type { Picture } from "src/types";
@@ -10,7 +10,9 @@
 
 	const allPictures = Object.values(dataAlbums).reduce((acc: Picture[], album) => {
 		if (album.pictures) {
-			const bestPictures = album.pictures.filter((picture) => picture.quality === 2);
+			const bestPictures = album.pictures.filter(
+				(picture) => picture.quality === QUALITY_PICTURE.HIGH
+			);
 			return [...acc, ...bestPictures];
 		}
 		return acc;
