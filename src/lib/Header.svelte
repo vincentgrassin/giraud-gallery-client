@@ -3,7 +3,6 @@
 	import { page } from "$app/stores";
 
 	import type { NavigationTab } from "../types";
-	import { children } from "svelte/internal";
 	const tabs: NavigationTab[] = [
 		{ label: resources.albums, id: "albums", path: "/albums", regex: "/album" },
 		{
@@ -24,7 +23,19 @@
 				}
 			]
 		},
-		{ label: resources.around, id: "around", path: "/around", regex: "/around" }
+		{
+			label: resources.around,
+			id: "more",
+			children: [
+				{ label: resources.discovery, id: "around", path: "/more/around", regex: "/more/around" },
+				{
+					label: resources.search,
+					id: "search",
+					path: "/more/search",
+					regex: "/more/search"
+				}
+			]
+		}
 	];
 </script>
 

@@ -89,3 +89,34 @@ export function shuffleGridDisplayKey() {
 	const randomIndex = Math.floor(Math.random() * options.length);
 	return options[randomIndex];
 }
+
+export function getIndexInAlphabet(letter: string) {
+	letter = letter.toUpperCase();
+
+	if (letter.length !== 1 || !/[A-Z]/.test(letter)) {
+		return "Invalid input. Please enter a single letter.";
+	}
+
+	const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	const index = alphabet.indexOf(letter) + 1;
+
+	return index;
+}
+
+export const cleanText = (text: string) => text.toLowerCase().trim();
+
+export function countLetterOccurrences(word: string | null, letter: string) {
+	if (!word) return 0;
+	word = word.toLowerCase();
+	letter = letter.toLowerCase();
+
+	let count = 0;
+
+	for (let i = 0; i < word.length; i++) {
+		if (word[i] === letter) {
+			count++;
+		}
+	}
+
+	return count;
+}

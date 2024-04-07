@@ -26,3 +26,5 @@ export type NavigationTab = {
 	regex?: string;
 	children?: NavigationTab[];
 };
+
+export type Tag = { label: string; albumIds: string[] };

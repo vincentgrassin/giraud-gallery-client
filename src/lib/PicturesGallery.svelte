@@ -19,7 +19,10 @@
 
 	$: {
 		if (isFavouriteDisplay) {
-			currentPictures = pictures.filter((picture) => picture.quality === QUALITY_PICTURE.HIGH);
+			currentPictures = pictures.filter(
+				(picture) =>
+					picture.quality === QUALITY_PICTURE.HIGH || picture.quality === QUALITY_PICTURE.MEDIUM
+			);
 		} else {
 			currentPictures = pictures;
 		}

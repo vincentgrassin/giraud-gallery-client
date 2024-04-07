@@ -547,5 +547,5 @@ export const B: Album = {
 	number: 1,
 	coverPicture: "B_116",
 	description:
-		"Boulogne, Newcastle, Édimbourg, Vallée de la Tyne, les Lochs, Glasgow, Londres, Guards, Cristal Palace, ‘En mer’, Trouville"
+		"Boulogne, Newcastle, Édimbourg, Vallée de la Tyne, les Lochs, Glasgow, Londres, Guards, Cristal Palace, En mer, Trouville"
 };
