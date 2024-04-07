@@ -5,35 +5,38 @@
 	import { crossfade } from "svelte/transition";
 	import Button from "./Button.svelte";
 	import Icon from "./Icon.svelte";
+	import { onMount } from "svelte";
+	import { colors } from "../styles/theme";
+	import { resources } from "../resources";
 
 	export let handlePictureChange: (picture: Picture | undefined) => void;
 	export let selected: Picture | undefined;
 	export let pictures: Picture[];
-	let gallery: HTMLElement;
-
-	import { onMount } from "svelte";
+	let galleryRef: HTMLElement;
+	let imageContainerRef: HTMLElement;
+	let isVisibleGallery: boolean = true;
 
 	onMount(async () => {
-		gallery.focus();
+		galleryRef?.focus();
 	});
 	$: currentIdx = selected ? pictures.findIndex((d) => d === selected) : -1;
-
-	const [send, receive] = crossfade({
-		duration: () => 350
-	});
 
 	const handleChange = async (picture: Picture) => {
 		handlePictureChange(picture);
 		try {
 			await tick();
-			const active = gallery.querySelector('[data-selected="true"]');
+			const active = galleryRef?.querySelector('[data-selected="true"]');
 			if (active) {
 				active.scrollIntoView();
 			}
 		} catch (e) {
 			console.log(e);
 		}
-		gallery.focus();
+		if (galleryRef) {
+			galleryRef.focus();
+		} else {
+			imageContainerRef.focus();
+		}
 	};
 
 	const handleArrowChange = async (e: KeyboardEvent, direction: "left" | "right") => {
@@ -45,6 +48,11 @@
 				? pictures.length - 1
 				: (currentIdx - 1) % pictures.length;
 		handleChange(pictures[nextIdx]);
+	};
+
+	const toggleGallery = () => {
+		isVisibleGallery = !isVisibleGallery;
+		imageContainerRef.focus();
 	};
 
 	const shortcut = {
@@ -66,35 +74,52 @@
 		}
 	}}
 >
-	<div class="gallery-container">
-		<div
-			aria-label="gallery"
-			role="group"
-			bind:this={gallery}
-			use:keyboard={{ shortcut }}
-			class="gallery"
-			tabindex={0}
+	<div class="close-button">
+		<Button
+			on:click={() => handlePictureChange(undefined)}
+			iconButton
+			variant="ghost"
+			--color={colors.white}
 		>
-			{#each pictures as picture}
-				<div
-					role="img"
-					aria-label={picture.id}
-					data-selected={selected === picture}
-					class:active={selected === picture}
-					on:click={() => handlePictureChange(picture)}
-					class="image"
-					style="background-image:url({buildThumbnailPath(picture, 1)})"
-				/>
-			{/each}
-		</div>
+			<Icon name="close" height="30px" width="30px" />
+		</Button>
+	</div>
+	<div class="gallery-container">
+		{#if isVisibleGallery}
+			<div
+				aria-label="gallery"
+				role="group"
+				bind:this={galleryRef}
+				use:keyboard={{ shortcut }}
+				class="gallery"
+				tabindex={0}
+			>
+				{#each pictures as picture}
+					<div
+						role="img"
+						aria-label={picture.id}
+						data-selected={selected === picture}
+						class:active={selected === picture}
+						on:click={() => handlePictureChange(picture)}
+						class="image"
+						style="background-image:url({buildThumbnailPath(picture, 1)})"
+					/>
+				{/each}
+			</div>
+		{/if}
 		<div class="gallery-button-container">
-			<Button on:click={() => handlePictureChange(undefined)} iconButton>
-				<Icon name="close" height="30px" width="30px" />
-			</Button>
+			<Button on:click={toggleGallery} variant="ghost" --color={colors.white}
+				>{isVisibleGallery ? resources.hide : resources.show}</Button
+			>
 		</div>
 	</div>
 
-	<div class="image-container">
+	<div
+		class="image-container"
+		bind:this={imageContainerRef}
+		use:keyboard={{ shortcut }}
+		tabindex={0}
+	>
 		<div class="button-container">
 			<Button
 				on:click={async () => {
@@ -190,9 +215,15 @@
 	.gallery-button-container {
 		display: flex;
 		align-items: center;
+		margin-left: auto;
 	}
 
 	.picture-informations {
 		color: white;
+	}
+
+	.close-button {
+		display: flex;
+		justify-content: end;
 	}
 </style>

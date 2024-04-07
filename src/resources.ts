@@ -154,7 +154,9 @@ export const resources = {
 	Le ménage Giraud eut quatre enfants : Anne Marie née en 1878 qui épousera Henri Lagrange, André
 	en 1880, Gabriel en 1882 et la petite dernière Geneviève en 1885 qui épousera André Grassin... »`,
 	familyTree: "Arbre généalogique",
-	documetnPatronymique: "Fiche Patronymique"
+	documetnPatronymique: "Fiche Patronymique",
+	show: "Afficher",
+	hide: "Masquer"
 };
 
 export const QUALITY_PICTURE = {
