@@ -95,15 +95,10 @@
 		margin: 0;
 		color: var(--white);
 		font-family: var(--handwriting);
-		font-size: var(--fsxl);
+		font-size: var(--fsl);
 		text-decoration: none;
 	}
 
-	@media (min-width: 760px) {
-		.title {
-			font-size: var(--fs4xl);
-		}
-	}
 	.nav-header {
 		height: 50%;
 		display: flex;
@@ -119,6 +114,9 @@
 	@media (min-width: 760px) {
 		.list {
 			max-width: 60%;
+		}
+		.title {
+			font-size: var(--fs4xl);
 		}
 	}
 	.nav-item {
