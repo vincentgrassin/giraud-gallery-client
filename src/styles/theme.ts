@@ -31,6 +31,7 @@ export const fontSize = {
 	fsm: "1rem",
 	fs2m: "1.25rem",
 	fs3m: "1.5rem",
+	fsl: "1.75rem",
 	fsxl: "2rem",
 	fs4xl: "3rem"
 };

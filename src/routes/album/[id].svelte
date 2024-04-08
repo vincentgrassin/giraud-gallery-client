@@ -35,7 +35,7 @@
 		align-items: center;
 	}
 	.text {
-		font-size: var(--fsm);
+		font-size: var(--fs2m);
 		margin: 0;
 	}
 
