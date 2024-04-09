@@ -21,13 +21,13 @@
 				<div class="image-wrapper">
 					<img
 						class="img-about"
-						src={"../images/carnet1.jpg"}
+						src={"../images/carnet1.webp"}
 						alt={"exemple de carnet"}
 						loading="lazy"
 					/>
 					<img
 						class="img-about"
-						src={"../images/carnet2.jpg"}
+						src={"../images/carnet2.webp"}
 						alt={"exemple de carnet 2"}
 						loading="lazy"
 					/>
@@ -40,13 +40,13 @@
 				<div class="image-wrapper">
 					<img
 						class="img-about"
-						src={"../images/journal1.png"}
+						src={"../images/journal1.webp"}
 						alt={"exemple de journal 1"}
 						loading="lazy"
 					/>
 					<img
 						class="img-about"
-						src={"../images/journal2.jpg"}
+						src={"../images/journal2.webp"}
 						alt={"exemple de journal 2"}
 						loading="lazy"
 					/>

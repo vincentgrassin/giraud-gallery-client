@@ -14,7 +14,7 @@
 			<div class="image-wrapper">
 				<img
 					class="francis-img"
-					src={"../images/certificat_naissance.jpg"}
+					src={"../images/certificat_naissance.webp"}
 					alt={"certificat naissance Francis Giraud"}
 					loading="lazy"
 				/>
@@ -32,13 +32,13 @@
 			<div class="image-wrapper">
 				<img
 					class="francis-img"
-					src={"../images/certificat_mariage.png"}
+					src={"../images/certificat_mariage.webp"}
 					alt={"certificat mariage 1 Francis Giraud"}
 					loading="lazy"
 				/>
 				<img
 					class="francis-img"
-					src={"../images/certificat_mariage2.png"}
+					src={"../images/certificat_mariage2.webp"}
 					alt={"certificat mariage 2 Francis Giraud"}
 					loading="lazy"
 				/>
@@ -53,7 +53,7 @@
 		<Title variant="h2" title={resources.documentDeath} />
 		<img
 			class="francis-img"
-			src={"../images/certificat_deces.png"}
+			src={"../images/certificat_deces.webp"}
 			alt={"certificat deces Francis Giraud"}
 			loading="lazy"
 		/>

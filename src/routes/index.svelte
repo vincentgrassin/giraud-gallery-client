@@ -57,7 +57,7 @@
 		<div class={`francis${gridKey}`}>
 			<img
 				class="francis-img"
-				src={"images/FRANCIS LEON GIRAUD PHOTO.jpg"}
+				src={"images/FRANCIS-LEON-GIRAUD-PHOTO.webp"}
 				alt={resources.francisGiraud}
 				loading="lazy"
 			/>
