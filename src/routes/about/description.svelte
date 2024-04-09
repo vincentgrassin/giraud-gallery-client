@@ -12,7 +12,7 @@
 		<div class="image-wrapper">
 			<img
 				class="francis-img"
-				src={"../images/FRANCIS LEON GIRAUD PHOTO.jpg"}
+				src={"../images/FRANCIS-LEON-GIRAUD-PHOTO.webp"}
 				alt={resources.francisGiraud}
 				loading="lazy"
 			/>
@@ -28,7 +28,7 @@
 		<Title variant="h2" title={resources.familyTree} />
 		<img
 			class="family-tree"
-			src={"../images/ARBRE GENEALOGIQUE GIRAUD-1.png"}
+			src={"../images/ARBRE GENEALOGIQUE GIRAUD-1.webp"}
 			alt={"arbre généalogique Francis Giraud"}
 			loading="lazy"
 		/>
@@ -38,14 +38,14 @@
 		<Title variant="h2" title={resources.documetnPatronymique} />
 		<img
 			class="family-tree"
-			src={"../images/FICHE PATRONYMIQUE GIRAUD-1.png"}
+			src={"../images/FICHE-PATRONYMIQUE-GIRAUD-1.webp"}
 			alt={"Fiche patronymique Francis Giraud 1"}
 			loading="lazy"
 		/>
 
 		<img
 			class="family-tree"
-			src={"../images/FICHE PATRONYMIQUE GIRAUD-2.png"}
+			src={"../images/FICHE-PATRONYMIQUE-GIRAUD-2.webp"}
 			alt={"Fiche patronymique Francis Giraud 2"}
 			loading="lazy"
 		/>
