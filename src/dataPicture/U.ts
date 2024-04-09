@@ -5,7 +5,7 @@ export const U: Album = {
 	pictures: [
 		{
 			id: "U_101",
-			quality: 2,
+			quality: 0,
 			staticPath: "U/101",
 			cloudinaryId: "f4dc92ce5b64f67f4147c00840d0e30d",
 			width: 1260,
