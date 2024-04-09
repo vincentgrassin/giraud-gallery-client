@@ -843,7 +843,7 @@ export const C: Album = {
 			height: 756
 		}
 	],
-	name: "Salon Beuzeval Liège Dinard",
+	name: "Salon - Beuzeval - Liège - Dinard",
 	date: "1869-1870",
 	startYear: 1869,
 	endYear: 1870,

@@ -1005,7 +1005,7 @@ export const O: Album = {
 		}
 	],
 	name: "Exposition",
-	date: "1890",
+	date: "1890-1900",
 	startYear: 1890,
 	endYear: null,
 	id: "O",

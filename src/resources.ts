@@ -1,6 +1,6 @@
 export const resources = {
 	home: "Accueil",
-	about: "A propos de",
+	about: "A propos des carnets et journaux de Francis-Léon Giraud",
 	albums: "Les Carnets",
 	albums22: "Les 22 carnets et journaux",
 	francisGiraud: "Qui est Francis Giraud ?",
@@ -20,6 +20,7 @@ export const resources = {
 	francisAlbums: "Les carnets de Francis Giraud",
 	unknownDate: "Date inconnue",
 	diary: "Journal",
+	album: "Carnet",
 	drawings: "Dessins",
 	around: "Autour des carnets",
 	inThisAlbum: "A découvrir dans ce carnet	:",
@@ -33,53 +34,23 @@ export const resources = {
 	documents: "Documents",
 	homeIntro: `Vous entrez dans l’œuvre de Francis-Léon Giraud.`,
 	homeIntro2: `Cette œuvre est constituée à ce jour de plus de	3000 dessins et aquarelles rassemblés dans 22 carnets et journaux.`,
-	homeIntro3: `Ces carnets et journaux ont été peints et écrits entre 1848 et 1900`,
+	homeIntro3: `Ces carnets et journaux ont été peints et écrits entre 1848 et 1900.`,
 	description: "Présentation",
 	refreshHome: "Recharger la mosaïque",
-	albumsGathering: "Comment ont été rassemblés les carnets de Francis-Léon Giraud",
-	albumsGatheringDetails: `C’est en 1999, au cours du règlement de la succession de mes parents, que j’ai découvert un carnet
-	d’aquarelles non signées. Il s’agissait d’une bonne centaine de papiers jaunis rectangulaires de
-	dimensions 17cm*12cm, percés de 2 trous, sur lesquels étaient peintes de petites aquarelles
-	toujours encadrées dans un rectangle et toutes réunies en un carnet par une rude ficelle. Le carnet
-	en question était daté de 1868 et illustrait un voyage en Ecosse : paysages, scènes de rue et de
-	plages, personnages en costume et militaires en kilts. La finesse du trait et la délicatesse des couleurs
-	en faisaient de superbes miniatures qui racontaient avec précision une époque révolue.
-	J’ai été charmé. Renseignements pris auprès de mes oncles et tantes, j’ai eu la confirmation que
-	l’auteur était mon arrière-grand-père Francis Giraud. J’ai été alors, non seulement charmé, mais ému
-	par cet héritage.`,
-	albumsGatheringDetails2: `Et j’ai appris que ce carnet n’était pas le seul qu’il avait laissé derrière lui. Peu à peu, j’ai vu sortir des
-	coffres et des armoires de la famille Grassin de nouveaux carnets et même des journaux traitant
-	d’autres voyages, en France et en Europe, de salons, d’expositions et d’évènements de l’époque. Tous
-	ces carnets avaient été reçus en héritage par ma grand-mère Geneviève Giraud, sa fille, épouse
-	d’André Grassin. Elle les avait donc transmis à ses enfants, mes oncles et tantes. Il était logique que sa
-	sœur Anne-Marie, épouse d’Henri Ladrange, en ait reçu sa part également. J’ai donc pris contact avec
-	la branche Ladrange et avec l’aide de mon cousin Louis-Marie Ratouis, j’identifiais ainsi 17 carnets dont
-	un carnet illustrant sa guerre de 1870, chaque carnet reliant entre 100 à 200 pages et 5 journaux,
-	chacun comportant une soixantaine de pages.`,
-	albumsGatheringDetails3: `J’ai pensé qu’il serait bien dommage que l’œuvre de notre aïeul restât ainsi cachée dans l’obscurité
-	des coffres de famille et pire, qu’elle soit dispersée à tout jamais au fil des successions. J’ai alors
-	demandé l’autorisation d’emprunter tous ces trésors à leurs propriétaires afin de les scanner. J’ai
-	réalisé ce travail, un peu de longue haleine puisqu’il s’agissait de plus de 3000 pages, dans les années
-	2000. Puis les années ont passé et toutes ces copies sont restées à nouveau cachées dans l’obscurité
-	de mon ordinateur ce qui n’était guère plus glorieux que l’obscurité des coffres de nos familles.
-	Le confinement dû à la pandémie de 2020, comme un effet collatéral positif du virus, m’a donné le
-	temps et l’occasion de ressortir à la lumière tous ces dessins. Et il m’a semblé qu’il serait peut-être
-	intéressant, pour tous les descendants de Francis, de pouvoir en apprécier un échantillonnage sur
-	version album papier.`,
-	albumsGatheringDetails4: `La sélection ne pouvait qu’être drastique et subjective : comment réduire plus de 3000 aquarelles en
-	quelques volumes ? Je me suis finalement fixé sur 4 volumes qui donneront aux lecteurs une idée du
-	coup de crayon et du coup de pinceau de Francis. Mais pour ceux qui en voudraient voir plus encore,
-	l’intégralité de l’œuvre identifiée à ce jour est disponible sur support digital sur demande.
-	L’œuvre n’est certainement pas complète et je suis certain que l’on va encore découvrir dans les
-	familles Grassin, Néel, Ratouis, Paul ou François Ladrange, de nouveaux dessins, carnets ou journaux.
-	Si c’était le cas, il serait bien d’en faire profiter le plus grand nombre. Ceci nous permettrait peut-être
-	d’éditer un nouveau volume, de partager entre descendants de Francis la même émotion et d’avoir
-	une pensée pour lui qui nous a laissé un peu de son sang et peut-être, un peu de son talent pour
-	certains d’entre nous ... Francis doit être bien étonné que, plus d’un siècle après sa disparition, ses
-	descendants s’intéressent encore à ses carnets de dessins. Etonné avec peut-être une petite pointe de
-	satisfaction... bien méritée.`,
-	albumsGatheringDetails5: `Jean-Francois GRASSIN, fils de Philippe GRASSIN, fils de Geneviève GIRAUD fille de Francis-Léon
-	 GIRAUD`,
+	albumsGathering: "Comment j’ai découvert ces carnets et ces journaux ?",
+	albumsGatheringDetails: `C’est en 1999, au cours du règlement de la succession de mes parents, que j’ai découvert un premier carnet. Le carnet en question, daté de 1868, illustrait un voyage en Ecosse. Renseignements pris auprès de ma famille, j’ai eu la confirmation que l’auteur était mon arrière-grand-père Francis-Léon Giraud et j’ai découvert que ce carnet n’était pas le seul qu’il avait laissé derrière lui. J’ai alors entrepris de les retrouver en m’adressant à ses descendants. A ce jour j’ai identifié 22 carnets ou journaux contenant plus de 3000 dessins ou aquarelles.`,
+	albumsGathering2: "Pourquoi un site francisgiraud.fr ?",
+	albumsGatheringDetails2: `En parcourant ces carnets, j’ai été séduit par le dessin, la finesse du trait et la délicatesse des couleurs. Et en même temps , j’ai réalisé que ces miniatures racontaient avec précision une époque révolue. J’ai pensé qu’elles pourraient intéresser d’autres membres de ma famille à commencer par les descendants de Francis Giraud et peut-être d’autres personnes spécialistes ou amoureux de cette époque. J’ai entrepris de les scanner et mon fils Vincent, que je remercie à nouveau ici, à entrepris de les rassembler et de vous les présenter agréablement sur le site francisgiraud.fr … que voici.`,
+	albumsGathering3: "A quoi ressemble un carnet ? A quoi ressemble un journal ?",
+	albumsGatheringDetails31: `Un carnet contient de nombreux papiers jaunis rectangulaires de dimensions 15/17cm*11/12cm réunis par une rude ficelle. Sur ces petits formats sont dessinés au crayon ou peints à l’aquarelle des scènes miniatures : scènes de la vie, de rue et de plages, scènes champêtres, des paysages, des monuments, des personnages, des militaires… Un carnet réunit de 50 à 200 aquarelles.`,
+	albumsGatheringDetails32: `Un carnet traite généralement d’un ou plusieurs thèmes : une année, un voyage en France ou en Europe, la guerre de 1870 vécue par Francis Giraud (n°4), des défilés et des uniformes militaires (n°17, 20, 21 et 22). La Sarthe tient une place de choix (n°11, 16, 19) car elle était le lieu de villégiature d’été de l’auteur. Un carnet peut aussi rassembler des dessins divers y compris des copies de tableaux de maître découverts au détour de visites d’expositions.`,
+	albumsGatheringDetails33: `Mais il y a aussi des journaux, contenant des pages de dimensions plus importantes, environ 22cm*16cm, réunies également par une ficelle. Elles sont toujours organisées sur deux colonnes, l’une pour le dessin, l’autre pour le commentaire. Les dessins vont encore plus loin dans la miniature pour laisser la place au texte. Ils traitent généralement de visites d’expositions, de musées, de monuments ou d’évènements comme les funérailles de Victor Hugo (n°10).`,
+	albumsGathering4: "Ces carnets et journaux sont-ils datés ?",
+	albumsGatheringDetails4: `La plupart des dessins et aquarelles ont été réalisés entre 1848 et 1900. Ils sont rarement datés individuellement. Mais ils ont été rassemblés dans des carnets qui eux ont quasiment toujours été datés. Sans en être certain, je pense raisonnablement qu’ils ont été assemblés par Francis-Léon Giraud lui-même ou sur ses instructions et qu’ils n’ont jamais été dé-assemblés jusqu’à l’opération de scan. Ces carnets et journaux sont donc souvent (mais pas toujours) homogènes d’un point de vue date. Nous avons respecté ce classement dans le site francigiraud.fr.`,
+	albumsGathering5: "Combien de carnets et de journaux ?",
+	albumsGatheringDetails5: `J’ai dénombré à ce jour 17 carnets et 5 journaux. Mais l’œuvre n’est certainement pas complète et l’on va encore découvrir de nouveaux documents. Si c’était le cas, il serait bien d’en faire profiter le plus grand nombre et je vous invite alors à me contacter pour enrichir ce site de ces nouveaux documents.`,
+	contact1: "Jean-François Grassin",
+	contact2: "jfgrassin@outlook.fr",
 	documentBirth: "Certificat de naissance",
 	documentWedding: "Certificat de mariage",
 	documentDeath: "Certificat de décès",

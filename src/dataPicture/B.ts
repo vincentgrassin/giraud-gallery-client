@@ -545,7 +545,7 @@ export const B: Album = {
 	endYear: null,
 	id: "B",
 	number: 1,
-	coverPicture: "B_116",
+	coverPicture: "B_145",
 	description:
 		"Boulogne, Newcastle, Édimbourg, Vallée de la Tyne, les Lochs, Glasgow, Londres, Guards, Cristal Palace, En mer, Trouville"
 };
