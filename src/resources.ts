@@ -25,7 +25,7 @@ export const resources = {
 	around: "Autour des carnets",
 	inThisAlbum: "A découvrir dans ce carnet	:",
 	displayFavourites: "Afficher un best-of",
-	displayAll: "Afficher tous",
+	displayAll: "Afficher tout",
 	listDisplay: "Afficher en liste",
 	gridDisplay: "Afficher en grille",
 	discover: "Découvrir les carnets",
@@ -130,7 +130,8 @@ export const resources = {
 	searchInAlbum: "Rechercher dans les carnets",
 	search: "Recherche",
 	discovery: "Découverte",
-	keyword: "Mot-clé"
+	keyword: "Mot-clé",
+	goBackToAlbum: "Retourner au carnet"
 };
 
 export const QUALITY_PICTURE = {
