@@ -11,14 +11,6 @@ export const A: Album = {
 			height: 449
 		},
 		{
-			id: "A_101",
-			quality: 1,
-			staticPath: "A/101",
-			cloudinaryId: "b98fc27cf27ae0352999e3413d41b8e2",
-			width: 787,
-			height: 624
-		},
-		{
 			id: "A_102",
 			quality: 1,
 			staticPath: "A/102",

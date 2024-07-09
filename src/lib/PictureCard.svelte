@@ -75,13 +75,8 @@
 	}}
 >
 	<div class="close-button">
-		<Button
-			on:click={() => handlePictureChange(undefined)}
-			iconButton
-			variant="ghost"
-			--color={colors.white}
-		>
-			<Icon name="close" height="30px" width="30px" />
+		<Button on:click={() => handlePictureChange(undefined)} variant="ghost" --color={colors.white}>
+			{resources.goBackToAlbum}
 		</Button>
 	</div>
 	<div class="gallery-container">

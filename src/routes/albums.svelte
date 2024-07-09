@@ -22,8 +22,14 @@
 	import { resources } from "../resources";
 	import AlbumCard from "$lib/AlbumCard.svelte";
 	import Title from "$lib/Title.svelte";
+	import { onMount } from "svelte";
 	export let albums: Album[];
 	albums = albums.sort((a, b) => (a.id > b.id ? 1 : a.id < b.id ? -1 : 0));
+
+	onMount(() => {
+		//FIXME: to make sure the picture viewer css is fully removed on history go back
+		document.body.classList.remove("picture-viewer-open");
+	});
 </script>
 
 <div class="container">
