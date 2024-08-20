@@ -1,7 +1,6 @@
 export type Picture = {
 	id: string;
 	staticPath: string;
-	cloudinaryId: string;
 	quality: number;
 	height: number;
 	width: number;
