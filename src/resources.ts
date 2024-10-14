@@ -100,29 +100,13 @@ export const resources = {
 	employés, et de Hector Soltès, 42 ans, employé rue Hermel 28, qui ont signé avec nous après lecture.`,
 	francisDescriptionTitle: "Portait de Francis-Léon GIRAUD 1842-1911",
 	francisDescriptionLegend: "Extrait de l’histoire des ancêtres par Paul Ladrange.",
-	francisDescriptionContent: `« ... Francis-Léon GIRAUD est né le 4 mars 1842 dans la maison de la rue de Chabrol à Paris, qui était
-	alors dans son neuf. C’était un garçon sérieux et réfléchi, doué surtout d’un très grand bon sens, qui a
-	rendu quelques services pour régler les imprudences de sa belle-famille.
-	Après ses études de droit, il entre comme clerc chez Maître Huilier, boulevard Haussmann, l’un des
-	principaux notaires de la capitale. Il y a fait toute sa carrière et en a été le « principal » pendant
-	plusieurs décennies. L’officine lui doit sans doute un peu de sa réputation (actuel Etudes Chardon).
-	Francis aurait pu devenir lui-même notaire et il en a certainement rêvé. Il a peut-être manqué d’audace
-	ou péché par excès de prudence. L’expérience malheureuse de son beau-père au Mans l’en a sans doute
-	détourné.
-	Le 24 avril 1877, il a épousé au Mans Marie Marguerite Hatton-Lagainière, de vieille souche sarthoise.
-	J’ignore comment cette union - assez maladroite - a été décidée. Ce fut un ménage de raison et de
-	devoir.
-	Le physique de Francis, un peu massif, masquait un esprit fin et cultivé, une âme d’artiste. Très doué,
-	comme sa sœur, pour le dessin et la peinture, il nous a laissé des dizaines de petits carnets, remplis de
-	dessins au crayon et d’aquarelles : scènes familiales, paysages, reproductions de tableaux d’une
-	merveilleuse finesse. Il visitait beaucoup les expositions et observait tous les spectacles de la rue. À son
-	retour, il reproduisait de mémoire ce qu’il avait vu. L’été, il parcourait à pied la campagne sarthoise,
-	croquant au passage une maison, un pont, un pré bordé de peupliers. Nous avons ainsi de précieux
-	dessins de Linthe à la fin du siècle dernier. La famille Giraud partageait son temps entre la rue de
-	Chabrol à Paris et la Sarthe l’été. Elle s’installait aussi au printemps à Enghien-les-Bains où la tante
-	Berthe louait à l’année une maison proche du lac.
-	Le ménage Giraud eut quatre enfants : Anne Marie née en 1878 qui épousera Henri Lagrange, André
-	en 1880, Gabriel en 1882 et la petite dernière Geneviève en 1885 qui épousera André Grassin... »`,
+	francisDescriptionContent: `« … Francis-Léon GIRAUD est né le 4 mars 1842 dans la maison de la rue de Chabrol à Paris, qui était alors dans son neuf. C’était un garçon sérieux et réfléchi, doué surtout d’un très grand bon sens, qui a rendu quelques services pour régler les imprudences de sa belle-famille.
+Après ses études de droit, il entre comme clerc chez Maître Huilier, boulevard Haussmann, l’un des principaux notaires de la capitale. Il y a fait toute sa carrière et en a été le « principal » pendant plusieurs décennies. L’officine lui doit sans doute un peu de sa réputation (actuel Etudes Chardon).
+Francis aurait pu devenir lui-même notaire et il en a certainement rêvé. Il a peut-être manqué d’audace ou péché par excès de prudence. L’expérience malheureuse de son beau-père au Mans l’en a sans doute détourné.
+Le 24 avril 1877, il a épousé au Mans Marie Marguerite Hatton-Lagainière, de vieille souche sarthoise. J’ignore comment cette union - assez maladroite -  a été décidée. Ce fut un ménage de raison et de devoir.
+Le physique de Francis, un peu massif, masquait un esprit fin et cultivé, une âme d’artiste. Très doué, comme sa sœur, pour le dessin et la peinture, il nous a laissé des dizaines de petits carnets, remplis de dessins au crayon et d’aquarelles : scènes familiales, paysages, reproductions de tableaux d’une merveilleuse finesse. Il visitait beaucoup les expositions et observait tous les spectacles de la rue. À son retour, il reproduisait de mémoire ce qu’il avait vu. L’été, il parcourait à pied la campagne sarthoise, croquant au passage une maison, un pont, un pré bordé de peupliers. Nous avons ainsi de précieux dessins de Linthe à la fin du siècle dernier. La famille Giraud partageait son temps entre la rue de Chabrol à Paris et la Sarthe l’été. Elle s’installait aussi au printemps à Enghien-les-Bains où la tante Berthe louait à l’année une maison proche du lac.
+Le ménage Giraud eut quatre enfants : Anne Marie née en 1878 qui épousera Henri Ladrange, André en 1880, Gabriel en 1882 et la petite dernière Geneviève en 1885 qui épousera André Grassin…
+ »`,
 	familyTree: "Arbre généalogique",
 	documetnPatronymique: "Fiche Patronymique",
 	show: "Afficher",
